@@ -1,0 +1,20 @@
+## PHP syntax highlighting
+##
+syntax "php" "\.php$" "\.php[2345s]$" "\.phtml$"
+#functions
+color brightmagenta "([A-Za-z0-9])"
+#numbers
+color brightblue "[0-9]"
+#special
+color brightwhite "(^|[^A-Za-z0-9])(<\?php|\?>|var|and|or|default|class|extends|true|false|global|function|new|switch|case|break|next|prev|elseif|if|else|foreach|for|as|do|while|exit|die|declare|require_once|require|include_once|include|return|echo|static|array|isset)([^A-Za-z0-9])"
+#types
+color brightred "([^A-Za-z0-9])|[^A-Za-z](null|int|string|float|bool|object|resource)[^A-Za-z0-9_]+[^A-Za-z]"
+#strings
+color brightyellow ""(\\.|[^\"])*""
+color brightyellow "'(\\.|[^\'])*'"
+#Variables
+color brightcyan "\$[]\[A-Za-z0-9_'\"]*"
+#comments
+color green "//.*"
+color green "#.*"
+color green start="/\*" end="\*/"

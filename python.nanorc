@@ -1,0 +1,24 @@
+## Here is an example for Python.
+##
+syntax "python" "\.py$"
+icolor brightred "def [0-9A-Z_]+"
+
+
+
+#Keyword Color
+color green "\<(and|as|assert|class|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|map|not|or|pass|print|raise|try|while|with)\>"
+color brightmagenta "\<(continue|break|return)\>"
+
+#Operator Color
+color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
+
+#Parenthetical Color
+color magenta "[(){}]" "\[" "\]"
+
+#String Color
+color cyan "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
+color cyan "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
+color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
+
+#Comment Color
+color brightblue "#.*$"
