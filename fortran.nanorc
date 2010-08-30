@@ -43,4 +43,4 @@ color magenta "[(){}]" "\[" "\]"
 icolor brightblue "<[^=     ]*>" ""(\\.|[^"])*""
 
 ## Comment highlighting
-icolor brightred "!.*"
+icolor brightred "^!.*" "^c.*" "^C.*"
