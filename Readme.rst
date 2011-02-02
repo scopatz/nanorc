@@ -55,3 +55,6 @@ my config file includes::
     ## XML
     include "~/.nano/xml.nanorc"
 
+    ## Lua
+    include "~/.nano/lua.nanorc"
+
