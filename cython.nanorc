@@ -1,7 +1,9 @@
 ## Cython nanorc, based off of Python nanorc.
 ##
-syntax "python" "\.pyx$" "\.pyd$" "\.pyi$"
-icolor brightred "def [0-9A-Z_]+"
+syntax "cython" "\.pyx$" "\.pyd$" "\.pyi$"
+icolor brightred "def [ 0-9A-Z_]+"
+icolor brightred "cpdef [ 0-9A-Z_]+"
+icolor brightred "cdef cppclass [ 0-9A-Z_]+"
 
 
 
@@ -10,8 +12,8 @@ color green "\<(and|as|assert|class|def|del|elif|else|except|exec|finally|for|fr
 color brightmagenta "\<(continue|break|return)\>"
 
 # Cython Keyword Color
-color green "\<(cdef|extern|namespace)\>"
-color red "\<(bint|double|int)\>"
+color green "\<(cdef|cpdef|cppclass|extern|namespace)\>"
+color red "\<(bint|char|double|int|public)\>"
 
 #Operator Color
 color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
