@@ -1,0 +1,28 @@
+## Cython nanorc, based off of Python nanorc.
+##
+syntax "python" "\.pyx$" "\.pyd$" "\.pyi$"
+icolor brightred "def [0-9A-Z_]+"
+
+
+
+# Python Keyword Color
+color green "\<(and|as|assert|class|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|map|not|or|pass|print|raise|try|while|with)\>"
+color brightmagenta "\<(continue|break|return)\>"
+
+# Cython Keyword Color
+color green "\<(cdef|extern|namespace)\>"
+color red "\<(bint|double|int)\>"
+
+#Operator Color
+color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
+
+#Parenthetical Color
+color magenta "[(){}]" "\[" "\]"
+
+#String Color
+color cyan "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
+color cyan "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
+color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
+
+#Comment Color
+color brightblue "#.*$"
