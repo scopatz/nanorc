@@ -2,8 +2,8 @@
 ##
 syntax "cython" "\.pyx$" "\.pxd$" "\.pyi$"
 icolor brightred "def [ 0-9A-Z_]+"
-icolor brightred "cpdef [ 0-9A-Z_]+"
-icolor brightred "cdef cppclass [ 0-9A-Z_]+"
+icolor brightred "cpdef [ 0-9A-Z_]+\(.*?\):"
+icolor brightred "cdef cppclass [ 0-9A-Z_]+\(.*?\):"
 
 
 
@@ -12,7 +12,7 @@ color green "\<(and|as|assert|class|def|del|elif|else|except|exec|finally|for|fr
 color brightmagenta "\<(continue|break|return)\>"
 
 # Cython Keyword Color
-color green "\<(cdef|cimport|cpdef|cppclass|extern|namespace)\>"
+color green "\<(cdef|cimport|cpdef|cppclass|ctypedef|extern|namespace|property)\>"
 color red "\<(bint|char|double|int|public)\>"
 
 #Operator Color
