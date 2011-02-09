@@ -12,7 +12,7 @@ color green "\<(and|as|assert|class|def|del|elif|else|except|exec|finally|for|fr
 color brightmagenta "\<(continue|break|return)\>"
 
 # Cython Keyword Color
-color green "\<(cdef|cimport|cpdef|cppclass|ctypedef|extern|namespace|property)\>"
+color green "\<(cdef|cimport|cpdef|cppclass|ctypedef|extern|include|namespace|property)\>"
 color red "\<(bint|char|double|int|public)\>"
 
 #Operator Color
