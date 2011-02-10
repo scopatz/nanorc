@@ -12,7 +12,7 @@ color green "\<(and|as|assert|class|def|del|elif|else|except|exec|finally|for|fr
 color brightmagenta "\<(continue|break|return)\>"
 
 # Cython Keyword Color
-color green "\<(cdef|cimport|cpdef|cppclass|ctypedef|extern|include|namespace|property)\>"
+color green "\<(cdef|cimport|cpdef|cppclass|ctypedef|extern|include|namespace|property|struct)\>"
 color red "\<(bint|char|double|int|public)\>"
 
 #Operator Color
@@ -26,5 +26,5 @@ color cyan "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
 color cyan "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
 color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
 
-#Comment Color
+# Comment Color
 color brightblue "#.*$"
