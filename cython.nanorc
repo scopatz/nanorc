@@ -13,7 +13,7 @@ color brightmagenta "\<(continue|break|return)\>"
 
 # Cython Keyword Color
 color green "\<(cdef|cimport|cpdef|cppclass|ctypedef|extern|include|namespace|property|struct)\>"
-color red "\<(bint|char|double|int|public)\>"
+color red "\<(bint|char|double|int|public|void)\>"
 
 #Operator Color
 color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
