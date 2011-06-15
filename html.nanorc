@@ -1,5 +1,7 @@
-## Here is a short example for HTML.
+## Here is a short improved example for HTML.
 ##
-syntax "html" "\.html$"
-color blue start="<" end=">"
+syntax "html" "\.htm[l]?$"
+color brightblue start="<" end=">"
 color red "&[^;[[:space:]]]*;"
+color yellow "".*"|qq\|.*\|"
+color red "(alt|bgcolor|height|href|label|longdesc|name|onclick|onfocus|onload|onmouseover|size|span|src|style|target|type|value|width)="
