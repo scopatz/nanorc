@@ -2,6 +2,6 @@
 ##
 syntax "tex" "\.tex$" "bib" "\.bib$" "cls" "\.cls$"
 icolor green "\\.|\\[A-Z]*"
-color magenta "[{}]"
+color magenta "[{}]$"
 color blue "%.*"
 color blue start="\\begin\{comment\}" end="\\end\{comment\}"
