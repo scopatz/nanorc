@@ -39,6 +39,9 @@ color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
 #Parenthetical Color
 color magenta "[(){}]" "\[" "\]"
 
+# Add preprocessor commands.
+color brightcyan "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
+
 ## String highlighting.  
 icolor brightblue "<[^=     ]*>" ""(\\.|[^"])*""
 
