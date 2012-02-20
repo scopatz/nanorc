@@ -15,9 +15,6 @@ color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
 #Parenthetical Color
 color magenta "[(){}]" "\[" "\]"
 
-#Comment Color
-color brightblue "#.*$"
-
 #String Color
 color cyan "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
 color cyan "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
@@ -25,4 +22,7 @@ color cyan "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
 #color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
 #color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
 color cyan start="([[:space:]]"""|^""")" end=""""" start="'''[^']" end="'''"
+
+#Comment Color
+color brightblue "#.*$"
 
