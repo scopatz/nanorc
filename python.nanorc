@@ -19,9 +19,13 @@ color magenta "[(){}]" "\[" "\]"
 color cyan "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
 color cyan "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
 
+color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
 #color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
-#color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
-color cyan start="([[:space:]]"""|^""")" end=""""" start="'''[^']" end="'''"
+#color cyan start="([[:space:]]"""|^""")" end=""""" start="'''[^']" end="'''"
+#color cyan start=""""" end=""""" start="'''" end="'''"
+#color cyan start="("""[^"]|[^"]""")" end="("""[^"]|[^"]""")" start="'''[^']" end="'''"
+#color cyan start="\"\"\"" end="\"\"\""
+
 
 #Comment Color
 color brightblue "#.*$"
