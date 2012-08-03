@@ -9,8 +9,11 @@ icolor brightred "def [0-9A-Z_]+"
 color green "\<(and|as|assert|class|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|map|not|or|pass|print|raise|try|while|with|yield)\>"
 color brightmagenta "\<(continue|break|return)\>"
 
+# decorator color
+color brightgreen "@.*"
+
 #Operator Color
-color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
+color yellow "[.:;,+*|=!\%@]" "<" ">" "/" "-" "&"
 
 #Parenthetical Color
 color magenta "[(){}]" "\[" "\]"
