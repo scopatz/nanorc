@@ -1,0 +1,14 @@
+## Hightlightings for zsh configuration files (most used keywords)
+syntax "zshrc" "\.?zshrc$"
+
+## Keywords
+color red "\<(autoload|prompt(init)?|zstyle|zmodload|compinit|setopt|export|source)\>"
+color magenta "\<(alias|bindkey|function)\>"
+
+## Strings
+icolor white ""(\\.|[^"])*""
+icolor white "'(\\.|[^'])*'"
+
+## Comments
+icolor brightblue "^[[:space:]]*#.*$"
+icolor cyan "^[[:space:]]*##.*$"
