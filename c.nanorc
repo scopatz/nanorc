@@ -29,7 +29,7 @@ color magenta "[(){}]" "\[" "\]"
 color cyan "<[^= 	]*>" ""(\\.|[^"])*""
 ##
 ## This string is VERY resource intensive!
-color cyan start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
+#color cyan start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 
 ## Comment highlighting
 color brightblue "//.*"
