@@ -10,7 +10,7 @@ color green "\<(and|as|assert|class|def|del|elif|else|except|exec|finally|for|fr
 color brightmagenta "\<(continue|break|return)\>"
 
 # decorator color
-color brightgreen "@.*"
+color brightgreen "@.*[(]"
 
 #Operator Color
 color yellow "[.:;,+*|=!\%@]" "<" ">" "/" "-" "&"
