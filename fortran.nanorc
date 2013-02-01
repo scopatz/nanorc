@@ -43,7 +43,8 @@ color magenta "[(){}]" "\[" "\]"
 color brightcyan "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
 
 ## String highlighting.  
-icolor brightblue "<[^=     ]*>" ""(\\.|[^"])*""
+icolor cyan "<[^=     ]*>" ""(\\.|[^"])*""
+icolor cyan "<[^=     ]*>" "'(\\.|[^"])*'"
 
 ## Comment highlighting
 icolor brightred "!.*$" "(^[Cc]| [Cc]) .*$"
