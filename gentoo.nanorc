@@ -16,10 +16,10 @@ color red "\<(S|D|T|PV|PF|P|PN|A)\>" "\<C(XX)?FLAGS\>" "\<LDFLAGS\>" "\<C(HOST|T
 color magenta "\<use(_(with|enable))?\> [!a-zA-Z0-9_+ -]*" "inherit.*"
 color brightblue "\<e(begin|end|conf|install|make|warn|infon?|error|log|patch|new(group|user))\>"
 color brightblue "\<die\>" "\<use(_(with|enable))?\>" "\<inherit\>" "\<has\>" "\<(has|best)_version\>" "\<unpack\>"
-# color brightblue "\<(do|new)(ins|s?bin|doc|lib(|\.so|\.a)|man|info|exe|initd|confd|envd|pam|menu|icon)\>"
+color brightblue "\<(do|new)(ins|s?bin|doc|lib(\.so|\.a)|man|info|exe|initd|confd|envd|pam|menu|icon)\>"
 color brightblue "\<do(python|sed|dir|hard|sym|html|jar|mo)\>" "\<keepdir\>"
-# color brightblue "prepall(|docs|info|man|strip)" "prep(info|lib|lib\.(so|a)|man|strip)"
-# color brightblue "\<(|doc|ins|exe)into\>" "\<f(owners|perms)\>" "\<(exe|ins|dir)opts\>"
+color brightblue "prepall(docs|info|man|strip)" "prep(info|lib|lib\.(so|a)|man|strip)"
+color brightblue "\<(doc|ins|exe)into\>" "\<f(owners|perms)\>" "\<(exe|ins|dir)opts\>"
 ## Highlight common commands used in ebuilds
 color blue "\<make\>" "\<(cat|cd|chmod|chown|cp|echo|env|export|grep|let|ln|mkdir|mv|rm|sed|set|tar|touch|unset)\>"
 ## Highlight comments (doesnt work that well)
