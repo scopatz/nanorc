@@ -1,0 +1,64 @@
+# This code is free software; you can redistribute it and/or modify it under
+# the terms of the new BSD License.
+#
+# Copyright (c) 2010, Sebastian Staudt
+
+# A nano configuration file to enable syntax highlighting of some Git specific
+# files with the GNU nano text editor (http://www.nano-editor.org)
+#
+# Save this file to a directory of your choice and add it to your nanorc using
+# include ${PATH_TO_THE_FILE}/git.nanorc
+
+# This syntax format is used for editing commit and tag messages
+syntax "git commit/tag messages" "COMMIT_EDITMSG|TAG_EDITMSG"
+
+# Commit message
+color white ".*"
+
+# Subject line (This is pretty weird, but it works at least for OS X' nano 2.0.6)
+#    color brightcyan start="^" end="$"
+
+# Comments
+color brightblack "^#.*"
+      
+# Files changes
+color white       "#[[:space:]](deleted|modified|new file|renamed):[[:space:]].*"
+color red         "#[[:space:]]deleted:"
+color green       "#[[:space:]]modified:"
+color brightgreen "#[[:space:]]new file:"
+color brightblue  "#[[:space:]]renamed:"
+       
+# Recolor hash symbols
+color brightblack "#"
+
+# Trailing spaces
+color ,red "[[:space:]]+$"
+
+# This syntax format is used for interactive rebasing
+syntax "git rebase todo" "git-rebase-todo"
+
+# Default
+color white ".*"
+
+# Comments
+color brightblack "^#.*"
+
+# Commit IDs
+color brightwhite "[0-9a-f]{7,40}"
+
+# Rebase commands
+color green       "^(e|edit) [0-9a-f]{7,40}"
+color green       "^#  (e, edit)"
+color brightgreen "^(f|fixup) [0-9a-f]{7,40}"
+color brightgreen "^#  (f, fixup)"
+color brightwhite "^(p|pick) [0-9a-f]{7,40}"
+color brightwhite "^#  (p, pick)"
+color blue        "^(r|reword) [0-9a-f]{7,40}"
+color blue        "^#  (r, reword)"
+color brightred   "^(s|squash) [0-9a-f]{7,40}"
+color brightred   "^#  (s, squash)"
+color yellow      "^(x|exec) [^ ]+ [0-9a-f]{7,40}"
+color yellow      "^#  (x <cmd>, exec <cmd>)"
+
+# Recolor hash symbols
+color brightblack "#"
