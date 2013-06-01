@@ -20,14 +20,17 @@ color white ".*"
 
 # Comments
 color brightblack "^#.*"
-      
+
 # Files changes
 color white       "#[[:space:]](deleted|modified|new file|renamed):[[:space:]].*"
 color red         "#[[:space:]]deleted:"
 color green       "#[[:space:]]modified:"
 color brightgreen "#[[:space:]]new file:"
 color brightblue  "#[[:space:]]renamed:"
-       
+
+# Untracked filenames
+color blue "^#	[^/?*:;{}\\]+$"
+
 # Recolor hash symbols
 color brightblack "#"
 
@@ -41,24 +44,37 @@ syntax "git rebase todo" "git-rebase-todo"
 color white ".*"
 
 # Comments
-color brightblack "^#.*"
-
-# Commit IDs
-color brightwhite "[0-9a-f]{7,40}"
+color brightblack   "^#.*"
+color brightred     "^noop$"
 
 # Rebase commands
-color green       "^(e|edit) [0-9a-f]{7,40}"
-color green       "^#  (e, edit)"
-color brightgreen "^(f|fixup) [0-9a-f]{7,40}"
-color brightgreen "^#  (f, fixup)"
-color brightwhite "^(p|pick) [0-9a-f]{7,40}"
-color brightwhite "^#  (p, pick)"
-color blue        "^(r|reword) [0-9a-f]{7,40}"
-color blue        "^#  (r, reword)"
-color brightred   "^(s|squash) [0-9a-f]{7,40}"
-color brightred   "^#  (s, squash)"
-color yellow      "^(x|exec) [^ ]+ [0-9a-f]{7,40}"
-color yellow      "^#  (x <cmd>, exec <cmd>)"
+color green         "^(e|edit) [0-9a-f]{7,40}"
+color green         "^#  (e, edit)"
+color brightgreen   "^(f|fixup) [0-9a-f]{7,40}"
+color brightgreen   "^#  (f, fixup)"
+color brightmagenta "^(p|pick) [0-9a-f]{7,40}"
+color brightmagenta "^#  (p, pick)"
+color blue          "^(r|reword) [0-9a-f]{7,40}"
+color blue          "^#  (r, reword)"
+color brightcyan    "^(s|squash) [0-9a-f]{7,40}"
+color brightcyan    "^#  (s, squash)"
+color yellow        "^(x|exec) [^ ]+ [0-9a-f]{7,40}"
+color yellow        "^#  (x, exec)"
 
 # Recolor hash symbols
-color brightblack "#"
+color brightblack   "#"
+
+# Commit IDs
+color white "[0-9a-f]{7,40}"
+
+# Derived from https://github.com/craigbarnes/nanorc
+syntax "gitconfig" "git(config|modules)$|\.git/config$"
+
+color brightcyan "\<(true|false)\>"
+color cyan "^[[:space:]]*[^=]*="
+color brightmagenta "^[[:space:]]*\[.*\]$"
+color yellow ""(\\.|[^"])*"|'(\\.|[^'])*'"
+color brightblack "(^|[[:space:]])#([^{].*)?$"
+color ,green "[[:space:]]+$"
+color ,red "    +"
+
