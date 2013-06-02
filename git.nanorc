@@ -34,6 +34,8 @@ color blue "^#	[^/?*:;{}\\]+$"
 # Recolor hash symbols
 color brightblack "#"
 
+color magenta "#[[:space:]]Changes to be committed:"
+
 # Trailing spaces
 color ,red "[[:space:]]+$"
 
