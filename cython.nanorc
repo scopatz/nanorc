@@ -2,8 +2,8 @@
 ##
 syntax "cython" "\.pyx$" "\.pxd$" "\.pyi$"
 icolor brightred "def [ 0-9A-Z_]+"
-icolor brightred "cpdef [ 0-9A-Z_]+\(.*?\):"
-icolor brightred "cdef cppclass [ 0-9A-Z_]+\(.*?\):"
+icolor brightred "cpdef [0-9A-Z_]+\(.*\):"
+icolor brightred "cdef cppclass [ 0-9A-Z_]+\(.*\):"
 
 
 
