@@ -2,7 +2,7 @@
 Improved Nano Syntax Highlighting Files
 ***************************************
 
-This repository holds {lang}.nanorc files that have imporved 
+This repository holds {lang}.nanorc files that have improved 
 definitions of syntax highlighting for various languages.
 These should be placed inside of the ``~/.nano/`` directory.
 
