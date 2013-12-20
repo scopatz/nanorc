@@ -2,9 +2,12 @@
 Improved Nano Syntax Highlighting Files
 ***************************************
 
-This repository holds {lang}.nanorc files that have improved 
+This repository holds ``{lang}.nanorc`` files that have improved
 definitions of syntax highlighting for various languages.
 These should be placed inside of the ``~/.nano/`` directory.
+Alternatively::
+
+    git clone git@github.com:scopatz/nanorc.git ~/.nano
 
 Once there you should add the languages you want to your
 nano configuration file ``~/.nanorc``.  For example::
@@ -12,5 +15,7 @@ nano configuration file ``~/.nanorc``.  For example::
     ## C/C++
     include "~/.nano/c.nanorc"
 
-You can also copy the contents of ``import.nanorc`` into your
-``~/.nanorc`` to include all languages.
+You can also append the contents of ``~/.nano/nanorc`` into your
+``~/.nanorc`` to include all languages::
+
+    cat ~/.nano/nanorc >> ~/.nanorc
