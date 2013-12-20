@@ -21,7 +21,6 @@ include ~/.nano/go.nanorc
 include ~/.nano/groff.nanorc
 include ~/.nano/haml.nanorc
 include ~/.nano/html.nanorc
-include ~/.nano/import.nanorc
 include ~/.nano/ini.nanorc
 include ~/.nano/inputrc.nanorc
 include ~/.nano/java.nanorc
@@ -33,7 +32,6 @@ include ~/.nano/kickstart.nanorc
 include ~/.nano/ledger.nanorc
 include ~/.nano/lisp.nanorc
 include ~/.nano/lua.nanorc
-include ~/.nano/main.nanorc
 include ~/.nano/makefile.nanorc
 include ~/.nano/man.nanorc
 include ~/.nano/markdown.nanorc
