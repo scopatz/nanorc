@@ -2,59 +2,20 @@
 Improved Nano Syntax Highlighting Files
 ***************************************
 
-This repository holds {lang}.nanorc files that have improved 
+This repository holds ``{lang}.nanorc`` files that have improved
 definitions of syntax highlighting for various languages.
 These should be placed inside of the ``~/.nano/`` directory.
+Alternatively::
+
+    git clone git@github.com:scopatz/nanorc.git ~/.nano
 
 Once there you should add the languages you want to your
-nano configuration file ``~/.nanorc``.  For example, 
-my config file includes::
+nano configuration file ``~/.nanorc``.  For example::
 
     ## C/C++
     include "~/.nano/c.nanorc"
 
-    ## Fortran
-    include "~/.nano/fortran.nanorc"
+You can also append the contents of ``~/.nano/nanorc`` into your
+``~/.nanorc`` to include all languages::
 
-    ## HTML
-    include "~/.nano/html.nanorc"
-
-    ## Patch files
-    include "~/.nano/patch.nanorc"
-
-    ## Manpages
-    include "~/.nano/man.nanorc"
-
-    ## Perl
-    include "~/.nano/perl.nanorc"
-
-    ## Python
-    include "~/.nano/python.nanorc"
-
-    ## reST
-    include "~/.nano/reST.nanorc"
-
-    ## Ruby
-    include "~/.nano/ruby.nanorc"
-
-    ## Bourne shell scripts
-    include "~/.nano/sh.nanorc"
-
-    ## makefile .am
-    include "~/.nano/gentoo.nanorc"
-
-    ## TeX
-    include "~/.nano/tex.nanorc"
-
-    ## CSS
-    include "~/.nano/css.nanorc"
-
-    ## php
-    include "~/.nano/php.nanorc"
-
-    ## XML
-    include "~/.nano/xml.nanorc"
-
-    ## Lua
-    include "~/.nano/lua.nanorc"
-
+    cat ~/.nano/nanorc >> ~/.nanorc
