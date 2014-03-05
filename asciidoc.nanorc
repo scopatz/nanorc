@@ -1,9 +1,5 @@
 syntax "asciidoc" "\.(asc|asciidoc)$"
 
-# anchors
-color brightwhite "\[\[.*\]\]"
-color brightwhite "<<.*>>"
-
 # main header
 color red "^====+$"
 # h1
@@ -32,7 +28,7 @@ color yellow "^\..*$"
 color magenta "^\[(source,.+|NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]"
 
 # Other markup
-color yellow ".*\+$"
+color yellow ".*[[:space:]]\+$"
 color yellow "_[^_]+_"
 color yellow "\*[^\*]+\*"
 color yellow "\+[^\+]+\+"
@@ -42,3 +38,10 @@ color yellow "~[^~]+~"
 color yellow "'[^']+'"
 
 color cyan "`{1,2}[^']+'{1,2}"
+
+# bullets
+color brightmagenta "^[[:space:]]*[\*\.-]{1,5}[[:space:]]"
+
+# anchors
+color brightwhite "\[\[.*\]\]"
+color brightwhite "<<.*>>"
