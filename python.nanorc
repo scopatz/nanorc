@@ -1,6 +1,7 @@
 ## Here is an example for Python.
 ##
 syntax "python" "\.py$"
+header "^#!.*/(env +)?python( |$)"
 icolor brightred "def [0-9A-Z_]+"
 
 
