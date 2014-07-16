@@ -17,7 +17,7 @@ color brightblue "\<(alias|bindkey|builtin|cd|eval|exec|export|jobs|let|popd|pus
 ## ZSH-specific
 color brightblue "\<(add-zsh-hook|autoload|compinit|echotc|emulate|print|prompt(init)?|setopt|zle|zmodload|zstyle)\>"
 ## Common linux commands
-color brightmagenta "\<(cat|chmod|chown|cp|echo|env|false|find|grep|install|kill|ln|make|mkdir|mv|pwd|rm|rmdir|sed|tar|true|touch|uname|wc|whoami)\>"
+color brightmagenta "\<(cat|chmod|chown|cp|echo|env|false|find|grep|install|kill|less|ln|make|mkdir|mv|pwd|rm|rmdir|sed|tar|true|touch|uname|wc|whoami)\>"
 
 ## Function definition
 icolor brightgreen "^\s+?(function\s+)?[0-9A-Z_]+\s+?\(\)"
