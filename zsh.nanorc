@@ -5,9 +5,6 @@ header "^#!.*/(env +)?zsh( |$)"
 ## Numbers
 color brightwhite "[0-9]+"
 
-## Function definition
-icolor brightgreen "^\s+?(function\s+)?[0-9A-Z_]+\s+?\(\)"
-
 ## Conditionals and control flow
 color green "\<(always|case|do|done|elif|else|esac|exit|fi|for|function|if|in|local|read|return|select|shift|then|time|until|while)\>"
 color green "(\{|\}|\(|\)|\;|\]|\[|`|\\|\$|<|>|!|=|&|\|)"
@@ -21,6 +18,9 @@ color brightblue "\<(alias|bindkey|builtin|cd|eval|exec|export|jobs|let|popd|pus
 color brightblue "\<(add-zsh-hook|autoload|compinit|echotc|emulate|print|prompt(init)?|setopt|zle|zmodload|zstyle)\>"
 ## Common linux commands
 color brightmagenta "\<(cat|chmod|chown|cp|echo|env|false|find|grep|install|kill|ln|make|mkdir|mv|pwd|rm|rmdir|sed|tar|true|touch|uname|wc|whoami)\>"
+
+## Function definition
+icolor brightgreen "^\s+?(function\s+)?[0-9A-Z_]+\s+?\(\)"
 
 ## Variables
 icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
