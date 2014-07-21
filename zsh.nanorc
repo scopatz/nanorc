@@ -3,7 +3,7 @@ syntax "zsh" "\.?zsh[^\.]+?$"
 header "^#!.*/(env +)?zsh( |$)"
 
 ## Numbers
-color brightwhite "[0-9]+"
+color brightyellow "\b[0-9]+\b"
 
 ## Conditionals and control flow
 color green "\<(always|case|do|done|elif|else|esac|exit|fi|for|function|if|in|local|read|return|select|shift|then|time|until|while)\>"
