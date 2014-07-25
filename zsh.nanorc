@@ -31,6 +31,7 @@ color brightyellow "'(\\.|[^'])*'"
 
 ## Comments
 color cyan "(^|[[:space:]])#.*$"
+color brightcyan "(^|[[:space:]])##.*$"
 
 ## Trailing spaces
 color ,blue "[[:space:]]+$"
