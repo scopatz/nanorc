@@ -1,0 +1,37 @@
+## Syntax highlighting for (T)CSH scripts (initially copied from sh.nanorc)
+syntax "tcsh" "\.?t?csh[^\.]+?$"
+header "^#!.*/(env +)?t?csh( |$)"
+
+## Numbers
+color brightyellow "\b[0-9]+\b"
+
+## Conditionals and control flow
+color green "\<(always|case|do|done|elif|else|endif|esac|exit|for|function|if|in|local|read|return|select|shift|then|time|until|while)\>"
+color green "(\{|\}|\(|\)|\;|\]|\[|`|\\|\$|<|>|!|=|&|\|)"
+## Conditional flags
+color green "-[Ldefgruwx]\>"
+color green "-(eq|ne|gt|lt|ge|le|s|n|z)\>"
+
+## CSH (needs trimming, mostly bash right now)
+color brightblue "\<(alias|bindkey|builtin|cd|eval|exec|jobs|let|popd|pushd|set|setenv|source|typeset|umask|unset)\>"
+## TCSH-specific
+#color brightblue "\<()\>"
+## Common linux commands
+color brightmagenta "\<(cat|chmod|chown|cp|cut|echo|env|false|find|grep|head|install|kill|less|ln|make|mkdir|mv|pwd|rm|rmdir|sed|tar|true|touch|uname|wc|whoami)\>"
+
+## Function definition
+icolor brightgreen "^\s+?(function\s+)?[0-9A-Z_]+\s+?\(\)"
+
+## Variables
+icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
+
+## Strings
+color brightyellow ""(\\.|[^"])*""
+color brightyellow "'(\\.|[^'])*'"
+
+## Comments
+color cyan "(^|[[:space:]])#.*$"
+color brightcyan "(^|[[:space:]])##.*$"
+
+## Trailing spaces
+color ,blue "[[:space:]]+$"
