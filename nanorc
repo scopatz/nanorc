@@ -65,4 +65,4 @@ include ~/.nano/xml.nanorc
 include ~/.nano/xresources.nanorc
 include ~/.nano/yaml.nanorc
 include ~/.nano/yum.nanorc
-include ~/.nano/zshrc.nanorc
+include ~/.nano/zsh.nanorc
