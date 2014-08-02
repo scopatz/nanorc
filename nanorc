@@ -53,6 +53,7 @@ include ~/.nano/python.nanorc
 include ~/.nano/reST.nanorc
 include ~/.nano/rpmspec.nanorc
 include ~/.nano/ruby.nanorc
+include ~/.nano/scala.nanorc
 include ~/.nano/sed.nanorc
 include ~/.nano/sh.nanorc
 include ~/.nano/sql.nanorc
