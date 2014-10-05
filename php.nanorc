@@ -27,7 +27,7 @@ color green "(\;\;|\|\||::|=>|->)"
 # Online Comments
 color brightyellow "(#.*|//.*)$"
 # STRINGS!
-color red "('[^']*?')|(\"[^\"]*?\")"
+color red "('[^']*')|(\"[^\"]*\")"
 # Inline Variables
 color white "\{\$[^}]*\}"
 # PHP Tags
