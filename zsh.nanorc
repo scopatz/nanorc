@@ -1,5 +1,5 @@
 ## Syntax highlighting for ZSH scripts (initially copied from sh.nanorc)
-syntax "zsh" "\.?zsh[^\.]+?$"
+syntax "zsh" "\.zsh[^\.]+$"
 header "^#!.*/(env +)?zsh( |$)"
 
 ## Numbers
@@ -20,7 +20,7 @@ color brightblue "\<(add-zsh-hook|autoload|compinit|echotc|emulate|print|prompt(
 color brightmagenta "\<(cat|chmod|chown|cp|cut|echo|env|false|find|grep|head|install|kill|less|ln|make|mkdir|mv|nice|pwd|rm|rmdir|sed|tar|true|touch|uname|wc|whoami)\>"
 
 ## Function definition
-icolor brightgreen "^\s+?(function\s+)?[0-9A-Z_]+\s+?\(\)"
+icolor brightgreen "^\s+(function\s+)[0-9A-Z_]+\s+\(\)"
 
 ## Variables
 icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
