@@ -56,6 +56,7 @@ include ~/.nano/ruby.nanorc
 include ~/.nano/scala.nanorc
 include ~/.nano/sed.nanorc
 include ~/.nano/sh.nanorc
+include ~/.nano/sls.nanorc
 include ~/.nano/sql.nanorc
 include ~/.nano/systemd.nanorc
 include ~/.nano/tcl.nanorc
