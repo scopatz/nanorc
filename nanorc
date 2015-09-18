@@ -12,6 +12,7 @@ include ~/.nano/css.nanorc
 include ~/.nano/cython.nanorc
 include ~/.nano/dot.nanorc
 include ~/.nano/email.nanorc
+include ~/.nano/Dockerfile.nanorc
 include ~/.nano/fish.nanorc
 include ~/.nano/fortran.nanorc
 include ~/.nano/gentoo.nanorc
