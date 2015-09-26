@@ -1,4 +1,4 @@
-syntax "asciidoc" "\.(asc|asciidoc)$"
+syntax "asciidoc" "\.(asc|asciidoc|adoc)$"
 
 # main header
 color red "^====+$"
