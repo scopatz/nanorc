@@ -1,5 +1,5 @@
 ## Syntax highlighting for Dockerfiles
-syntax "Dockerfile" "Dockerfile[^/]*$"
+syntax "Dockerfile" "Dockerfile[^/]*$" "\.dockerfile$"
 
 ## Keywords
 icolor red "^(FROM|MAINTAINER|RUN|CMD|LABEL|EXPOSE|ENV|ADD|COPY|ENTRYPOINT|VOLUME|USER|WORKDIR|ONBUILD)[[:space:]]"
