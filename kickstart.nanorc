@@ -12,4 +12,4 @@ color red         "^-[a-zA-Z0-9*-]+"
 
 color brightblack "(^|[[:space:]])#([^{].*)?$"
 color ,green "[[:space:]]+$"
-color ,red "	+"
+color ,red "	+ +| +	+"
