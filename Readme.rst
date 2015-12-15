@@ -27,4 +27,4 @@ You can also append the contents of ``~/.nano/nanorc`` into your
     
 Finally, you can run an automatic installer using the following code::
 
-    $ curl https://github.com/scopatz/nanorc/raw/installer.sh | sh
+    $ curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
