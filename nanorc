@@ -42,6 +42,7 @@ include ~/.nano/mpdconf.nanorc
 include ~/.nano/mutt.nanorc
 include ~/.nano/nanorc.nanorc
 include ~/.nano/nginx.nanorc
+include ~/.nano/ocaml.nanorc
 include ~/.nano/patch.nanorc
 include ~/.nano/peg.nanorc
 include ~/.nano/perl.nanorc
