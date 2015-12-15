@@ -1,4 +1,5 @@
 include ~/.nano/apacheconf.nanorc
+include ~/.nano/arduino.nanorc
 include ~/.nano/asciidoc.nanorc
 include ~/.nano/asm.nanorc
 include ~/.nano/awk.nanorc
@@ -41,6 +42,7 @@ include ~/.nano/mpdconf.nanorc
 include ~/.nano/mutt.nanorc
 include ~/.nano/nanorc.nanorc
 include ~/.nano/nginx.nanorc
+include ~/.nano/ocaml.nanorc
 include ~/.nano/patch.nanorc
 include ~/.nano/peg.nanorc
 include ~/.nano/perl.nanorc
@@ -54,6 +56,7 @@ include ~/.nano/python.nanorc
 include ~/.nano/reST.nanorc
 include ~/.nano/rpmspec.nanorc
 include ~/.nano/ruby.nanorc
+include ~/.nano/rust.nanorc
 include ~/.nano/scala.nanorc
 include ~/.nano/sed.nanorc
 include ~/.nano/sh.nanorc
