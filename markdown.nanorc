@@ -1,0 +1,17 @@
+syntax "markdown" "\.(md|mkd|mkdn|markdown)$"
+
+# Emphasis
+color green "(^|[[:space:]])(_[^ ][^_]*_|\*[^ ][^*]*\*)"
+
+# Strong emphasis
+color brightgreen "(^|[[:space:]])(__[^ ][^_]*__|\*\*[^ ][^*]*\*\*)"
+
+color brightmagenta  "^=====*$|^-----*$|^#{1,6}.*"
+color blue   "^[[:space:]]*[\*+-] |^[[:space:]]*[0-9]+\. "
+color black    "^[[:space:]]+"
+color magenta   "\(([CcRr]|[Tt][Mm])\)" "\.{3}" "(^|[[:space:]])\-\-($$)"
+color brightyellow "\!?\[[^]]*\]([[:space:]]*\[[^]]*\]|\(.*\))?"
+color brightyellow "^\[.*\]:[[:space:]]*[^"]*"
+color yellow   "`[^`]*`|^ {4}[^-+*].*"
+color brightblack  "^>.*"
+
