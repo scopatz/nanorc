@@ -53,20 +53,19 @@ color red "\<([0-9]+)\>"
 color brightmagenta "(\(|\)|\[|\]|\{|\})"
 
 # Strings
-#color green "\"(\\.|[^\\\"])*\"|'(\\.|[^\\'])*'"
-
-# Strings
 color red "\"(\\.|[^\\\"])*\"|'(\\.|[^\\'])*'"
+
+# Multiline strings
+color red start="\s*\[\[" end="\]\]"
 
 # Escapes
 color red "\\[0-7][0-7][0-7]|\\x[0-9a-fA-F][0-9a-fA-F]|\\[abefnrs]|(\\c|\\C-|\\M-|\\M-\\C-)."
 
-
 # Shebang
-color brightcyan   "^#!.*"
+color brightcyan "^#!.*"
 
 # Simple comments
-color green        "\-\-.*$"
+color green "\-\-.*$"
 
 # Multiline comments
-color green         start="\-\-\[" end="]"
+color green start="\s*\-\-\s*\[\[" end="\]\]"
