@@ -43,6 +43,7 @@ include ~/.nano/nginx.nanorc
 include ~/.nano/patch.nanorc
 include ~/.nano/peg.nanorc
 include ~/.nano/perl.nanorc
+include ~/.nano/perl6.nanorc
 include ~/.nano/php.nanorc
 include ~/.nano/pkg-config.nanorc
 include ~/.nano/pkgbuild.nanorc
