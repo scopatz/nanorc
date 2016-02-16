@@ -24,3 +24,7 @@ You can also append the contents of ``~/.nano/nanorc`` into your
 ``~/.nanorc`` to include all languages::
 
     cat ~/.nano/nanorc >> ~/.nanorc
+    
+Finally, you can run an automatic installer using the following code::
+
+    $ curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh

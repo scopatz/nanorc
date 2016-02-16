@@ -23,5 +23,5 @@ color brightmagenta  "^%(trigger|triggerin|triggerpostun|triggerun|verifyscript)
 color brightblack "(^|[[:space:]])#([^{].*)?$"
 color blue   "^\*.*$"
 color ,green "[[:space:]]+$"
-color ,red "	+"
+color ,red "	+ +| +	+"
 color brightwhite,cyan "TODO:?"

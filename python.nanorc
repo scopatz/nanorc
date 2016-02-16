@@ -4,7 +4,7 @@ syntax "python" "\.py$"
 header "^#!.*/(env +)?python( |$)"
 
 ## built-in objects
-color cyan "\<(None|self)\>"
+color cyan "\<(None|self|True|False)\>"
 ## built-in attributes
 color cyan "\<(__builtin__|__dict__|__methods__|__members__|__class__|__bases__|__import__|__name__|__doc__|__self__|__debug__)\>"
 ## built-in functions
