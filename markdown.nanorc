@@ -6,12 +6,27 @@ color green "(^|[[:space:]])(_[^ ][^_]*_|\*[^ ][^*]*\*)"
 # Strong emphasis
 color brightgreen "(^|[[:space:]])(__[^ ][^_]*__|\*\*[^ ][^*]*\*\*)"
 
+# headlines
 color brightmagenta  "^=====*$|^-----*$|^#{1,6}.*"
+
+# lists    
 color blue   "^[[:space:]]*[\*+-] |^[[:space:]]*[0-9]+\. "
+
+# leading whitespace
 color black    "^[[:space:]]+"
-color magenta   "\(([CcRr]|[Tt][Mm])\)" "\.{3}" "(^|[[:space:]])\-\-($$)"
+
+# misc
+color magenta   "\(([CcRr]|[Tt][Mm])\)" "\.{3}" "(^|[[:space:]])\-\-($|[[:space:]])"
+
+# images  
 color brightyellow "\!?\[[^]]*\]([[:space:]]*\[[^]]*\]|\(.*\))?"
+
+# links
 color brightyellow "^\[.*\]:[[:space:]]*[^"]*"
+
+# code
 color yellow   "`[^`]*`|^ {4}[^-+*].*"
+
+# quotes
 color brightblack  "^>.*"
 
