@@ -1,5 +1,10 @@
 ## Here is an example for Java.
 ##
+
+## Mac OSX users: If you use Mac OSX, it might be necessary to perform the following:
+##   1. Replace \< by [[:<:]]           
+##   2. Replace \> by [[:>:]]           
+
 syntax "java" "\.java$"
 color green "\<(boolean|byte|char|double|float|int|long|new|short|this|transient|void)\>"
 color red "\<(break|case|catch|continue|default|do|else|finally|for|if|return|switch|throw|try|while)\>"
