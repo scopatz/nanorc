@@ -1,6 +1,6 @@
 ## Here is an example for patch files.
 ##
-syntax "patch" "\.(patch|diff)$"
+syntax "Patch" "\.(patch|diff)$"
 color brightgreen "^\+.*"
 color green "^\+\+\+.*"
 color brightblue "^ .*"

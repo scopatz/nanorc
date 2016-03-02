@@ -1,6 +1,6 @@
 ## Here is an example for Python.
 ##
-syntax "python" "\.py$"
+syntax "Python" "\.py$"
 header "^#!.*/(env +)?python( |$)"
 
 ## built-in objects

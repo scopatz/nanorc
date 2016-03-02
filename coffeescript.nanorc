@@ -1,4 +1,4 @@
-syntax "coffeescript" "\.coffee$"
+syntax "CoffeeScript" "\.coffee$"
 header "^#!.*/(env +)?coffee"
 
 color red "[!&|=/*+-<>]|\<(and|or|is|isnt|not)\>"

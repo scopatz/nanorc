@@ -1,6 +1,6 @@
 ## Here is an example for ebuilds/eclasses
 ##
-syntax "ebuild" "\.e(build|class)$"
+syntax "Ebuild" "\.e(build|class)$"
 ## All the standard portage functions
 color brightgreen "^src_(unpack|compile|install|test)" "^pkg_(config|nofetch|setup|(pre|post)(inst|rm))"
 ## Highlight bash related syntax
@@ -31,7 +31,7 @@ color ,green "[[:space:]]+$"
 
 ## Here is an example for Portage control files
 ##
-syntax "/etc/portage" "\.(keywords|mask|unmask|use)$"
+syntax "etc-portage" "\.(keywords|mask|unmask|use)$"
 ## Base text:
 color green "^.+$"
 ## Use flags:

@@ -1,4 +1,4 @@
-syntax "tcl" "\.tcl$"
+syntax "TCL" "\.tcl$"
 header "^#!.*/(env +)?tclsh( |$)"
 
 ## Standard Tcl [info commands]

@@ -1,4 +1,4 @@
-syntax "sed" "\.sed$"
+syntax "SED" "\.sed$"
 header "^#!.*bin/(env +)?sed( |$)"
 
 color red "[|^$.*+]"

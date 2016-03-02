@@ -1,4 +1,4 @@
-syntax "colortest" "ColorTest$"
+syntax "colorTest" "ColorTest$"
 
 color black "\<PLAIN\>"
 

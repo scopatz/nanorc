@@ -2,7 +2,7 @@
 
 ## Old version
 
-#syntax "jsfiles" "(\.|/|)js$"
+#syntax "JavaScript" "(\.|/|)js$"
 #color green "//.*$" start="\/\*" end="\*\/"
 #color blue "'(\\.|[^'])*'"
 #color red ""(\\.|[^\"])*""

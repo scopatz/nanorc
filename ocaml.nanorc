@@ -1,4 +1,4 @@
-syntax "ocaml" "\.mli?$"
+syntax "OCaml" "\.mli?$"
 #uid
 color red "\<[A-Z][0-9a-z_]{2,}\>"
 #declarations

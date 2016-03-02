@@ -1,4 +1,4 @@
-syntax "email"
+syntax "Email"
 
 color magenta "^>([^>].*|$)"
 color blue "^>>([^>].*|$)"
