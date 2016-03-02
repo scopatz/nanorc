@@ -1,4 +1,4 @@
-syntax "c#" "\.cs$"
+syntax "C#" "\.cs$"
 
 # Class
 color brightmagenta  "class +[A-Za-z0-9]+ *((:) +[A-Za-z0-9.]+)?"

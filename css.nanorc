@@ -1,7 +1,7 @@
 ## Here is an example for css files.
 ##
 
-syntax "css" "\.(css|scss)$"
+syntax "CSS" "\.(css|scss)$"
 color brightred     "."
 color brightyellow  start="\{" end="\}"
 color brightwhite   start=":" end="[;^\{]"

@@ -1,4 +1,4 @@
-syntax "vala" "\.vala$"
+syntax "Vala" "\.vala$"
 
 color green     "\<(float|double|bool|char|int|uint|short|long|void|(un)?signed)\>"
 color brightblue "[A-Za-z_][A-Za-z0-9_]*[[:space:]]*[()]"

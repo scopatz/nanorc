@@ -26,7 +26,7 @@
 ##               /usr/share/nano/arduino.nanorc
 ##               ...
 
-syntax "ino"  "\.?ino$"
+syntax "INO"  "\.?ino$"
 
 ## 
 color brightred "\<[A-Z_][0-9A-Z_]+\>" 

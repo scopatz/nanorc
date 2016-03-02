@@ -1,5 +1,5 @@
 ## For reST
-syntax "rest" "\.rest$" "\.rst$"
+syntax "RST" "\.rest$" "\.rst$"
 # italics
 #color magenta "\*[^*]\*"
 # bold

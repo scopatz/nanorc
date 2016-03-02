@@ -1,4 +1,4 @@
-syntax "vi" "(^|/|\.)(ex|vim)rc$|\.vim"
+syntax "VI" "(^|/|\.)(ex|vim)rc$|\.vim"
 
 color brightblue "[A-Za-z_][A-Za-z0-9_]*[[:space:]]*[()]"
 color cyan  "\<([nvxsoilc]?(nore|un)?map|[nvlx]n|[ico]?no|[cilovx][um]|s?unm)\>"

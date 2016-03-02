@@ -1,4 +1,4 @@
-syntax "pkg-config" "\.pc$"
+syntax "PC" "\.pc$"
 
 color cyan  "^(Name|Description|URL|Version|Conflicts|Cflags):"
 color cyan  "^(Requires|Libs)(\.private)?:"

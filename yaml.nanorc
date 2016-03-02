@@ -1,4 +1,4 @@
-syntax "yaml" "\.ya?ml$"
+syntax "YAML" "\.ya?ml$"
 header "^---" "%YAML"
 
 color green     "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "

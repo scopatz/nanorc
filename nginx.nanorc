@@ -1,4 +1,4 @@
-syntax "nginx" "nginx.*\.conf$" "\.nginx$"
+syntax "Nginx" "nginx.*\.conf$" "\.nginx$"
 header "^(server|upstream)[a-z ]*\{$"
 
 color brightmagenta  "\<(events|server|http|location|upstream)[[:space:]]*\{"

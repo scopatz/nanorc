@@ -1,4 +1,4 @@
-syntax "gitconfig" "git(config|modules)$|\.git/config$"
+syntax "git-config" "git(config|modules)$|\.git/config$"
 
 color brightcyan "\<(true|false)\>"
 color cyan "^[[:space:]]*[^=]*="
@@ -16,7 +16,7 @@ color ,red "	+"
 # A nano configuration file to enable syntax highlighting of some Git specific
 # files with the GNU nano text editor (http://www.nano-editor.org)
 #
-syntax "git commit/tag messages" "COMMIT_EDITMSG|TAG_EDITMSG"
+syntax "git-commit" "COMMIT_EDITMSG|TAG_EDITMSG"
 
 # Commit message
 color yellow ".*"
@@ -50,7 +50,7 @@ color ,red "[[:space:]]+$"
 
 
 # This syntax format is used for interactive rebasing
-syntax "git rebase todo" "git-rebase-todo"
+syntax "git-rebase-todo" "git-rebase-todo"
 
 # Default
 color yellow ".*"
