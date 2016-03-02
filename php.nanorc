@@ -19,7 +19,7 @@ color yellow "[=][^>]"
 color magenta "[+-]*([0-9]\.)*[0-9]+([eE][+-]?([0-9]\.)*[0-9])*"
 color magenta "0x[0-9a-zA-Z]*"
 # Special Variables
-color brightblue "(\$this|parent::|self::|\$this-\>)"
+color brightblue "(\$this|parent::|self::|\$this->)"
 # Bitwise Operations
 color magenta "(\;|\||\^){1}"
 # And/Or/SRO/etc
