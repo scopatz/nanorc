@@ -37,7 +37,7 @@ color brightyellow "table\.\<(concat|insert|maxn|move|pack|remove|sort|unpack)\>
 color brightyellow "utf8\.\<(char|charpattern|codes|codepoint|len|offset)\>"
 color brightyellow "coroutine\.\<(create|isyieldable|resume|running|status|wrap|yield)\>"
 color brightyellow "debug\.\<(debug|getfenv|gethook|getinfo|getlocal|getmetatable|getregistry|getupvalue|getuservalue|setfenv|sethook|setlocal|setmetatable|setupvalue|setuservalue|traceback|upvalueid|upvaluejoin)\>"
-color brightyellow "bit32\.\<(arshift|band|bnot|bor|btest|bxor|extract|replace|lrotate|lshift|rrotate|rshift|)\>"
+color brightyellow "bit32\.\<(arshift|band|bnot|bor|btest|bxor|extract|replace|lrotate|lshift|rrotate|rshift)\>"
 
 # File handle methods
 color brightyellow "\:\<(close|flush|lines|read|seek|setvbuf|write)\>"
