@@ -32,7 +32,7 @@ color magenta "\b(AnyObject)\b"
 color magenta "\b(AnyObject|AnyClass|GeneratorType|AnyGenerator|Element|Optional|Mirror|UnicodeScalarType|IntMax|UIntMax|Void|Any|Comparable|Equatable|Hashable|SequenceType)\b"
 
 # Standard Libraries
-color cyan "\b(Foundation|Glibc|Darwin|XCTest|)\b"
+color cyan "\b(Foundation|Glibc|Darwin|XCTest)\b"
 
 # Text
 color red ""[^"]*""
