@@ -71,3 +71,6 @@ color green "\-\-.*$"
 
 # Multiline comments
 color green start="\s*\-\-\s*\[\[" end="\]\]"
+
+# Trailing whitespaces
+color ,green "[[:space:]]+$"
