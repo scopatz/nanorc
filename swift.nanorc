@@ -23,8 +23,16 @@ color magenta "\<(init)\>"
 # Attribute
 color red "(@+[a-zA-Z]+)"
 
-# Numbers
+# Numbers / Decimal Literal 
 color blue "\<([0-9]+)\>"
+# Unicode Literal "U+"
+color blue "\<(U\++[0-9A-Z]+)\>"
+# Binary Literal "0b"
+color blue "\<(0b+[0-1]+)\>"
+# Octal Literal "0o"
+color blue "\<(0o+[0-7]+)\>"
+# Hexadecimal Literal "0x"
+color blue "\<(0x+[0-9A-Fa-f]+)\>"
 
 # Standard Types
 color brightmagenta "\<((U)?Int(8|16|32|64))\>"
