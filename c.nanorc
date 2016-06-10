@@ -39,4 +39,4 @@ color brightblue "//.*"
 color brightblue start="/\*" end="\*/"
 
 ## Trailing whitespace
-#color ,green "[[:space:]]+$"
+color ,green "[[:space:]]+$"
