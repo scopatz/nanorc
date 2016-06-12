@@ -20,3 +20,6 @@ color magenta "\<(APPLE|UNIX|WIN32|CYGWIN|BORLAND|MINGW|MSVC(_IDE|60|71|80|90)?)
 
 icolor brightblue "^([[:space:]]*)?#.*"
 icolor brightblue "[[:space:]]#.*"
+
+## Trailing whitespace
+color ,green "[[:space:]]+$"
