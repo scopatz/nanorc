@@ -1,7 +1,7 @@
 syntax "CoffeeScript" "\.coffee$"
 header "^#!.*/(env +)?coffee"
 
-color red "[!&|=/*+-<>]|\<(and|or|is|isnt|not)\>"
+color red "[!&|=/*+\-<>]|\<(and|or|is|isnt|not)\>"
 color brightblue "[A-Za-z_][A-Za-z0-9_]*:[[:space:]]*(->|\()" "->"
 color brightblue "[()]"
 color cyan  "\<(for|of|continue|break|isnt|null|unless|this|else|if|return)\>"
