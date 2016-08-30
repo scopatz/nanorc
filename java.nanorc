@@ -6,6 +6,7 @@ color red "\<(break|case|catch|continue|default|do|else|finally|for|if|return|sw
 color cyan "\<(abstract|class|extends|final|implements|import|instanceof|interface|native|package|private|protected|public|static|strictfp|super|synchronized|throws|volatile)\>"
 color red ""[^"]*""
 color yellow "\<(true|false|null)\>"
+icolor yellow "\b(([1-9][0-9]+)|0+)\.[0-9]+\b" "\b[1-9][0-9]*\b" "\b0[0-7]*\b" "\b0x[1-9a-f][0-9a-f]*\b"
 color blue "//.*"
 color blue start="/\*" end="\*/"
 color brightblue start="/\*\*" end="\*/"
