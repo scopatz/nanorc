@@ -30,7 +30,8 @@ color magenta "[.:;,+*|=!\%@]" "<" ">" "/" "-" "&"
 color magenta "[(){}]" "\[" "\]"
 
 ## numbers
-color brightyellow "\b[0-9]+\b"
+icolor blue "\b(([1-9][0-9]+)|0+)\.[0-9]+j?\b" "\b([1-9][0-9]*[Lj]?)\b" "\b0o?[0-7]*L?\b" "\b0x[1-9a-f][0-9a-f]*L?\b" "\b0b[01]+\b"
+
 
 ## strings
 color yellow "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
