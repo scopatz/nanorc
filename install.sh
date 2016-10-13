@@ -9,6 +9,7 @@ cd ~/.nano/
 unzip -o "/tmp/nanorc.zip"
 mv nanorc-master/* ./
 rm -rf nanorc-master
+rm /tmp/nanorc.zip
 
 if [ ! -f ~/.nanorc ]
 then
@@ -18,3 +19,4 @@ fi
 cat ~/.nano/nanorc >> ~/.nanorc
 sort -u ~/.nanorc > /tmp/nanorc2
 cat /tmp/nanorc2 > ~/.nanorc
+rm /tmp/nanorc2
