@@ -34,5 +34,5 @@ color brightcyan "##[^{].*$" "##$"
 ## Some common markers
 color brightcyan "(XXX|TODO|FIXME|\?\?\?)"
 ## Trailing spaces
-color red "[[:space:]]+$"
+color ,green "[[:space:]]+$"
 
