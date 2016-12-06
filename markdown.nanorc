@@ -45,3 +45,6 @@ color yellow   "`[^`]*`|^ {4}[^-+*].*"
 # code blocks
 color yellow start="^```[^$]" end="^```$"
 color yellow "^```$"
+
+## Trailing spaces
+color ,green "[[:space:]]+$"
