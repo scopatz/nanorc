@@ -24,3 +24,6 @@ color brightblack "^#.*"
 
 # Logic keywords
 color magenta "\<(if|elif|else|or|not|and|endif|end)\>"
+
+## Trailing spaces
+color ,green "[[:space:]]+$"
