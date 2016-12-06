@@ -14,3 +14,6 @@ color white "[sm]/.*/"
 color brightblue start="(^use| = new)" end=";"
 color brightgreen "#.*"
 color brightred start="<<EOSQL" end="EOSQL"
+
+## Trailing spaces
+color ,green "[[:space:]]+$"
