@@ -14,3 +14,5 @@ color brightblue "(@|@@)[0-9A-Z_a-z]+"
 ## Comments
 color brightcyan "#[^{].*$" "#$"
 
+## Trailing spaces
+color ,green "[[:space:]]+$"
