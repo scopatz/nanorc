@@ -46,7 +46,7 @@ color brightblack "^#[[:space:]]On branch"
 color brightblack "#"
 
 # Trailing spaces (+LINT is not ok, git uses tabs)
-color ,red "[[:space:]]+$"
+color ,green "[[:space:]]+$"
 
 
 # This syntax format is used for interactive rebasing
