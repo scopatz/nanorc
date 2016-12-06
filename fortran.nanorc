@@ -48,3 +48,6 @@ icolor cyan "<[^=     ]*>" "'(\\.|[^"])*'"
 
 ## Comment highlighting
 icolor brightred "!.*$" "(^[Cc]| [Cc]) .*$"
+
+## Trailing spaces
+color ,green "[[:space:]]+$"
