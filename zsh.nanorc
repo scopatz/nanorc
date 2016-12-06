@@ -39,4 +39,4 @@ color cyan "(^|[[:space:]])#.*$"
 color brightcyan "(^|[[:space:]])##.*$"
 
 ## Trailing spaces
-color ,blue "[[:space:]]+$"
+color ,green "[[:space:]]+$"
