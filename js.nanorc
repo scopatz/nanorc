@@ -38,6 +38,9 @@ color red "\<(true|false)\>"
 color brightyellow "L?\"(\\"|[^"])*\""
 color brightyellow "L?'(\'|[^'])*'"
 
+## Trailing spaces
+color ,green "[[:space:]]+$"
+
 ## Escapes
 color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
 
