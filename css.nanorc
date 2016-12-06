@@ -8,3 +8,6 @@ color brightwhite   start=":" end="[;^\{]"
 color brightblue    ":active|:focus|:hover|:link|:visited|:link|:after|:before|$"
 color brightblue    start="\/\*" end="\*\/"
 color green         ";|:|\{|\}"
+
+## Trailing spaces
+color ,green "[[:space:]]+$"
