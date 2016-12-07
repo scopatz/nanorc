@@ -34,3 +34,6 @@ color magenta start="#!\[" end="\]"
 
 # Some common markers
 color brightcyan "(XXX|TODO|FIXME|\?\?\?)"
+
+## Trailing spaces
+color ,green "[[:space:]]+$"

@@ -9,3 +9,6 @@ color cyan   ">"
 color yellow start="<!DOCTYPE" end="[/]?>"
 color yellow start="<!--" end="-->"
 color red    "&[^;]*;"
+
+## Trailing spaces
+color ,green "[[:space:]]+$"

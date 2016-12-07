@@ -22,3 +22,5 @@ color brightcyan "##[^{].*$" "##$"
 color green start="<<-?'?EOT'?" end="^EOT"
 color brightcyan "(XXX|TODO|FIXME|\?\?\?)"
 
+## Trailing spaces
+color ,green "[[:space:]]+$"

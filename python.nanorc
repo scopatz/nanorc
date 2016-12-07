@@ -47,3 +47,6 @@ color green start=""""([^"]|$)" end=""""" start="'''([^']|$)" end="'''"
 #color cyan start=""""" end=""""" start="'''" end="'''"
 #color cyan start="("""[^"]|[^"]""")" end="("""[^"]|[^"]""")" start="'''[^']" end="'''"
 #color cyan start="\"\"\"" end="\"\"\""
+
+## Trailing spaces
+color ,green "[[:space:]]+$"
