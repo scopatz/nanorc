@@ -1,3 +1,5 @@
+#!/bin/sh
+
 wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
 if [ ! -d ~/.nano/ ]
 then
@@ -16,7 +18,10 @@ then
     touch ~/.nanorc
 fi
 
-cat ~/.nano/nanorc >> ~/.nanorc
-sort -u ~/.nanorc > /tmp/nanorc2
-cat /tmp/nanorc2 > ~/.nanorc
-rm /tmp/nanorc2
+# add all includes from ~/.nano/nanorc if they're not already there
+NANORC_FILE=~/.nanorc
+while read inc; do
+    if ! grep -q "$inc" "${NANORC_FILE}"; then
+        echo "$inc" >> $NANORC_FILE
+    fi
+done < ~/.nano/nanorc
