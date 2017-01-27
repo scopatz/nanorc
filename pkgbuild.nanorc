@@ -2,9 +2,9 @@
 ##
 syntax "PKGBUILD" "^.*PKGBUILD$"
 color green start="^." end="$"
-color cyan "^.*(pkgbase|pkgname|pkgver|pkgrel|pkgdesc|arch|url|license).*=.*$"
-color brightcyan "\<(pkgbase|pkgname|pkgver|pkgrel|pkgdesc|arch|url|license)\>"
-color brightcyan "(\$|\$\{|\$\()(pkgbase|pkgname|pkgver|pkgrel|pkgdesc|arch|url|license)(\}|\))"
+color cyan "^.*(pkgbase|pkgname|epoch|pkgver|pkgrel|pkgdesc|arch|url|license).*=.*$"
+color brightcyan "\<(pkgbase|pkgname|epoch|pkgver|pkgrel|pkgdesc|arch|url|license)\>"
+color brightcyan "(\$|\$\{|\$\()(pkgbase|epoch|pkgname|pkgver|pkgrel|pkgdesc|arch|url|license)(\}|\))"
 color cyan "^.*(depends|makedepends|optdepends|conflicts|provides|replaces).*=.*$"
 color brightcyan "\<(depends|makedepends|optdepends|conflicts|provides|replaces)\>"
 color brightcyan "(\$|\$\{|\$\()(depends|makedepends|optdepends|conflicts|provides|replaces)(\}|\))"
