@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 function _fetch_sources() {
-  wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
+  wget -O /tmp/nanorc.zip https://github.com/gmcclins/nanorc/archive/master.zip
   if [ ! -d ~/.nano/ ]
   then
     mkdir ~/.nano/
@@ -10,8 +10,7 @@ function _fetch_sources() {
   cd ~/.nano/
 
   unzip -o "/tmp/nanorc.zip"
-  mv nanorc-master/* ./
-  rm -rf nanorc-master
+  mv nanorc-master/ ~/.nano/nanorc/
   rm /tmp/nanorc.zip
 }
 
@@ -21,12 +20,12 @@ function _update_nanorc() {
       touch ~/.nanorc
   fi
 
-  # add all includes from ~/.nano/nanorc if they're not already there
+  # add all includes from ~/.nano/nanorc/nanorc if they're not already there
   while read inc; do
       if ! grep -q "$inc" "${NANORC_FILE}"; then
           echo "$inc" >> $NANORC_FILE
       fi
-  done < ~/.nano/nanorc
+  done < ~/.nano/nanorc/nanorc
 }
 
 function _update_nanorc_lite() {
