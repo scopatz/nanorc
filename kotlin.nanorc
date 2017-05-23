@@ -1,0 +1,20 @@
+# Nano syntax file
+# Language:     Kotlin
+# Maintainer:   Bjarne Holen <bjarneholen@gmail.com>
+# Last Change:  2012 Feb 14
+
+syntax "kotlin" "\.kt$"
+color brightred "\<[A-Z_][0-9A-Z_]+\>" 
+color green "\<(namespace|as|type|class|this|super|val|var|fun|for|null|true|false|is|in|throw|return|break|continue|object|if|try|else|while|do|when|trait|import|where|by|get|set|abstract|enum|open|annotation|override|private|public|internal|protected|catch|out|vararg|inline|finally|final|package)\>"
+##
+## String highlighting.  You will in general want your comments and
+## strings to come last, because syntax highlighting rules will be
+## applied in the order they are read in.
+color blue "<[^= 	]*>" ""(\\.|[^"])*""
+
+## Comment highlighting
+color red "//.*"
+color red start="/\*" end="\*/"
+
+## Trailing whitespace
+color ,green "[[:space:]]+$"
