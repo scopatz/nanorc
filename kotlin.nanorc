@@ -1,16 +1,21 @@
 # Nano syntax file
 # Language:     Kotlin
 # Maintainer:   Bjarne Holen <bjarneholen@gmail.com>
-# Last Change:  2012 Feb 14
+# Edited by:    Ritiek Malhotra <ritiekmalhotra123@gmail.com>
+# Last Change:  2017 May 24
 
-syntax "kotlin" "\.kt$"
-color brightred "\<[A-Z_][0-9A-Z_]+\>" 
-color green "\<(namespace|as|type|class|this|super|val|var|fun|for|null|true|false|is|in|throw|return|break|continue|object|if|try|else|while|do|when|trait|import|where|by|get|set|abstract|enum|open|annotation|override|private|public|internal|protected|catch|out|vararg|inline|finally|final|package)\>"
+syntax "kotlin" "\.kt$" "\.kts$"
+color magenta "\b(([1-9][0-9]+)|0+)\.[0-9]+\b" "\b[1-9][0-9]*\b" "\b0[0-7]*\b" "\b0x[1-9a-f][0-9a-f]*\b"
+color yellow "[.:;,+*|=!\%@]" "<" ">" "/" "-" "&"
+color green "\<(namespace|as|type|class|this|super|val|var|fun|is|in|object|when|trait|import|where|by|get|set|abstract|enum|open|annotation|override|private|public|internal|protected|out|vararg|inline|final|package)\>"
+color yellow "\<(true|false|null)\>"
+color cyan "\<(break|catch|continue|do|else|finally|for|if|return|throw|try|while|repeat)\>"
+color brightred "\<(inner|outer)\>"
 ##
 ## String highlighting.  You will in general want your comments and
 ## strings to come last, because syntax highlighting rules will be
 ## applied in the order they are read in.
-color blue "<[^= 	]*>" ""(\\.|[^"])*""
+color brightblue "<[^= 	]*>" ""(\\.|[^"])*""
 
 ## Comment highlighting
 color red "//.*"
