@@ -1,6 +1,6 @@
 #!/bin/sh
 
-function _fetch_sources() {
+_fetch_sources(){
   wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
   if [ ! -d ~/.nano/ ]
   then
@@ -15,7 +15,7 @@ function _fetch_sources() {
   rm /tmp/nanorc.zip
 }
 
-function _update_nanorc() {
+_update_nanorc(){
   if [ ! -f ~/.nanorc ]
   then
       touch ~/.nanorc
@@ -29,7 +29,7 @@ function _update_nanorc() {
   done < ~/.nano/nanorc
 }
 
-function _update_nanorc_lite() {
+_update_nanorc_lite(){
   sed -i '/include "\/usr\/share\/nano\/\*\.nanorc"/i include "~\/.nano\/*.nanorc"' "${NANORC_FILE}"
 }
 
@@ -45,8 +45,9 @@ case "$1" in
 esac
 
 _fetch_sources;
-if [[ $UPDATE_LITE ]]; then
-  _update_nanorc_lite;
+if [ $UPDATE_LITE ];
+then
+  _update_nanorc_lite
 else
-  _update_nanorc;
+  _update_nanorc
 fi
