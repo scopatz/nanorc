@@ -2,12 +2,12 @@
 
 _fetch_sources(){
   wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
-  if [ ! -d ~/.nano/ ]
+  if [ ! -d ~/.nano/nanorc/ ]
   then
-    mkdir ~/.nano/
+    mkdir ~/.nano/nanorc/
   fi
 
-  cd ~/.nano/
+  cd ~/.nano/nanorc/
 
   unzip -o "/tmp/nanorc.zip"
   mv nanorc-master/* ./
@@ -26,7 +26,7 @@ _update_nanorc(){
       if ! grep -q "$inc" "${NANORC_FILE}"; then
           echo "$inc" >> $NANORC_FILE
       fi
-  done < ~/.nano/nanorc
+  done < ~/.nano/nanorc/nanorc
 }
 
 _update_nanorc_lite(){
