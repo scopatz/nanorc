@@ -9,15 +9,15 @@ definitions of syntax highlighting for various languages.
 1. Copy files
 ~~~~~~
 
-These should be placed inside of the ``~/.nano/`` directory. 
+These should be placed inside of the ``~/.nano/nanorc/`` directory. 
 Or for system-wide installation ``/usr/share/nano-syntax-highlighting/``.
 In other words::
 
-    git clone git@github.com:scopatz/nanorc.git ~/.nano
+    git clone git@github.com:scopatz/nanorc.git ~/.nano/nanorc/
 
 *Note - if you have any issues (ssh was not properly configured), alternatively use::
 
-    git clone https://github.com/scopatz/nanorc.git ~/.nano
+    git clone https://github.com/scopatz/nanorc.git ~/.nano/nanorc/
     
 *System wide will look like so*::
 
@@ -31,12 +31,12 @@ Once there you should add the languages you want to your
 nano configuration file ``~/.nanorc``.  For example::
 
     ## C/C++
-    include "~/.nano/c.nanorc"
+    include "~/.nano/nanorc/c.nanorc"
 
-You can also append the contents of ``~/.nano/nanorc`` into your
+You can also append the contents of ``~/.nano/nanorc/nanorc`` into your
 ``~/.nanorc`` to include all languages::
 
-    cat ~/.nano/nanorc >> ~/.nanorc
+    cat ~/.nano/nanorc/nanorc >> ~/.nanorc
     
 Or to be less verbose, append content of the folder in one line with wildcard::
 
@@ -45,7 +45,7 @@ Or to be less verbose, append content of the folder in one line with wildcard::
     ## For current user
     $ echo "include $install_path/*.nanorc" >> ~/.nanorc
     
-where ``$install_path`` is ``/usr/share/nano-syntax-highlighting`` or ``~/.nano/`` or ...
+where ``$install_path`` is ``/usr/share/nano-syntax-highlighting`` or ``~/.nano/nanorc/`` or ...
 
 1a.  Automatic installer
 ~~~~~~~~~~~~~~~~~~~~~~
