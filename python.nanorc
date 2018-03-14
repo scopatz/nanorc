@@ -51,3 +51,6 @@ color yellow start=""""[^"]" end=""""" start="'''[^']" end="'''"
 
 ## Trailing spaces
 color ,green "[[:space:]]+$"
+
+# reminders
+color brightwhite,yellow "(FIXME|TODO|XXX)"
