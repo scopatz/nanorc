@@ -41,8 +41,9 @@ color yellow "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
 color green "#.*$"
 
 ## block comments
-color green start=""""([^"]|$)" end=""""" start="'''([^']|$)" end="'''"
+#color green start=""""([^"]|$)" end=""""" start="'''([^']|$)" end="'''"
 #color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
+color yellow start=""""[^"]" end=""""" start="'''[^']" end="'''"
 #color cyan start="([[:space:]]"""|^""")" end=""""" start="'''[^']" end="'''"
 #color cyan start=""""" end=""""" start="'''" end="'''"
 #color cyan start="("""[^"]|[^"]""")" end="("""[^"]|[^"]""")" start="'''[^']" end="'''"
