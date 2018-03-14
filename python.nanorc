@@ -38,7 +38,7 @@ color yellow "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
 color yellow "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
 
 ## comments
-color green "#.*$"
+color green "^#.*|[[:space:]]#.*$"
 
 ## block comments
 #color green start=""""([^"]|$)" end=""""" start="'''([^']|$)" end="'''"
