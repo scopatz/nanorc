@@ -7,7 +7,7 @@ _fetch_sources(){
     mkdir ~/.nano/
   fi
 
-  cd ~/.nano/
+  cd ~/.nano/ || exit
 
   unzip -o "/tmp/nanorc.zip"
   mv nanorc-master/* ./
@@ -22,9 +22,9 @@ _update_nanorc(){
   fi
 
   # add all includes from ~/.nano/nanorc if they're not already there
-  while read inc; do
+  while read -r inc; do
       if ! grep -q "$inc" "${NANORC_FILE}"; then
-          echo "$inc" >> $NANORC_FILE
+          echo "$inc" >> "$NANORC_FILE"
       fi
   done < ~/.nano/nanorc
 }
