@@ -1,4 +1,4 @@
-syntax yaml "\.ya?ml"
+syntax "yaml" "\.ya?ml$"
 comment "#"
 header "^---" "%YAML"
 
@@ -11,11 +11,11 @@ color red "(^|\s+).*+\s*:(\s|$)"
 # Special values
 color yellow "[:-]\s+(true|false|null)\s*$"
 color yellow "[:-]\s+[0-9]+\.?[0-9]*(\s*($|#))"
-color yellow  "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "
+color yellow "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "
 
 # Separator
-color brightwhite "^\s+-"
-color brightwhite ":(\s|\t|$)"
+color normal "^\s+-"
+color normal ":(\s|\t|$)"
 
 # Comments
 color white "(^|[[:space:]])#.*$"
