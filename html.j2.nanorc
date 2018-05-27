@@ -1,0 +1,17 @@
+## Here is a short improved example for HTML.
+##
+syntax "HTML" "\.htm[l]?.j2$"
+color brightblue start="<" end=">"
+color red "&[^;[[:space:]]]*;"
+color yellow ""[^"]*"|qq\|.*\|"
+color red "(action|alt|bgcolor|height|href|id|label|longdesc|method|name|onclick|onfocus|onload|onmouseover|rel|size|span|src|style|target|title|type|value|width)="
+color magenta start="<!--" end="-->"
+
+## Trailing spaces
+color ,green "[[:space:]]+$"
+
+## Jinja templating
+color green "\{{2}.*\}{2}"
+color green "\{\%.*\%\}"
+color brightcyan "(if|endif|for)"
+
