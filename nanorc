@@ -1,3 +1,7 @@
+set tabsize 4
+set tabstospaces
+set constantshow #show line numbering
+
 include "~/.nano/apacheconf.nanorc"
 include "~/.nano/arduino.nanorc"
 include "~/.nano/asciidoc.nanorc"
