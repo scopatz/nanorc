@@ -18,4 +18,4 @@ color brightwhite "^\s+-"
 color brightwhite ":(\s|\t|$)"
 
 # Comments
-color white "(^|[[:space:]])#.*$"
+color brightblue "(^|[[:space:]])#.*$"
