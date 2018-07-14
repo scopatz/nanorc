@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# check for unzip before we continue
+if [ ! "$(command -v unzip)" ]; then
+  echo 'unzip is required but was not found. Install unzip first and then run this script again.' >&2
+  exit 1
+fi
+
 _fetch_sources(){
   wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
   if [ ! -d ~/.nano/ ]
@@ -8,7 +14,6 @@ _fetch_sources(){
   fi
 
   cd ~/.nano/ || exit
-
   unzip -o "/tmp/nanorc.zip"
   mv nanorc-master/* ./
   rm -rf nanorc-master
