@@ -5,6 +5,6 @@
 syntax "dotenv" "\.env" "\.env\..+"
 
 color green "(\(|\)|\$|=)"
-color brightyellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
+color yellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
 color cyan "(^|[[:space:]])#.*$"
 color ,green "[[:space:]]+$"

@@ -40,14 +40,14 @@ color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
 color magenta "[(){}]" "\[" "\]"
 
 # Add preprocessor commands.
-color brightcyan "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
+color cyan "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
 
 ## String highlighting.  
 icolor cyan "<[^=     ]*>" ""(\\.|[^"])*""
 icolor cyan "<[^=     ]*>" "'(\\.|[^"])*'"
 
 ## Comment highlighting
-icolor brightred "!.*$" "(^[Cc]| [Cc]) .*$"
+icolor red "!.*$" "(^[Cc]| [Cc]) .*$"
 
 ## Trailing spaces
 color ,green "[[:space:]]+$"

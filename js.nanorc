@@ -6,9 +6,9 @@
 #color green "//.*$" start="\/\*" end="\*\/"
 #color blue "'(\\.|[^'])*'"
 #color red ""(\\.|[^\"])*""
-#color brightgreen "\<(true)\>"
-#color brightred "\<(false)\>" "http\:\/\/.*$"
-#color brightmagenta "[0-9](\\.|[^\"])*)"
+#color green "\<(true)\>"
+#color red "\<(false)\>" "http\:\/\/.*$"
+#color magenta "[0-9](\\.|[^\"])*)"
 
 ## New updated taken from http://wiki.linuxhelp.net/index.php/Nano_Syntax_Highlighting
 
@@ -38,8 +38,8 @@ color red "\<(Number|Object|RegExp|String)\>"
 color red "\<(true|false)\>"
 
 ## String
-color brightyellow "L?\"(\\"|[^"])*\""
-color brightyellow "L?'(\'|[^'])*'"
+color yellow "L?\"(\\"|[^"])*\""
+color yellow "L?'(\'|[^'])*'"
 
 ## Trailing spaces
 color ,green "[[:space:]]+$"
@@ -48,5 +48,5 @@ color ,green "[[:space:]]+$"
 color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
 
 ## Comments
-color brightblue start="/\*" end="\*/"
-color brightblue "//.*$"
+color blue start="/\*" end="\*/"
+color blue "//.*$"

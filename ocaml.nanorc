@@ -22,6 +22,6 @@ color yellow "\<(new|ref|mutable|lazy|assert|raise)\>"
 #comments
 color white start="\(\*" end="\*\)"
 #strings (no multiline handling yet)
-color brightblack ""[^\"]*""
+color black ""[^\"]*""
 ## Trailing spaces
 color ,green "[[:space:]]+$"

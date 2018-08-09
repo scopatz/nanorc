@@ -28,7 +28,7 @@ color yellow ""[^\"]*""
 color green "--.*"
 color green start="\{-" end="-\}"
 
-color brightred "undefined"
+color red "undefined"
 
 ## Trailing spaces
 color ,green "[[:space:]]+$"
