@@ -4,11 +4,11 @@ syntax "svn-commit" "svn-commit(\.[[:digit:]]+)?\.tmp$"
 color yellow ".*"
 
 # ignore after line EDITOR_EOF_PREFIX (see svn/util.c)
-color brightblack "^--.+--$"
+color black "^--.+--$"
 
 # files changes
 color white       "^[ADM_](M|[[:space:]])[[:space:]](\+|[[:space:]])[[:space:]].*"
 color red         "^D[[:space:]]{4}"
 color green       "^[M_](M|[[:space:]])[[:space:]]{3}"
-color brightgreen "^A(M|[[:space:]])[[:space:]]{3}"
-color brightblue  "^A(M|[[:space:]])[[:space:]]\+[[:space:]]"
+color green "^A(M|[[:space:]])[[:space:]]{3}"
+color blue  "^A(M|[[:space:]])[[:space:]]\+[[:space:]]"

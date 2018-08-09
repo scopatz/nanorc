@@ -24,11 +24,11 @@ color green     "\<(VARCHAR|TINYINT|TEXT|DATE|SMALLINT|MEDIUMINT|INT|INTEGER|BIG
 icolor cyan "\.\<(databases|dump|echo|exit|explain|header(s)?|help)\>"
 icolor cyan "\.\<(import|indices|mode|nullvalue|output|prompt|quit|read)\>"
 icolor cyan "\.\<(schema|separator|show|tables|timeout|width)\>"
-color brightcyan  "\<(ON|OFF)\>"
+color cyan  "\<(ON|OFF)\>"
 
 color blue   "\<([0-9]+)\>"
 color yellow ""(\\.|[^"])*"|'(\\.|[^'])*'"
 color yellow   "`(\\.|[^\\`])*`"
-color brightblack  "\-\-.*$"
+color black  "\-\-.*$"
 color ,green "[[:space:]]+$"
 color ,red "	+ +| +	+"

@@ -2,8 +2,8 @@
 ##
 syntax "Man" "\.[1-9]x?$"
 color green "\.(S|T)H.*$"
-color brightgreen "\.(S|T)H" "\.TP"
-color brightred "\.(BR?|I[PR]?).*$"
-color brightblue "\.(BR?|I[PR]?|PP)"
-color brightwhite "\\f[BIPR]"
+color green "\.(S|T)H" "\.TP"
+color red "\.(BR?|I[PR]?).*$"
+color blue "\.(BR?|I[PR]?|PP)"
+color white "\\f[BIPR]"
 color yellow "\.(br|DS|RS|RE|PD)"

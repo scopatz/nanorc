@@ -12,12 +12,12 @@ color magenta "^~~~~+$"
 color green "^====[[:space:]].*$"
 color green "^\^\^\^\^+$"
 # h5
-color brightblue "^=====[[:space:]].*$"
-color brightblue "^\+\+\+\++$"
+color blue "^=====[[:space:]].*$"
+color blue "^\+\+\+\++$"
 
 # attributes
-color brightgreen ":.*:"
-color brightred "\{[a-z0-9]*\}"
+color green ":.*:"
+color red "\{[a-z0-9]*\}"
 color red "\\\{[a-z0-9]*\}"
 color red "\+\+\+\{[a-z0-9]*\}\+\+\+"
 
@@ -40,8 +40,8 @@ color yellow "'[^']+'"
 color cyan "`{1,2}[^']+'{1,2}"
 
 # bullets
-color brightmagenta "^[[:space:]]*[\*\.-]{1,5}[[:space:]]"
+color magenta "^[[:space:]]*[\*\.-]{1,5}[[:space:]]"
 
 # anchors
-color brightwhite "\[\[.*\]\]"
-color brightwhite "<<.*>>"
+color white "\[\[.*\]\]"
+color white "<<.*>>"

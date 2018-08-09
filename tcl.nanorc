@@ -9,15 +9,15 @@ color cyan "\<(string bytelength|string compare|string equal|string first|string
 ## Extended TclX [info commands]
 color cyan "\<(alarm|auto_load_pkg|bsearch|catclose|catgets|catopen|ccollate|cconcat|cequal|chgrp|chmod|chown|chroot|cindex|clength|cmdtrace|commandloop|crange|csubstr|ctoken|ctype|dup|echo|execl|fcntl|flock|fork|fstat|ftruncate|funlock|host_info|id|infox|keyldel|keylget|keylkeys|keylset|kill|lassign|lcontain|lempty|lgets|link|lmatch|loadlibindex|loop|lvarcat|lvarpop|lvarpush|max|min|nice|pipe|profile|random|readdir|replicate|scancontext|scanfile|scanmatch|select|server_accept|server_create|signal|sleep|sync|system|tclx_findinit|tclx_fork|tclx_load_tndxs|tclx_sleep|tclx_system|tclx_wait|times|translit|try_eval|umask|wait)\>"
 ## Function declaration
-color brightblue "proc[[:space:]]" "(\{|\})"
+color blue "proc[[:space:]]" "(\{|\})"
 ## Syntax
 color green "(\(|\)|\;|`|\\|\$|<|>|!|=|&|\|)"
 ## Numbers
-color brightyellow "\<[0-9]+(\.[0-9]+)?\>"
+color yellow "\<[0-9]+(\.[0-9]+)?\>"
 ## Strings
 color yellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
 ## Variables
-icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
+icolor red "\$\{?[0-9A-Z_!@#$*?-]+\}?"
 ## Comments
 color magenta "(^|;)[[:space:]]*#.*"
 ## Trailing whitespace

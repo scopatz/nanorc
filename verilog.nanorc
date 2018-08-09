@@ -21,12 +21,12 @@
 syntax "verilog" "\.(v|vh|sv|svh)$"
 
 # I don't think we want this.
-#color brightred "\<[A-Z_][0-9A-Z_]+\>"
+#color red "\<[A-Z_][0-9A-Z_]+\>"
 
 # Module, package, etc. definitions: colorize their names.
-# (I'm not sure if brightred is a good color).
-icolor brightred "(module|package|task|interface|program|class) [0-9A-Z_]+"
-icolor brightred "function [0-9A-Z_]+ [0-9A-Z_]+"
+# (I'm not sure if red is a good color).
+icolor red "(module|package|task|interface|program|class) [0-9A-Z_]+"
+icolor red "function [0-9A-Z_]+ [0-9A-Z_]+"
 
 # Verilog keywords, taken from http://svref.renerta.com/sv00003.htm.
 color green "\<(always|and|assign|automatic|begin|buf|bufif0|bufif1|case|casex|casez|cell|class|cmos|config)\>"
@@ -64,18 +64,18 @@ icolor cyan "\$[0-9A-Z_]+"
 icolor cyan "^[[:space:]]*`[0-9A-Z_]+"
 
 # I'm not sure what this line does... it was in c.nanorc.
-#color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
+#color magenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
 
 # Strings.  In general you will want your strings and comments to come last,
 # because highlighting rules are applied in the order they are read in.
-color brightyellow ""([^"]|\\")*"" "<[^[:blank:]=]*>"
+color yellow ""([^"]|\\")*"" "<[^[:blank:]=]*>"
 # Multiline strings.  This regex is VERY resource intensive,
 # and sometimes colours things that shouldn't be coloured.
-###color brightyellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
+###color yellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 
 # Comments.
-color brightblue "//.*"
-color brightblue start="/\*" end="\*/"
+color blue "//.*"
+color blue start="/\*" end="\*/"
 
 # Reminders.
 color ,yellow "\<(FIXME|TODO|XXX)\>"

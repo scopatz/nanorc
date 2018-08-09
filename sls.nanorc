@@ -20,7 +20,7 @@ color green ""(\\.|[^"])*"|'(\\.|[^'])*'"
 color yellow "\<(grain|grains|compound|pcre|grain_pcre|list|pillar)\>"
 
 # Comments
-color brightblack "^#.*"
+color black "^#.*"
 
 # Logic keywords
 color magenta "\<(if|elif|else|or|not|and|endif|end)\>"

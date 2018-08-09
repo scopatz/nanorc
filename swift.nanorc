@@ -9,7 +9,7 @@ color white ".+"
 
 # Operators
 color yellow "[.:;,+*|=!?\%]" "<" ">" "/" "-" "&"
-color brightyellow "[!]"
+color yellow "[!]"
 
 # Statements
 color magenta  "\<(class|import|let|var|struct|enum|func|if|else|switch|case|default|for|in|static|private|public|throws)\>"
@@ -35,10 +35,10 @@ color blue "\<(0o+[0-7]+)\>"
 color blue "\<(0x+[0-9A-Fa-f]+)\>"
 
 # Standard Types
-color brightmagenta "\<((U)?Int(8|16|32|64))\>"
-color brightmagenta "\<(true|false|nil)\>"
-color brightmagenta "\<(UInt|Int|Double|String|Float|Bool|Dictionary|Array|Character|Range|Set|Bit|RawByte|Slice)\>"
-color brightmagenta "\<(UnicodeScalar|UnsafePointer|UnsafeMutablePointer)\>"
+color magenta "\<((U)?Int(8|16|32|64))\>"
+color magenta "\<(true|false|nil)\>"
+color magenta "\<(UInt|Int|Double|String|Float|Bool|Dictionary|Array|Character|Range|Set|Bit|RawByte|Slice)\>"
+color magenta "\<(UnicodeScalar|UnsafePointer|UnsafeMutablePointer)\>"
 color magenta "\<(AnyObject)\>"
 
 # Standard Type Aliases and Protocols
@@ -56,7 +56,7 @@ color white start="\\\(" end="\)"
 
 # Comments
 color green "//.*"
-color brightgreen "///.*"
+color green "///.*"
 color green start="/\*\*" end="\*/"
 color green "[/**]"
 

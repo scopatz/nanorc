@@ -9,10 +9,10 @@ icolor yellow "\.[A-Z_]+\>"
 color green ""([^"]|(\\"))*"" "%[QW]?\{[^}]*\}" "%[QW]?\([^)]*\)" "%[QW]?<[^>]*>" "%[QW]?\$[^$]*\$" "%[QW]?\^[^^]*\^" "%[QW]?![^!]*!"
 color green "'([^']|(\\'))*'" "%[qw]\{[^}]*\}" "%[qw]\([^)]*\)" "%[qw]<[^>]*>" "%[qw]\[[^]]*\]" "%[qw]\$[^$]*\$" "%[qw]\^[^^]*\^" "%[qw]![^!]*!"
 ## Vars
-color brightgreen  "#\{[^}]*\}"
-color brightblue "(@|@@)[0-9A-Z_a-z]+"
+color green  "#\{[^}]*\}"
+color blue "(@|@@)[0-9A-Z_a-z]+"
 ## Comments
-color brightcyan "#[^{].*$" "#$"
+color cyan "#[^{].*$" "#$"
 
 ## Trailing spaces
 color ,green "[[:space:]]+$"

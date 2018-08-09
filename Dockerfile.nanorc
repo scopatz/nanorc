@@ -5,10 +5,10 @@ syntax "Dockerfile" "Dockerfile[^/]*$" "\.dockerfile$"
 icolor red "^(FROM|MAINTAINER|RUN|CMD|LABEL|EXPOSE|ENV|ADD|COPY|ENTRYPOINT|VOLUME|USER|WORKDIR|ONBUILD)[[:space:]]"
 
 ## Brackets & parenthesis
-color brightgreen "(\(|\)|\[|\])"
+color green "(\(|\)|\[|\])"
 
 ## Double ampersand
-color brightmagenta "&&"
+color magenta "&&"
 
 ## Comments
 icolor cyan "^[[:space:]]*#.*$"
@@ -17,10 +17,10 @@ icolor cyan "^[[:space:]]*#.*$"
 color ,green "[[:space:]]+$"
 
 ## Strings, single-quoted
-color brightwhite "'([^']|(\\'))*'" "%[qw]\{[^}]*\}" "%[qw]\([^)]*\)" "%[qw]<[^>]*>" "%[qw]\[[^]]*\]" "%[qw]\$[^$]*\$" "%[qw]\^[^^]*\^" "%[qw]![^!]*!"
+color white "'([^']|(\\'))*'" "%[qw]\{[^}]*\}" "%[qw]\([^)]*\)" "%[qw]<[^>]*>" "%[qw]\[[^]]*\]" "%[qw]\$[^$]*\$" "%[qw]\^[^^]*\^" "%[qw]![^!]*!"
 
 ## Strings, double-quoted
-color brightwhite ""([^"]|(\\"))*"" "%[QW]?\{[^}]*\}" "%[QW]?\([^)]*\)" "%[QW]?<[^>]*>" "%[QW]?\[[^]]*\]" "%[QW]?\$[^$]*\$" "%[QW]?\^[^^]*\^" "%[QW]?![^!]*!"
+color white ""([^"]|(\\"))*"" "%[QW]?\{[^}]*\}" "%[QW]?\([^)]*\)" "%[QW]?<[^>]*>" "%[QW]?\[[^]]*\]" "%[QW]?\$[^$]*\$" "%[QW]?\^[^^]*\^" "%[QW]?![^!]*!"
 
 ## Single and double quotes
-color brightyellow "('|\")"
+color yellow "('|\")"

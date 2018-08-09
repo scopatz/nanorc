@@ -5,7 +5,7 @@ syntax "RST" "\.rest$" "\.rst$"
 # bold
 color red "\*\*[^*]+\*\*"
 # code block
-color brightred "::"
+color red "::"
 # link reference
 color blue "`[^`]+`_{1,2}"
 # code

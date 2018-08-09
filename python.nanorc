@@ -14,14 +14,14 @@ color cyan "\<(__abs__|__add__|__and__|__call__|__cmp__|__coerce__|__complex__|_
 ## exception classes
 # color cyan "\<(Exception|StandardError|ArithmeticError|LookupError|EnvironmentError|AssertionError|AttributeError|EOFError|FloatingPointError|IOError|ImportError|IndexError|KeyError|KeyboardInterrupt|MemoryError|NameError|NotImplementedError|OSError|OverflowError|RuntimeError|SyntaxError|SystemError|SystemExit|TypeError|UnboundLocalError|UnicodeError|ValueError|WindowsError|ZeroDivisionError)\>"
 ## types
-color brightcyan "\<(NoneType|TypeType|IntType|LongType|FloatType|ComplexType|StringType|UnicodeType|BufferType|TupleType|ListType|DictType|FunctionType|LambdaType|CodeType|ClassType|UnboundMethodType|InstanceType|MethodType|BuiltinFunctionType|BuiltinMethodType|ModuleType|FileType|XRangeType|TracebackType|FrameType|SliceType|EllipsisType)\>"
+color cyan "\<(NoneType|TypeType|IntType|LongType|FloatType|ComplexType|StringType|UnicodeType|BufferType|TupleType|ListType|DictType|FunctionType|LambdaType|CodeType|ClassType|UnboundMethodType|InstanceType|MethodType|BuiltinFunctionType|BuiltinMethodType|ModuleType|FileType|XRangeType|TracebackType|FrameType|SliceType|EllipsisType)\>"
 ## definitions
-color brightcyan "def [a-zA-Z_0-9]+" 
+color cyan "def [a-zA-Z_0-9]+" 
 ## keywords
-color brightblue "\<(and|as|assert|break|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|map|not|or|pass|print|raise|return|try|with|while|yield)\>" 
+color blue "\<(and|as|assert|break|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|map|not|or|pass|print|raise|return|try|with|while|yield)\>" 
 
 ## decorators
-color brightgreen "@.*[(]"
+color green "@.*[(]"
 
 ## operators
 color magenta "[.:;,+*|=!\%@]" "<" ">" "/" "-" "&"
