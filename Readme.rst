@@ -70,6 +70,10 @@ or alternatively::
 ~~~~~~~~~~
 On **Arch Linux** and other *pacman/aur* based systems it is possible to::
 
-    $ yaourt nano-syntax-highlight
+    $ aurman -S nano-syntax-highlighting-git
+
+or search package::
+
+    $ aurman -Ss nano-syntax-highlight
 
 Then you need to mannually add ``.nanorc``-s to user's ``~/.nanorc`` or system ``/etc/nanorc``. See **$2**
