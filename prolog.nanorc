@@ -1,10 +1,10 @@
 ## Here is a prolog example.
 
-syntax prolog "\.pl"
+syntax "prolog" "\.pl"
 comment "%"
 
 # Reset everything
-color normal ".*"
+color brightwhite ".*"
 
 # Integers and floats
 color yellow "(^| |=)[0-9]+\.?[0-9]*"
@@ -18,7 +18,7 @@ color yellow "(^|[[:blank:]]|\(|,)_($|[[:blank:]]|,|\))"
 
 # Functions
 color cyan "(^|[[:blank:]])\w+\("
-color normal "\(|\)|\[|\]|,|=|\\="
+color brightwhite "\(|\)|\[|\]|,|=|\\="
 
 # Atoms
 color green start="\"" end="\""
@@ -32,4 +32,4 @@ color white start="/\*" end="\*/"
 color black,yellow "(BUG|DEBUG|FIXME|IDEA|NOTE|REVIEW|TEMP|TODO|WARNING|XXX)"
 
 # Spaces in front of tabs
-color ,red " +	+"
+color ,red " +  +"
