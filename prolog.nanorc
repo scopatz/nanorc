@@ -32,4 +32,4 @@ color white start="/\*" end="\*/"
 color black,yellow "(BUG|DEBUG|FIXME|IDEA|NOTE|REVIEW|TEMP|TODO|WARNING|XXX)"
 
 # Spaces in front of tabs
-color ,red " +  +"
+color ,red " +	+"
