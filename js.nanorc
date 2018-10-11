@@ -29,7 +29,7 @@ color green "\<(break|case|catch|continue|default|delete|do|else|finally)\>"
 color green "\<(for|function|if|in|instanceof|new|null|return|switch)\>"
 color green "\<(switch|this|throw|try|typeof|undefined|var|void|while|with)\>"
 color green "\<(import|as|from|export)\>"
-color green "\<const|let|class|extends|of|get|set|await|async|yield)\>"
+color green "\<(const|let|class|extends|of|get|set|await|async|yield)\>"
 
 ## Type specifiers
 color red "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
