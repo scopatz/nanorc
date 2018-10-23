@@ -1,7 +1,7 @@
 ## Syntax highlighting for Hashicorp Terraform / HCL files.
 
-# See:  http://www.json.org/
-# Original author:  Aapo Rantalainen
+# See:  https://github.com/hashicorp/hcl
+# Original author:  John Boero
 # License:  GPLv3 or newer
 
 syntax hcl "\.(tf|hcl)$"
