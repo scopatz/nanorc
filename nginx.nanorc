@@ -1,4 +1,4 @@
-syntax "Nginx" "nginx.*\.conf$" "\.nginx$"
+syntax "Nginx" "nginx.*\.conf$" "\.nginx$" ".*\/sites\-available\/.*$" ".*\/sites\-enabled\/.*$"
 header "^(server|upstream)[^{]*\{$"
 
 color brightmagenta  "\<(events|server|http|location|upstream)[[:space:]]*\{"
