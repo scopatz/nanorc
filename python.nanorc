@@ -12,7 +12,7 @@ color cyan "\<(abs|append|apply|buffer|callable|chr|clear|close|closed|cmp|coerc
 ## special method names
 color cyan "\<(__abs__|__add__|__and__|__call__|__cmp__|__coerce__|__complex__|__concat__|__contains__|__del__|__delattr__|__delitem__|__delslice__|__div__|__divmod__|__float__|__getattr__|__getitem__|__getslice__|__hash__|__hex__|__init__|__int__|__inv__|__invert__|__len__|__long__|__lshift__|__mod__|__mul__|__neg__|__nonzero__|__oct__|__or__|__pos__|__pow__|__radd__|__rand__|__rcmp__|__rdiv__|__rdivmod__|__repeat__|__repr__|__rlshift__|__rmod__|__rmul__|__ror__|__rpow__|__rrshift__|__rshift__|__rsub__|__rxor__|__setattr__|__setitem__|__setslice__|__str__|__sub__|__xor__)\>"
 ## exception classes
-# color cyan "\<(Exception|StandardError|ArithmeticError|LookupError|EnvironmentError|AssertionError|AttributeError|EOFError|FloatingPointError|IOError|ImportError|IndexError|KeyError|KeyboardInterrupt|MemoryError|NameError|NotImplementedError|OSError|OverflowError|RuntimeError|SyntaxError|SystemError|SystemExit|TypeError|UnboundLocalError|UnicodeError|ValueError|WindowsError|ZeroDivisionError)\>"
+color cyan "\<(Exception|StandardError|ArithmeticError|LookupError|EnvironmentError|AssertionError|AttributeError|EOFError|FloatingPointError|IOError|ImportError|IndexError|KeyError|KeyboardInterrupt|MemoryError|NameError|NotImplementedError|OSError|OverflowError|RuntimeError|SyntaxError|SystemError|SystemExit|TypeError|UnboundLocalError|UnicodeError|ValueError|WindowsError|ZeroDivisionError)\>"
 ## types
 color brightcyan "\<(NoneType|TypeType|IntType|LongType|FloatType|ComplexType|StringType|UnicodeType|BufferType|TupleType|ListType|DictType|FunctionType|LambdaType|CodeType|ClassType|UnboundMethodType|InstanceType|MethodType|BuiltinFunctionType|BuiltinMethodType|ModuleType|FileType|XRangeType|TracebackType|FrameType|SliceType|EllipsisType)\>"
 ## definitions
@@ -30,7 +30,7 @@ color magenta "[.:;,+*|=!\%@]" "<" ">" "/" "-" "&"
 color magenta "[(){}]" "\[" "\]"
 
 ## numbers
-icolor blue "\b(([1-9][0-9]+)|0+)\.[0-9]+j?\b" "\b([1-9][0-9]*[Lj]?)\b" "\b0o?[0-7]*L?\b" "\b0x[1-9a-f][0-9a-f]*L?\b" "\b0b[01]+\b"
+icolor brightyellow "\b(([1-9][0-9]+)|0+)\.[0-9]+j?\b" "\b([1-9][0-9]*[Lj]?)\b" "\b0o?[0-7]*L?\b" "\b0x[1-9a-f][0-9a-f]*L?\b" "\b0b[01]+\b"
 
 
 ## strings
@@ -38,15 +38,13 @@ color yellow "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
 color yellow "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
 
 ## comments
-color green "#.*$"
+color green "^#.*|[[:space:]]#.*$"
 
 ## block comments
-color green start=""""([^"]|$)" end=""""" start="'''([^']|$)" end="'''"
-#color cyan start=""""[^"]" end=""""" start="'''[^']" end="'''"
-#color cyan start="([[:space:]]"""|^""")" end=""""" start="'''[^']" end="'''"
-#color cyan start=""""" end=""""" start="'''" end="'''"
-#color cyan start="("""[^"]|[^"]""")" end="("""[^"]|[^"]""")" start="'''[^']" end="'''"
-#color cyan start="\"\"\"" end="\"\"\""
+color yellow start=""""[^"]" end=""""" start="'''[^']" end="'''"
 
-## Trailing spaces
+## trailing spaces
 color ,green "[[:space:]]+$"
+
+## reminders
+color brightwhite,yellow "(FIXME|TODO|XXX)"
