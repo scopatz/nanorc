@@ -1,7 +1,8 @@
 ## Here is an example for Python.
 ##
-syntax "Python" "\.py$"
+syntax "python" "\.py$"
 header "^#!.*/(env +)?python[-0-9._]*( |$)"
+magic "Python script"
 
 ## built-in objects
 color cyan "\<(None|self|True|False)\>"
