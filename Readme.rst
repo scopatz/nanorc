@@ -79,5 +79,5 @@ or search package::
 Then you need to mannually add ``.nanorc``-s to user's ``~/.nanorc`` or system ``/etc/nanorc``. See **$2**
 
 Acknowledgement
-~~~~~~~~~~
+~~~~~~~~~~~~~~~
 Some of these files are derived from the original nano release [`Project <https://www.nano-editor.org/>`_] [`Repository <https://git.savannah.gnu.org/cgit/nano.git>`_]
