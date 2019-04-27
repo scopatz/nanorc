@@ -1,0 +1,19 @@
+syntax "Jade" "\.jade$"
+# Elements
+color yellow "^\s*([a-z0-9]+)"
+# Main elements
+color red "^\s*(html|head|body)"
+# Parenthesis content
+color blue "\((.*?)\)"
+# Strings
+color cyan "('[^']*')|(\"[^\"]*\")"
+# Parenthesis, commas, equals
+icolor green "\(" "\)" "\," "\="
+# Comments and spaces
+color blue "//.*"
+color blue start="/\*" end="\*/"
+color ,green "[[:space:]]+$"
+# Pipes
+color yellow,magenta "\|"
+# Doctype
+color brightblack "^\s*(doctype)(.*)"
