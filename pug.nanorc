@@ -7,8 +7,12 @@ color red "^\s*(html|head|body)"
 icolor magenta "^\s*(include)"
 # Variables
 color brightblue "^\s*(\-)\s(var)\s([a-z0-9]+)"
-icolor magenta "^\s*(\-)\s(var)$" "^\s*(\-)\s(var)\s"
-color white "^\s*(\-)"
+icolor magenta "^\s*-\s(var)$" "^\s*-\s(var)\s"
+# Cases
+color brightblue "^\s*(case)\s(.*)"
+color cyan "^\s*(when)\s(.*)"
+icolor magenta "^\s*(case|when|default)$" "^\s*(case|when|default)\s"
+color brightred "^\s*-\s(break)$" "^\s*-\s(break)\s"
 # Conditionals
 icolor magenta "^\s*(if|else|else if)$" "^\s*(if|else|else if)\s"
 # Parenthesis content
@@ -17,9 +21,10 @@ color blue start="\(" end="\)"
 color cyan "('[^']*')|(\"[^\"]*\")"
 # Parenthesis, commas, equals
 icolor green "\(" "\)" "\," "\="
-# Comments and spaces
+# Comments, dashes and spaces
 color blue "\s+(//.*)"
 color blue start="/\*" end="\*/"
+color white "^\s*(\-)"
 color ,green "[[:space:]]+$"
 # Unbuffered comments
 color brightblue "\s+(//-.*)"
