@@ -18,9 +18,13 @@ color cyan "('[^']*')|(\"[^\"]*\")"
 # Parenthesis, commas, equals
 icolor green "\(" "\)" "\," "\="
 # Comments and spaces
-color blue "//.*"
+color blue "\s+(//.*)"
 color blue start="/\*" end="\*/"
 color ,green "[[:space:]]+$"
+# HTML-style conditional comments
+color brightmagenta "<!--(.*)>"
+# HTML-style elements
+color yellow "<([^!].*)>"
 # Pipes
 color yellow,magenta "\|"
 # Doctype
