@@ -21,6 +21,8 @@ icolor green "\(" "\)" "\," "\="
 color blue "\s+(//.*)"
 color blue start="/\*" end="\*/"
 color ,green "[[:space:]]+$"
+# Unbuffered comments
+color brightblue "\s+(//-.*)"
 # HTML-style conditional comments
 color brightmagenta "<!--(.*)>"
 # HTML-style elements
