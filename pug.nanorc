@@ -3,6 +3,8 @@ syntax "Pug" "\.pug$"
 color yellow "^\s*([a-z0-9]+)"
 # Main elements
 color red "^\s*(html|head|body)"
+# Includes
+color magenta "^\s*(include)"
 # Parenthesis content
 color blue "\((.*?)\)"
 # Strings
