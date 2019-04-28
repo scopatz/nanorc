@@ -4,7 +4,13 @@ color yellow "^\s*([a-z0-9]+)"
 # Main elements
 color red "^\s*(html|head|body)"
 # Includes
-color magenta "^\s*(include)"
+icolor magenta "^\s*(include)"
+# Variables
+color brightblue "^\s*(\-)\s(var)\s([a-z0-9]+)"
+icolor magenta "^\s*(\-)\s(var)$" "^\s*(\-)\s(var)\s"
+color white "^\s*(\-)"
+# Conditionals
+icolor magenta "^\s*(if|else|else if)$" "^\s*(if|else|else if)\s"
 # Parenthesis content
 color blue "\((.*?)\)"
 # Strings
