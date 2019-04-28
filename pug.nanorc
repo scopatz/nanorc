@@ -24,7 +24,8 @@ color ,green "[[:space:]]+$"
 # Unbuffered comments
 color brightblue "\s+(//-.*)"
 # HTML-style conditional comments
-color brightmagenta "<!--(.*)>"
+color brightmagenta start="<!" end="!>"
+color brightmagenta "<!\[endif\]-->"
 # HTML-style elements
 color yellow "<([^!].*)>"
 # Pipes
