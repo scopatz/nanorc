@@ -12,7 +12,7 @@ color white "^\s*(\-)"
 # Conditionals
 icolor magenta "^\s*(if|else|else if)$" "^\s*(if|else|else if)\s"
 # Parenthesis content
-color blue "\((.*?)\)"
+color blue start="\(" end="\)"
 # Strings
 color cyan "('[^']*')|(\"[^\"]*\")"
 # Parenthesis, commas, equals
