@@ -1,0 +1,39 @@
+syntax "typescript" "\.(ts)$"
+
+## Default
+color white "^.+$"
+
+## Decimal, cotal and hexadecimal numbers
+color yellow "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
+
+## Floating point number with at least one digit before decimal point
+color yellow "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
+color yellow "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
+
+## Keywords
+color green "\<(abstract|boolean|break|byte|case|catch|set)\>"
+color green "\<(class|const|continue|debugger|default|delete|readonly)\>"
+color green "\<(do|else|enum|export|extends|finally|final|for)\>"
+color green "\<(from|function|goto|if|implements|import|instanceof)\>"
+color green "\<(var|interface|int|in|let|new|package|private)\>"
+color green "\<(protected|public|return|static|super|switch)\>"
+color green "\<(this|throw|try|typeof)\>"
+color green "\<(void|while|with|yield)\>"
+
+## Type specifiers
+color red "\<(Array|Boolean|Date|Enumerator|Error|Function)\>"
+color red "\<(Number|Object|RegExp|String)\>"
+color red "\<(true|false)\>"
+
+## String
+color brightyellow "L?\"(\\"|[^"])*\""
+color brightyellow "L?'(\'|[^'])*'"
+color brightcyan "L?`(\`|[^`])*`"
+color brightwhite,blue start="\$\{" end="\}"
+
+## Escapes
+color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
+
+## Comments
+color magenta start="/\*" end="\*/"
+color magenta "//.*$"
