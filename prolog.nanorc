@@ -1,6 +1,6 @@
 ## Here is a prolog example.
 
-syntax "prolog" "\.pl"
+syntax "prolog" "\.(pl|b|f|n)" # to add support also for aleph .b, .f and .n file extensions.
 comment "%"
 
 # Reset everything
