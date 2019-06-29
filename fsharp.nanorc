@@ -5,7 +5,8 @@ color brightgreen  "type +[A-Za-z0-9]+ *((:) +[A-Za-z0-9.]+)?"
 color brightgreen  "module +[A-Za-z0-9]+ *((:) +[A-Za-z0-9.]+)?"
 color brightmagenta  "\<(List|Seq|Array|Option|Choice|Map|list|seq|array|option|choice|ref|in|out)\>"
 color brightgreen    "<+[A-Za-z0-9'^]+ *((:) +[A-Za-z0-9'^.]+)?>"
-color brightmagenta  "[<+[A-Za-z0-9]+ *((:) +[A-Za-z0-9.]+)?>]" # Attributes
+# Attributes
+color brightmagenta  "[<+[A-Za-z0-9]+ *((:) +[A-Za-z0-9.]+)?>]"
 
 # Annotation
 color magenta   "@[A-Za-z]+"
@@ -18,9 +19,10 @@ color cyan            "\<(abstract|and|let|as|assert|base|begin|class|default|de
 
 color red "[-+/*=<>?:!~%&|]"
 color blue   "\<([0-9._]+|0x[A-Fa-f0-9_]+|0b[0-1_]+)[FL]?\>"
-color yellow ""(\\.|[^"])*"" # String
 color magenta   "\\([btnfr]|'|\"|\\)"
 color magenta   "\\u[A-Fa-f0-9]{4}"
+# String
+color yellow ""(\\.|[^"])*""
 
 # Comments
 color brightblack "(^|[[:space:]])//.*"
