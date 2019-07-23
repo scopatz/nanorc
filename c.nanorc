@@ -3,7 +3,7 @@
 syntax "C" "\.(c(c|pp|xx)?|C)$" "\.(h(h|pp|xx)?|H)$" "\.ii?$" "\.(def)$"
 color brightred "\<[A-Z_][0-9A-Z_]+\>" 
 color green "\<(float|double|bool|char|wchar_t|int|short|long|sizeof|enum|void|static|const|struct|union|typedef|extern|(un)?signed|inline)\>"
-color green "\<((s?size)|(char(16|32))|((u_?)?int(8|16|32|64|ptr)))_t\>"
+color green "\<((s?size)|(char(16|32))|((u_?)?int(_fast|_least)?(8|16|32|64))|u?int(max|ptr))_t\>"
 color green "\<(class|namespace|template|public|protected|private|typename|this|friend|virtual|using|mutable|volatile|register|explicit)\>"
 color green "\<(for|if|while|do|else|case|default|switch)\>"
 color green "\<(try|throw|catch|operator|new|delete)\>"
