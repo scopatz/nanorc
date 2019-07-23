@@ -13,15 +13,15 @@ These should be placed inside of the ``~/.nano/`` directory.
 Or for system-wide installation ``/usr/share/nano-syntax-highlighting/``.
 In other words::
 
-    git clone git@github.com:scopatz/nanorc.git ~/.nano
+    git clone --single-branch --branch=v2.9 git@github.com:scopatz/nanorc.git ~/.nano
 
 *Note - if you have any issues (ssh was not properly configured), alternatively use::
 
-    git clone https://github.com/scopatz/nanorc.git ~/.nano
+    git clone --single-branch --branch=v2.9 https://github.com/scopatz/nanorc.git ~/.nano
     
 *System wide will look like so*::
 
-    sudo git clone https://github.com/scopatz/nanorc.git /usr/share/nano-syntax-highlighting/
+    sudo git clone --single-branch --branch=v2.9 https://github.com/scopatz/nanorc.git /usr/share/nano-syntax-highlighting/
 
 **NOTE**: \< and \> are regular character escapes on macOS. The bug's fixed in Nano, but this might be a problem
 if you are using an older version. If this is the case, replace them respectively with [[:<:]] and [[:>:]].
