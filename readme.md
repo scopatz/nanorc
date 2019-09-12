@@ -60,7 +60,7 @@ The configuration file is located at `~/.nanorc`, for users, and at `/etc/nanorc
 
 Again there are three ways:
 
-# 1. Include all
+## 1. Include all
 
 Append the content of the folder in one line, with wildcard::
 
