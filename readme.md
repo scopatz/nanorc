@@ -83,6 +83,12 @@ Add your preferable languages one by onento the file. For example:
 include "~/.nano/c.nanorc"
 ```
 
+# Themes - WIP
+
+There are three themes that you can use.  
+
+
+
 # Tricks & Tweaks
 
 ## MacOS
@@ -94,4 +100,8 @@ This is reported in [Issue 52](https://github.com/scopatz/nanorc/issues/52).
 
 # Acknowledgements
 
-Some of these files are derived from the original [Nano](https://www.nano-editor.org) editor [repo](https://git.savannah.gnu.org/cgit/nano.git)
+- [Nano Editor](https://www.nano-editor.org) for some `nanorc` files.
+- [nanorc-mac](https://github.com/richrad/nanorc-mac) for the themes idea.
+- [Bruce Barnert](http://www.grymoire.com/Unix/Sed.html#toc-uh-5) for good `sed` documentation.
+
+- And to all contributors!
