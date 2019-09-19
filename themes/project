@@ -1,23 +1,41 @@
 #!/usr/bin/sed -f
 
-# ORIGINAL
-# Best approach to the original 'nanorc' files.
-# If you want the original, uninstall these files,
-#  but you will lose many highlight instructions...
+# PROJECT
+## Our approach to nano's highlight.
 
 # GUI Colors
-## No GUI colors in original ...
+## No GUI colors available, yet...
+
 
 # Text Colors
 
-s|COMMENT1|brightblue
-s|COMMENT2|cyan
-s|ERROR|brightred
-s|KEYWORD1|brightgreen
-s|KEYWORD2|green
-s|COLOR|yellow
-s|STRING|brightmagenta
-s|TSPACE|,green
+s|COMMENT1|brightblue|
+s|COMMENT2|cyan|
+s|ERROR|brightred|
+s|KEYWORD1|brightgreen|
+s|KEYWORD2|green|
+s|COLOR|yellow|
+s|STRING|brightmagenta|
+s|TSPACE|,green|
 
 # Macros
-## No Macros in original ...
+
+#s|^PLAIN:|color black|
+#s|^TYPE:|color brightgreen|
+#s|^STRING:|color yellow|
+#s|^NUMBER:|color blue|
+#s|^BOOLEAN:|color brightmagenta|
+#s|^REGEXP:|color brightcyan|
+#s|^VARIABLE:|color brightyellow|
+#s|^OPERATOR:|color red|
+#s|^KEYWORD:|color green|
+#s|^~KEYWORD:|icolor green|
+#s|^FUNCTION:|color brightblue|
+#s|^ESCAPE:|color magenta|
+#s|^COMMENT:|color cyan|
+#s|^ENABLED:|color brightgreen|
+#s|^DISABLED:|color brightred|
+#s|^WARNING:|color ,red|
+#s|^+TODO|color brightcyan "TODO:?"|
+#s|^+LINT|color ,green "[[:space:]]+$"\ncolor ,red "\t*"|
+#s|^+LONG-LINE-WARNING|color ,red "^.{81,}$"|
