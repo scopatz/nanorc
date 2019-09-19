@@ -1,0 +1,23 @@
+#!/usr/bin/sed -f
+
+# ORIGINAL
+# Best approach to the original 'nanorc' files.
+# If you want the original, uninstall these files,
+#  but you will lose many highlight instructions...
+
+# GUI Colors
+## No GUI colors in original ...
+
+# Text Colors
+
+s|COMMENT1|brightblue
+s|COMMENT2|cyan
+s|ERROR|brightred
+s|KEYWORD1|brightgreen
+s|KEYWORD2|green
+s|COLOR|yellow
+s|STRING|brightmagenta
+s|TSPACE|,green
+
+# Macros
+## No Macros in original ...
