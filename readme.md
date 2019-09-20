@@ -85,8 +85,10 @@ include "~/.nano/c.nanorc"
 
 # Themes - WIP
 
-There are three themes that you can use.  
-
+There are three themes you can use:
+- original: only nano's default highlight.
+- project: only scopatz's highlight.
+- custom: highlight, GUI and shortcuts.
 
 
 # Tricks & Tweaks
