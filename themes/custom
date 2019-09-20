@@ -1,7 +1,7 @@
 #!/usr/bin/sed -f
 
-# PROJECT
-## Our approach to nano's highlight.
+# CUSTOM
+## Highlight, GUI and shortcuts..
 
 # GUI Colors
 ## No GUI colors available, yet...
