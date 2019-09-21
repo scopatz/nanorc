@@ -9,15 +9,33 @@
 ## No GUI colors in original ...
 
 # Text Colors
+## Strings and Comments:
+##  In general you will want your strings and comments to come last,
+##  because highlighting rules are applied in the order they are read in.
+## The words should be in singular.
+## BTICKS = backtick
+## TSPACE = trailing whitespace
+## VERSION = version numbers
+## REMINDERS = fixme, todo, xxx
 
-s|COMMENT1|brightblue|
-s|COMMENT2|cyan|
-s|ERROR|brightred|
+s|CONSTANT|brightred|
+s|FUNCTION|magenta|
 s|KEYWORD1|brightgreen|
 s|KEYWORD2|green|
+s|DIRECTIVE|brightcyan|
+s|STRING1|brightmagenta|
+s|STRING2|brightyellow|
+s|COMMENT1|brightblue|
+s|COMMENT2|cyan|
 s|COLOR|yellow|
-s|STRING|brightmagenta|
+s|MACRO|cyan|
+s|ERROR|brightred|
+s|OPERATORS|green|
+s|BRACKET|magenta|
+s|BTICKS|green|
 s|TSPACE|,green|
+s|VERSION|red|
+s|REMINDERS|brightwhite,yellow|
 
 # Macros
 ## No Macros in original ...
