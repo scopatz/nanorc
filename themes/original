@@ -36,6 +36,7 @@ s|BTICKS|green|
 s|TSPACE|,green|
 s|VERSION|red|
 s|REMINDERS|brightwhite,yellow|
+s|EMAIL|magenta|
 
 # Macros
 ## No Macros in original ...

@@ -9,10 +9,10 @@
 - awk.nanorc
 - c.nanorc
 - changelog.nanorc
-cmake.nanorc
-css.nanorc
-debian.nanorc
-default.nanorc
+- cmake.nanorc
+- css.nanorc
+- debian.nanorc
+- default.nanorc
 elisp.nanorc
 fortran.nanorc
 gentoo.nanorc
