@@ -86,7 +86,7 @@ include "~/.nano/c.nanorc"
 # Themes - WIP
 
 There are three themes you can use:
-- original: only nano's default highlight.
+- original: only nano's approximate default highlight.
 - project: only scopatz's highlight.
 - custom: highlight, GUI and shortcuts.
 
@@ -100,9 +100,16 @@ The bug is fixed in Nano, but this might be a problem if you are using an older 
 If this is the case, replace them respectively with `[[:<:]]` and `[[:>:]]`.
 This is reported in [Issue 52](https://github.com/scopatz/nanorc/issues/52).
 
+## New Features
+
+Sometimes new features are pending in nano's project issues.  
+A view in that issues it can be helpful. See GNU Project link in the end.
+
+
 # Acknowledgements
 
 - [Nano Editor](https://www.nano-editor.org) for some `nanorc` files.
+- [GNU Project](https://savannah.gnu.org/projects/nano/) for hosting the `nano`'s git and issues.
 - [nanorc-mac](https://github.com/richrad/nanorc-mac) for the themes idea.
 - [Bruce Barnert](http://www.grymoire.com/Unix/Sed.html#toc-uh-5) for good `sed` documentation.
 

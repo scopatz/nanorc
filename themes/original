@@ -19,18 +19,19 @@
 ## REMINDERS = fixme, todo, xxx
 
 s|CONSTANT|brightred|
-s|FUNCTION|magenta|
+s|FUNCTION|brightmagenta|
 s|KEYWORD1|brightgreen|
 s|KEYWORD2|green|
 s|DIRECTIVE|brightcyan|
-s|STRING1|brightmagenta|
-s|STRING2|brightyellow|
+s|STRING1|red|
+s|STRING2|magenta|
 s|COMMENT1|brightblue|
 s|COMMENT2|cyan|
 s|COLOR|yellow|
 s|MACRO|cyan|
 s|ERROR|brightred|
 s|OPERATORS|green|
+s|BOOLEAN|brightmagenta|
 s|BRACKET|magenta|
 s|BTICKS|green|
 s|TSPACE|,green|
