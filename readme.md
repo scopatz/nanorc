@@ -2,6 +2,8 @@
 
 This repository holds ``{lang}.nanorc`` files that have improved definitions of syntax highlighting for various languages.
 
+For readability will use `$install_path` for the path of your choose (in *system wide* the path is always `/usr/share/nano-syntax-highlighting/`).
+
 # Installation
 
 There are three ways to install this repo.
@@ -41,7 +43,6 @@ The files should be placed inside of the `~/.nano/` directory.
 
 > You can put the files in another directory inside the correct `.nano` folder.
 > For example: `~/.nano/nanorc/`.
-> For readability will use `$install_path` for the path of your choose (in *system wide* the path is always `/usr/share/nano-syntax-highlighting/`).
 
 For user, only run:
 
@@ -62,7 +63,7 @@ Again there are three ways:
 
 ## 1. Include all
 
-Append the content of the folder in one line, with wildcard::
+Append the content of the folder in one line, with wildcard:
 
 `echo "include $install_path/*.nanorc" >> ~/.nanorc` or  
 `echo "include $install_path/*.nanorc" >> /etc/nanorc`
