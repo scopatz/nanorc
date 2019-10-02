@@ -16,7 +16,7 @@ color green "(class|extends|goto) ([a-zA-Z0-9_]*)"
 color green "[^a-z0-9_-]{1}(var|class|function|echo|case|break|default|exit|switch|if|else|elseif|endif|foreach|endforeach|@|while|public|private|protected|return|true|false|null|TRUE|FALSE|NULL|const|static|extends|as|array|require|include|require_once|include_once|define|do|continue|declare|goto|print|in|namespace|use)[^a-z0-9_-]{1}"
 
 # Functions
-color blue "([a-zA-Z0-9_-.$]*)\("
+color blue "([a-zA-Z0-9_\-$\.]*)\("
 
 # Variables
 color magenta "[a-zA-Z_0-9]* <\-"
