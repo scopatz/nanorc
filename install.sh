@@ -1,4 +1,5 @@
 #!/bin/sh
+# NANO HIGHLIGHT INSTALLATION
 
 # check for unzip before we continue
 if [ ! "$(command -v unzip)" ]; then
@@ -19,7 +20,7 @@ _fetch_sources(){
 
 _update_nanorc(){
   touch ~/.nanorc
-      
+
   # add all includes from ~/.nano/nanorc if they're not already there
   while read -r inc; do
       if ! grep -q "$inc" "${NANORC_FILE}"; then
