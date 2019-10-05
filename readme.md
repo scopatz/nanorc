@@ -93,6 +93,15 @@ The bug is fixed in Nano, but this might be a problem if you are using an older 
 If this is the case, replace them respectively with `[[:<:]]` and `[[:>:]]`.
 This is reported in [Issue 52](https://github.com/scopatz/nanorc/issues/52).
 
+### Why not include the original files?
+
+It is a good question, but the way that nano reads the files matters.  
+In other words, the regex instructions should be in a _specific order_ (you can see that in some nanorc files).  
+So, if we `include` or `extendsyntax` (yes, there is also this command) the colors or other things won't be work well.  
+The best way to do is copying and editing the original files (if it is needed).  
+The bug about it: https://savannah.gnu.org/bugs/index.php?5698  
+But if some original nanorc file needs an update, feel free to [patch it](https://savannah.gnu.org/patch/?func=additem&group=nano)!
+
 ## Acknowledgements
 
 Some of these files are derived from the original [Nano](https://www.nano-editor.org) editor [repo](https://git.savannah.gnu.org/cgit/nano.git)
