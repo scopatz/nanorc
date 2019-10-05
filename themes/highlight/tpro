@@ -1,12 +1,6 @@
 #!/usr/bin/sed -f
 
-# ORIGINAL
-## Best approach to the original 'nanorc' files.
-## If you want the original, uninstall these files,
-##  but you will lose many highlight instructions...
-
-# GUI Colors
-## No GUI colors in original ...
+# TPRO
 
 # Text Colors
 ## Strings and Comments:
