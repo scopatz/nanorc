@@ -96,7 +96,7 @@ This is reported in [Issue 52](https://github.com/scopatz/nanorc/issues/52).
 ### Why not include the original files?
 
 It is a good question, but the way that nano reads the files matters.  
-In other words, the regex instructions should be in a _ specific order_ (you can see that in some nanorc files).  
+In other words, the regex instructions should be in a _specific order_ (you can see that in some nanorc files).  
 So, if we `include` or `extendsyntax` (yes, there is also this command) the colors or other things won't be work well.  
 The best way to do is copying and editing the original files (if it is needed).  
 The bug about it: https://savannah.gnu.org/bugs/index.php?5698  
