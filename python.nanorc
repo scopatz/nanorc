@@ -21,7 +21,7 @@ color brightcyan "\<(NoneType|TypeType|IntType|LongType|FloatType|ComplexType|St
 ## definitions
 color brightcyan "def [a-zA-Z_0-9]+" 
 ## keywords
-color brightblue "\<(and|as|assert|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|map|not|or|pass|raise|return|try|with|while|yield)\>"
+color brightblue "\<(and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|map|not|or|pass|raise|return|try|with|while|yield)\>"
 
 ## decorators
 color brightgreen "@.*[(]"
