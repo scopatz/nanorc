@@ -99,8 +99,12 @@ It is a good question, but the way that nano reads the files matters.
 In other words, the regex instructions should be in a _specific order_ (you can see that in some nanorc files).  
 So, if we `include` or `extendsyntax` (yes, there is also this command) the colors or other things won't be work well.  
 The best way to do is copying and editing the original files (if it is needed).  
-The bug about it: https://savannah.gnu.org/bugs/index.php?5698  
+Please see this [issue](https://savannah.gnu.org/bugs/index.php?5698).   
 But if some original nanorc file needs an update, feel free to [patch it](https://savannah.gnu.org/patch/?func=additem&group=nano)!
+
+### My shortcut is not working!
+
+Please see this [issue](https://savannah.gnu.org/bugs/?56994).
 
 ## Acknowledgements
 
