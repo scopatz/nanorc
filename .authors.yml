@@ -120,7 +120,7 @@
   email: paduct@list.ru
   aliases:
   - Bro
-  num_commits: 1
+  num_commits: 2
   first_commit: 2017-01-12 04:25:39
   github: Paduct
 - name: Steven Honeyman
@@ -230,7 +230,7 @@
   email: thomasr@fantasymail.de
   aliases:
   - ThomasR
-  num_commits: 2
+  num_commits: 4
   first_commit: 2016-02-28 08:15:46
   github: ThomasR
 - name: Sandro Jäckel
@@ -238,7 +238,7 @@
   github: SuperSandro2000
   aliases:
   - Sandro
-  num_commits: 2
+  num_commits: 3
   first_commit: 2019-03-15 03:31:46
 - name: maritaria
   email: bramkamies@gmail.com
@@ -335,7 +335,7 @@
   github: TJProgrammer
 - name: Anthony Scopatz
   email: scopatz@gmail.com
-  num_commits: 45
+  num_commits: 47
   first_commit: 2010-07-28 18:15:43
   github: astronautlevel
 - name: PhilipRoman

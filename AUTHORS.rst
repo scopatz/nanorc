@@ -1,4 +1,4 @@
-All of the people who have made at least one contribution to xonsh.
+All of the people who have made at least one contribution to nanorc.
 Authors are sorted by number of commits.
 
 * Anthony Scopatz
@@ -14,11 +14,13 @@ Authors are sorted by number of commits.
 * Tiago Almeida
 * yochem
 * nl6720
+* Thomas Rosenau
 * Matthew Cox
 * Birger Jarl
 * divinity76
 * CirKu17
 * Geoffrey McClinsey
+* Sandro Jäckel
 * Philipp Leo Dylong
 * Huub de Beer
 * Mikael O. Bonnier
@@ -26,11 +28,10 @@ Authors are sorted by number of commits.
 * Ondřej Ešler
 * Dan Kaplun
 * Aryan Ebrahimpour
+* Paduct
 * Jody Leonard
 * Daniel Jones
 * Brandon Gulla
-* Thomas Rosenau
-* Sandro Jäckel
 * DesertPunk
 * Shmueli Englard
 * Ondrej Esler
@@ -59,7 +60,6 @@ Authors are sorted by number of commits.
 * Jason Ormand
 * Ian Mustafa
 * Michał Kiełbowicz
-* Paduct
 * Steven Honeyman
 * Filip Szymański
 * kaernyk
