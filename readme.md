@@ -34,7 +34,7 @@ Feel free to add your official package manager.
 
 | System     | Command                                  |
 | ---------- | ---------------------------------------- |
-| Arch Linux | `pacman -S nano-syntax-highlighting`   |
+| Arch Linux | `pacman -S nano-syntax-highlighting`     |
 
 ### 3. Clone repo (copy the files)
 
