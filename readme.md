@@ -28,13 +28,13 @@ The ` install.sh` script may be run with `-l` or `--lite` to insert the included
 ### 2. Package managers
 
 The follow table lists all systems with this package published.  
-Fell free to add your official package manager.
-> Systems that are based in others' package managers or repositories are compatible. For example: `pacman/aur` based systems are compatible with `Arch Linux`.
+Feel free to add your official package manager.
+
+> Systems that are based in others' package managers or repositories are compatible. For example: `pacman` based systems are compatible with `Arch Linux`.
 
 | System     | Command                                  |
 | ---------- | ---------------------------------------- |
-| Arch Linux | `aurman -Ss nano-syntax-highlight`       |
-|            | `aurman -S nano-syntax-highlighting-git` |
+| Arch Linux | `pacman -S nano-syntax-highlighting`     |
 
 ### 3. Clone repo (copy the files)
 
@@ -63,7 +63,7 @@ Again there are three ways:
 
 ### 1. Include all
 
-Append the content of the folder in one line, with wildcard::
+Append the content of the folder in one line, with wildcard:
 
 `echo "include $install_path/*.nanorc" >> ~/.nanorc` or  
 `echo "include $install_path/*.nanorc" >> /etc/nanorc`
