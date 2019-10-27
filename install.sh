@@ -1,5 +1,20 @@
 #!/bin/sh
-# NANO HIGHLIGHT INSTALLATION
+
+# IMPROVED NANO SYNTAX HIGHLIGHTING FILES
+# Get nano editor better to use and see.
+
+# Copyright (C) 2014+ Anthony Scopatz et al.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or (at
+# your option) any later version.
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/>.
+
 
 # check for unzip before we continue
 if [ ! "$(command -v unzip)" ]; then
@@ -32,6 +47,14 @@ _update_nanorc(){
 _update_nanorc_lite(){
   sed -i '/include "\/usr\/share\/nano\/\*\.nanorc"/i include "~\/.nano\/*.nanorc"' "${NANORC_FILE}"
 }
+
+# Good start / docs
+# start constants
+# list and check the needed programs
+# check parameters
+# init main
+# get the git
+# updat/create the nanorc
 
 NANORC_FILE=~/.nanorc
 
