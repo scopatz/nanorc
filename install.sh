@@ -15,12 +15,39 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 
+# Bash Variables
+# Ativate or not the erros (1=activated)
+OPTERR=1
+# Separator (useful for simulate arrays)
+IFS=" "
 
-# check for unzip before we continue
-if [ ! "$(command -v unzip)" ]; then
-  echo 'unzip is required but was not found. Install unzip first and then run this script again.' >&2
-  exit 1
-fi
+# Global Variables
+G_NANORC_FILE="~/.nanorc"
+G_DEPS="unzip sed wget"
+
+# Functions
+
+# Check dependencies
+f_check_deps(){
+  DEPS_MISSED=""
+
+  # If there isn't the dependency the $DEPS_MISSED will be populated.
+  for DEP in $G_DEPS; do
+    if [ ! "$(command -v "$DEP")" ]; then
+      DEPS_MISSED="${DEP} ${DEPS_MISSED}"
+    fi
+  done
+
+  # Error if $DEPS_MISSED is populated.
+  if [ "$DEPS_MISSED" = "" ]; then
+    return 0
+  else
+    for DEP in $DEPS_MISSED; do
+      echo "The '${DEP}' program is required but was not found. Install '${DEP}' first and then run this script again." >&2
+    done
+    return 1
+  fi
+}
 
 _fetch_sources(){
   wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
@@ -48,15 +75,12 @@ _update_nanorc_lite(){
   sed -i '/include "\/usr\/share\/nano\/\*\.nanorc"/i include "~\/.nano\/*.nanorc"' "${NANORC_FILE}"
 }
 
-# Good start / docs
-# start constants
-# list and check the needed programs
+
 # check parameters
 # init main
 # get the git
 # updat/create the nanorc
-
-NANORC_FILE=~/.nanorc
+f_check_deps
 
 case "$1" in
  -l|--lite)
