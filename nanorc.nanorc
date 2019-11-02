@@ -15,3 +15,6 @@ icolor white ""(\\.|[^"])*""
 ## Comments
 icolor brightblue "^[[:space:]]*#.*$"
 icolor cyan "^[[:space:]]*##.*$"
+
+## Trailing whitespace
+icolor ,green "[[:space:]]+$"
