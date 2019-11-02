@@ -22,10 +22,45 @@ OPTERR=1
 IFS=" "
 
 # Global Variables
+G_VERSION="1.0.0"
 G_NANORC_FILE="~/.nanorc"
 G_DEPS="unzip sed wget"
 
+# Exit Values Help
+# 0 - OK
+# 1 - Small problem
+# 2 - Big problem
+
 # Functions
+
+# Show the usage/help
+f_menu_usage(){
+  echo "Usage: $0 [ -l|-v|-h ] [ -f FILE ]"
+  echo "IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
+  echo "Get nano editor better to use and see."
+  echo
+  echo "-l       Activate lite installation."
+  echo "-v       Show version, license and other info."
+  echo "-h       Show help or usage."
+  echo "-f FILE  Other file instead of the default .nanorc file."
+  
+  exit 2
+}
+
+# Show version, license and other file.
+f_menu_version(){
+  echo "IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
+  echo "Version ${G_VERSION}"
+  echo
+  echo "Copyright (C) 2014+ Anthony Scopatz et al."
+  echo "License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>."
+  echo "This is free software: you are free to change and redistribute it."
+  echo "There is NO WARRANTY, to the extent permitted by law."
+  echo
+  echo "Written by Anthony Scopatz and others."
+
+  exit 0
+}
 
 # Check dependencies
 f_check_deps(){
@@ -76,10 +111,17 @@ _update_nanorc_lite(){
 }
 
 
-# check parameters
+# corewct the get ifs
+# check parameters with getopts
+# help version license+info output bugs report
+
 # init main
 # get the git
 # updat/create the nanorc
+
+
+# Main / Init of script
+
 f_check_deps
 
 case "$1" in
