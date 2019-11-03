@@ -19,12 +19,13 @@
 # Ativate or not the erros (1=activated)
 OPTERR=1
 # Separator (useful for simulate arrays)
-IFS=" "
+G_IFS=" "
 
 # Global Variables
 G_VERSION="1.0.0"
-G_NANORC_FILE="~/.nanorc"
 G_DEPS="unzip sed wget"
+G_LITE=false
+G_FILE="~/.nanorc"
 
 # Exit Values Help
 # 0 - OK
@@ -39,11 +40,13 @@ f_menu_usage(){
   echo "IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
   echo "Get nano editor better to use and see."
   echo
-  echo "-l       Activate lite installation."
-  echo "-v       Show version, license and other info."
-  echo "-h       Show help or usage."
-  echo "-f FILE  Other file instead of the default .nanorc file."
-  
+  echo "-l    Activate lite installation."
+  echo "       We will take account your existing .nanorc files."
+  echo "-v    Show version, license and other info."
+  echo "-h    Show help or usage."
+  echo "-f FILE"
+  echo "      Other file instead of the default .nanorc file."
+
   exit 2
 }
 
@@ -58,6 +61,8 @@ f_menu_version(){
   echo "There is NO WARRANTY, to the extent permitted by law."
   echo
   echo "Written by Anthony Scopatz and others."
+  echo
+  echo "For bugs report, please fill an issue at https://github.com/scopatz/nanorc"
 
   exit 0
 }
@@ -82,6 +87,13 @@ f_check_deps(){
     done
     return 1
   fi
+}
+
+# Set IFS
+f_set_ifs(){
+  temp=$IFS
+  IFS=$G_IFS
+  G_IFS=temp
 }
 
 _fetch_sources(){
@@ -111,32 +123,38 @@ _update_nanorc_lite(){
 }
 
 
-# corewct the get ifs
-# check parameters with getopts
-# help version license+info output bugs report
+# check parameters with set variable
+# made the script more or less verbose
 
 # init main
 # get the git
 # updat/create the nanorc
 
+# ============================
+#
+# MAIN / Init of script
+#
+# =============================
 
-# Main / Init of script
+f_set_ifs
+f_check_deps && exit 2
 
-f_check_deps
+while getopts "lf:vh?" c
+  case $c in
+    l) G_LITE=true;;
+    f) G_FILE=$OPTARG;;
+    v) f_menu_version ;;
+    h|?|*) f_menu_usage ;;
+  esac
+done
 
-case "$1" in
- -l|--lite)
-   UPDATE_LITE=1;;
- -h|--help)
-   echo "Install script for nanorc syntax highlights"
-   echo "Call with -l or --lite to update .nanorc with secondary precedence to existing .nanorc includes"
- ;;
-esac
+_fetch_sources
 
-_fetch_sources;
-if [ $UPDATE_LITE ];
+if [ $G_LITE ];
 then
   _update_nanorc_lite
 else
   _update_nanorc
 fi
+
+f_set_ifs
