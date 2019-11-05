@@ -16,8 +16,8 @@
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 # Help:
-# https://www.shellscript.sh/tips/getopts/
-
+# Getopts: https://www.shellscript.sh/tips/getopts/
+# Sed: http://www.grymoire.com/Unix/Sed.html
 
 # Bash Variables
 # Ativate or not the erros (1=activated)
@@ -49,7 +49,7 @@ f_menu_usage(){
   echo "-v    Show version, license and other info."
   echo "-h    Show help or usage."
   echo "-f FILE"
-  echo "      Other file instead of the default .nanorc file."
+  echo "      The path of other file instead of the default .nanorc file."
 
   exit 2
 }

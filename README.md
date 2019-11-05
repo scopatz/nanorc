@@ -112,6 +112,6 @@ A view in that issues it can be helpful. See GNU Project link in the end.
 - [Nano Editor](https://www.nano-editor.org) for some `nanorc` files.
 - [GNU Project](https://savannah.gnu.org/projects/nano/) for hosting the `nano`'s git and issues.
 - [nanorc-mac](https://github.com/richrad/nanorc-mac) for the themes idea.
-- [Bruce Barnert](http://www.grymoire.com/Unix/Sed.html#toc-uh-5) for good `sed` documentation.
+- [Bruce Barnert](http://www.grymoire.com/Unix/Sed.html) for good `sed` documentation.
 
 - And to all contributors!
