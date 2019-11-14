@@ -16,7 +16,6 @@
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 # Help:
-# Getopts: https://www.shellscript.sh/tips/getopts/
 # Sed: http://www.grymoire.com/Unix/Sed.html
 
 # Bash Variables
@@ -26,32 +25,35 @@ OPTERR=1
 G_IFS=" "
 
 # Global Variables
-G_VERSION="1.0.0"
-G_DEPS="unzip sed wget"
-G_LITE=false
-G_FILE="~/.nanorc"
+G_VERSION="2019.10.17"
+G_DEPS="unzip sed"
+G_REPO_MASTER="https://github.com/scopatz/nanorc/archive/master.zip"
+G_REPO_RELEASE="https://github.com/scopatz/nanorc/archive/${G_VERSION}.zip"
+unset G_LITE G_FILE G_VERBOSE G_UNSTABLE
 
 # Exit Values Help
 # 0 - OK
-# 1 - Small problem
-# 2 - Big problem
+# 1 - Big problem
 
 # Functions
 
 # Show the usage/help
 f_menu_usage(){
-  echo "Usage: $0 [ -l|-v|-h ] [ -f FILE ]"
+  echo "Usage: $0 [ -h | -l | -t | -u | -v ] [ -f FILE ]"
+  echo
   echo "IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
   echo "Get nano editor better to use and see."
   echo
-  echo "-l    Activate lite installation."
-  echo "       We will take account your existing .nanorc files."
-  echo "-v    Show version, license and other info."
   echo "-h    Show help or usage."
+  echo "-l    Activate lite installation."
+  echo "        We will take account your existing .nanorc files."
+  echo "-t    Turn the script more verbose, often to tests."
+  echo "-u    Use the unstable branch."
+  echo "-v    Show version, license and other info."
   echo "-f FILE"
   echo "      The path of other file instead of the default .nanorc file."
 
-  exit 2
+  exit 1
 }
 
 # Show version, license and other file.
@@ -100,12 +102,45 @@ f_set_ifs(){
   G_IFS=temp
 }
 
-_fetch_sources(){
-  wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
+# Set Variable
+# Receives two parameters:
+#  1. the variable name
+#  2. a value
+# Sources:  https://unix.stackexchange.com/questions/23111/what-is-the-eval-command-in-bash
+f_set_variable(){
+  varname=$1
+  shift
+
+  # Because 'sh' do not recognize indirect expansion "${!#}"
+  eval varvalue="$"$varname
+
+  if [ -z "${varvalue}" ]; then
+    eval "$varname=${@}"
+  else
+    echo "Error: ${varname} already set"
+    usage
+  fi
+}
+
+# Fetch Sources
+# todo: check the directory/file before call this function
+# todo: add a no directory or other nam
+# todp: rename to install
+f_fetch_sources()
+  temp="temp.zip"
+  cd ~
+
+  if [ "$G_UNSTABLE" = true ]; then
+    curl -L -o $temp $G_REPO_MASTER
+  else
+    curl -L -o $temp $G_REPO_RELEASE
+  fi
+
+  unzip -u -d $G_DIR $temp
+
   mkdir -p ~/.nano/
 
-  cd ~/.nano/ || exit
-  unzip -o "/tmp/nanorc.zip"
+
   mv nanorc-master/* ./
   rm -rf nanorc-master
   rm /tmp/nanorc.zip
@@ -127,10 +162,6 @@ _update_nanorc_lite(){
 }
 
 
-# check parameters with set variable
-# made the script more or less verbose
-
-# init main
 # get the git
 # updat/create the nanorc
 
@@ -140,19 +171,33 @@ _update_nanorc_lite(){
 #
 # =============================
 
+# Pre-check
 f_set_ifs
-f_check_deps && exit 2
+f_check_deps && exit 1
 
-while getopts "lf:vh?" c
+# Menu
+# Getopts: https://www.shellscript.sh/tips/getopts/
+while getopts "hltvf:" c
   case $c in
-    l) G_LITE=true;;
-    f) G_FILE=$OPTARG;;
+    h) f_menu_usage ;;
+    l) f_set_variable G_LITE true ;;
+    t) f_set_variable G_VERBOSE true ;;
+    u) f_set_variable G_UNSTABLE true
     v) f_menu_version ;;
-    h|?|*) f_menu_usage ;;
+    f) f_set_variable G_FILE $OPTARG ;;
+    *) f_menu_usage ;;
   esac
 done
 
-_fetch_sources
+# Check the file
+[ -z "$G_FILE" ] && G_FILE="~/.nanorc"
+
+# Set verbose
+if [ "$G_VERBOSE" = true ]; then
+  set -x
+fi
+
+f_fetch_sources
 
 if [ $G_LITE ];
 then
@@ -161,4 +206,6 @@ else
   _update_nanorc
 fi
 
+# Post-check
 f_set_ifs
+exit 0

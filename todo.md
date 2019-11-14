@@ -11,4 +11,5 @@
 4. Make the install file the oficial installaton and update it accordingly.
 
 0. make the installation with more plesant wait
-0. may be begin with version system 1.0.0 ...
+0. may be begin with version system 1.0.0
+0. make a function for error output/echo
