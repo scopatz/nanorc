@@ -14,6 +14,7 @@
 # General Public License for more details.
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
+# https://spdx.org/licenses/GPL-3.0-or-later.html
 
 # Help:
 # Sed: http://www.grymoire.com/Unix/Sed.html
@@ -29,7 +30,7 @@ G_VERSION="2019.10.17"
 G_DEPS="unzip sed"
 G_REPO_MASTER="https://github.com/scopatz/nanorc/archive/master.zip"
 G_REPO_RELEASE="https://github.com/scopatz/nanorc/archive/${G_VERSION}.zip"
-unset G_LITE G_FILE G_VERBOSE G_UNSTABLE
+unset G_DIR G_LITE G_VERBOSE G_UNSTABLE G_FILE
 
 # Exit Values Help
 # 0 - OK
@@ -39,11 +40,13 @@ unset G_LITE G_FILE G_VERBOSE G_UNSTABLE
 
 # Show the usage/help
 f_menu_usage(){
-  echo "Usage: $0 [ -h | -l | -t | -u | -v ] [ -f FILE ]"
+  echo "Usage: $0 [ -d | -h | -l | -t | -u | -v ] [ -f FILE ]"
   echo
   echo "IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
   echo "Get nano editor better to use and see."
   echo
+  echo "-d    Give other directory for installation."
+  echo "        Default: ~/.nano/nanorc/"
   echo "-h    Show help or usage."
   echo "-l    Activate lite installation."
   echo "        We will take account your existing .nanorc files."
@@ -117,34 +120,12 @@ f_set_variable(){
   if [ -z "${varvalue}" ]; then
     eval "$varname=${@}"
   else
-    echo "Error: ${varname} already set"
+    echo "Error: ${varname} already set."
     usage
   fi
 }
 
-# Fetch Sources
-# todo: check the directory/file before call this function
-# todo: add a no directory or other nam
-# todp: rename to install
-f_fetch_sources()
-  temp="temp.zip"
-  cd ~
 
-  if [ "$G_UNSTABLE" = true ]; then
-    curl -L -o $temp $G_REPO_MASTER
-  else
-    curl -L -o $temp $G_REPO_RELEASE
-  fi
-
-  unzip -u -d $G_DIR $temp
-
-  mkdir -p ~/.nano/
-
-
-  mv nanorc-master/* ./
-  rm -rf nanorc-master
-  rm /tmp/nanorc.zip
-}
 
 _update_nanorc(){
   touch ~/.nanorc
@@ -162,7 +143,45 @@ _update_nanorc_lite(){
 }
 
 
-# get the git
+
+
+# Install
+# Sources: https://www.cyberciti.biz/faq/download-a-file-with-curl-on-linux-unix-command-line/
+f_install(){
+  temp="temp.zip"
+  cd ~
+
+  mkdir -p $G_DIR
+
+  if [ ! -d "G_DIR" ]; then
+    echo "Error: ${G_DIR} is not a directory or cannot be accessed or created."
+    usage
+  fi
+
+  if [ "$G_UNSTABLE" = true ]; then
+    curl -L -o $temp $G_REPO_MASTER
+  else
+    curl -L -o $temp $G_REPO_RELEASE
+  fi
+
+  unzip -u $temp
+  rm $temp
+
+  if [ "$G_UNSTABLE" = true ]; then
+    mv "nanorc-master/*" $G_DIR
+    rm -rf "nanorc-master"
+  else
+    mv "nanorc-${G_VERSION}" $G_DIR
+    rm -rf "nanorc-${G_VERSION}"
+  fi
+
+  if [ "$G_LITE" = true ]; then
+    _update_nanorc_lite
+  else
+    _update_nanorc
+  fi
+}
+
 # updat/create the nanorc
 
 # ============================
@@ -177,8 +196,9 @@ f_check_deps && exit 1
 
 # Menu
 # Getopts: https://www.shellscript.sh/tips/getopts/
-while getopts "hltvf:" c
+while getopts "d:hltvf:" c
   case $c in
+    d) f_set_variable G_DIR $OPTARG ;;
     h) f_menu_usage ;;
     l) f_set_variable G_LITE true ;;
     t) f_set_variable G_VERBOSE true ;;
@@ -189,22 +209,17 @@ while getopts "hltvf:" c
   esac
 done
 
-# Check the file
+# Set defaults if there is not.
 [ -z "$G_FILE" ] && G_FILE="~/.nanorc"
+[ -z "$G_DIR" ] && G_DIR="~/.nano/nanorc/"
 
 # Set verbose
 if [ "$G_VERBOSE" = true ]; then
   set -x
 fi
 
-f_fetch_sources
-
-if [ $G_LITE ];
-then
-  _update_nanorc_lite
-else
-  _update_nanorc
-fi
+# Install
+f_install
 
 # Post-check
 f_set_ifs
