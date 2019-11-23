@@ -1,11 +1,10 @@
 #!/usr/bin/sed -f
 
-# PROJECT
-## Our approach to nano's highlight.
-
-# GUI Colors
-## No GUI colors available, yet...
-
+# SCOPATZ
+# =====================
+# NANORC Scopatz
+# https://github.com/scopatz
+# =====================
 
 # Text Colors
 ## Strings and Comments:
@@ -40,6 +39,6 @@ s|EMAIL|magenta|
 
 # Macros
 
-#s|^+TODO|color brightcyan "TODO:?"|
-#s|^+LINT|color ,green "[[:space:]]+$"\ncolor ,red "\t*"|
-#s|^+LONG-LINE-WARNING|color ,red "^.{81,}$"|
+# s|^+TODO|color brightcyan "TODO:?"|
+# s|^+LINT|color ,green "[[:space:]]+$"\ncolor ,red "\t*"|
+# s|^+LONG-LINE-WARNING|color ,red "^.{81,}$"|

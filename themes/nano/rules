@@ -1,6 +1,14 @@
 #!/usr/bin/sed -f
 
-# TPRO
+
+# NANO
+# =====================
+# NANORC Nano
+# =====================
+
+## Best approach to the original 'nanorc' files.
+## If you want the original, uninstall these files,
+##  but you will lose many highlight instructions...
 
 # Text Colors
 ## Strings and Comments:

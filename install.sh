@@ -28,9 +28,10 @@ G_IFS=" "
 # Global Variables
 G_VERSION="2019.10.17"
 G_DEPS="unzip sed"
+G_FILE="~/.nanorc"
 G_REPO_MASTER="https://github.com/scopatz/nanorc/archive/master.zip"
 G_REPO_RELEASE="https://github.com/scopatz/nanorc/archive/${G_VERSION}.zip"
-unset G_DIR G_LITE G_VERBOSE G_UNSTABLE G_FILE
+unset G_LITE G_UNSTABLE G_VERBOSE G_DIR G_THEME
 
 # Exit Values Help
 # 0 - OK
@@ -40,22 +41,26 @@ unset G_DIR G_LITE G_VERBOSE G_UNSTABLE G_FILE
 
 # Show the usage/help
 f_menu_usage(){
-  echo "Usage: $0 [ -d | -h | -l | -t | -u | -v ] [ -f FILE ]"
+  echo "Usage: $0 [ -h|-l|-u|-v|-w ] [ -d DIR ] [ -t THEME ]"
   echo
   echo "IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
   echo "Get nano editor better to use and see."
   echo
-  echo "-d    Give other directory for installation."
-  echo "        Default: ~/.nano/nanorc/"
   echo "-h    Show help or usage."
   echo "-l    Activate lite installation."
   echo "        We will take account your existing .nanorc files."
-  echo "-t    Turn the script more verbose, often to tests."
-  echo "-u    Use the unstable branch."
+  echo "-u    Use the unstable branch (master)."
   echo "-v    Show version, license and other info."
-  echo "-f FILE"
-  echo "      The path of other file instead of the default .nanorc file."
-
+  echo "-w    Turn the script more verbose, often to tests."
+  echo
+  echo "-d DIR"
+  echo "      Give other directory for installation."
+  echo "        Default: ~/.nano/nanorc/"
+  echo
+  echo "-t THEME"
+  echo "      Give other theme for installation."
+  echo "        Default: scopatz"
+  echo "        Options: nano, tpro"
   exit 1
 }
 
@@ -149,11 +154,14 @@ _update_nanorc_lite(){
 # Sources: https://www.cyberciti.biz/faq/download-a-file-with-curl-on-linux-unix-command-line/
 f_install(){
   temp="temp.zip"
+  begin="# BEGIN"
+  end="# END"
+  theme="${G_DIR}/themes/${G_THEME}/"
   cd ~
 
   mkdir -p $G_DIR
 
-  if [ ! -d "G_DIR" ]; then
+  if [ ! -d "$G_DIR" ]; then
     echo "Error: ${G_DIR} is not a directory or cannot be accessed or created."
     usage
   fi
@@ -175,14 +183,42 @@ f_install(){
     rm -rf "nanorc-${G_VERSION}"
   fi
 
+  if [ ! -d "$theme" ]; then
+    echo "Error: ${G_THEME} is not a theme or cannot be accessed."
+    usage
+  fi
+
+  touch "$G_FILE"
+
+  echo "$begin" >> $G_FILE
+  echo "" >> $G_FILE
+  echo "$end" >> $G_FILE
+
   if [ "$G_LITE" = true ]; then
+    sed -n -i.bkp '/'"$begin"'/,/'"$end"'/ {
+        /'"$begin"'/n
+        /'"$end"'/ !{
+          s/*//
+          r  
+        }
+    #    r theme
+    # write the includes
+    }' $G_FILE
+
     _update_nanorc_lite
   else
     _update_nanorc
   fi
 }
 
-# updat/create the nanorc
+# update.
+# write comments, options, gui, rebindings, includes highlights (according theme)
+# lite = maintains the nano nanorc files'
+# get the list of nano's files and include only ours (exclude).
+# big change: update all nanorc
+# big change: install "only" the themed nanorc files and .nanorc
+
+# next: update/re-create the nanorc
 
 # ============================
 #
@@ -196,22 +232,22 @@ f_check_deps && exit 1
 
 # Menu
 # Getopts: https://www.shellscript.sh/tips/getopts/
-while getopts "d:hltvf:" c
+while getopts "d:hlt:uvw" c
   case $c in
     d) f_set_variable G_DIR $OPTARG ;;
     h) f_menu_usage ;;
     l) f_set_variable G_LITE true ;;
-    t) f_set_variable G_VERBOSE true ;;
-    u) f_set_variable G_UNSTABLE true
+    t) f_set_variable G_THEME $OPTARG ;;
+    u) f_set_variable G_UNSTABLE true ;;
     v) f_menu_version ;;
-    f) f_set_variable G_FILE $OPTARG ;;
+    w) f_set_variable G_VERBOSE true ;;
     *) f_menu_usage ;;
   esac
 done
 
 # Set defaults if there is not.
-[ -z "$G_FILE" ] && G_FILE="~/.nanorc"
 [ -z "$G_DIR" ] && G_DIR="~/.nano/nanorc/"
+[ -z "$G_THEME" ] && G_THEME="scopatz"
 
 # Set verbose
 if [ "$G_VERBOSE" = true ]; then

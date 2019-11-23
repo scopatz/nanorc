@@ -1,9 +1,10 @@
 #!/usr/bin/sed -f
 
-# ORIGINAL
-## Best approach to the original 'nanorc' files.
-## If you want the original, uninstall these files,
-##  but you will lose many highlight instructions...
+# TPRO
+# =====================
+# NANORC TiagoProgrammer
+# https://github.com/TJProgrammer
+# =====================
 
 # Text Colors
 ## Strings and Comments:
@@ -37,4 +38,4 @@ s|REMINDERS|brightwhite,yellow|
 s|EMAIL|magenta|
 
 # Macros
-## No Macros in original ...
+## No Macros yet ...

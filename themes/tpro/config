@@ -1,0 +1,107 @@
+# TPRO
+# =====================
+# NANORC TiagoProgrammer
+# https://github.com/TJProgrammer
+# =====================
+
+# This configuration activates some IDE-ish features:
+#  - the autoindent,
+#  - a emptyline in the end of files,
+#  - justify a big text at 50th character,
+#  - a guidestripe at 80th character,
+#  - the linenumbers,
+#  - the multibuffer to opens several files at same time,  
+#  - the positionlog to continue where stay,
+#  - the suspend (like minimising),
+#  - no tabs, only spaces,
+#  - save on quit,
+#  - no save the changes in WriteOut menu (Discard Buffer),
+#  - no trail blanks,
+#  - save in unix format when possible,
+#  - delete the marked region without touch the cut buffer.
+# And some rebindings to the most natural and usual shortcuts!
+
+# Nano Options
+set afterends
+set atblanks
+set autoindent
+set brackets ""')>»]}"
+set emptyline
+set fill 70
+set guidestripe 80
+set historylog
+set linenumbers
+set matchbrackets "(<«"“[{)>»"”]}"
+set mouse
+set multibuffer
+set noconvert
+set positionlog
+set punct "!.?"
+set quickblank
+set smarthome
+set softwrap
+set suspend
+set tabsize 2
+set tabstospaces
+set tempfile
+set trimblanks
+set unix
+set zap
+
+# Nano GUI Colors
+# set ... fgcolor,bgcolor
+# Colors are: white, black, blue, green, red, cyan, yellow, magenta and normal.
+set errorcolor red
+set functioncolor blue
+set keycolor white
+set numbercolor white
+set selectedcolor ,cyan
+set statuscolor magenta
+set stripecolor ,blue
+set titlecolor brightwhite,blue
+
+# Nano Rebindings
+# bind key function menu/all
+# unbind key menu/all
+# ^ Ctrl ; M- Alt ; F function
+
+bind M-H help all
+bind ^Q exit all
+bind ^Q exit browser
+bind M-S writeout all
+bind ^S savefile all
+# Note: "O" from "Open a new file"
+bind ^O insert all
+
+bind ^F whereis main
+bind ^D wherewas main
+bind M-D findprevious main
+bind M-F findnext main
+
+bind ^X cut main
+bind ^C copy main
+bind ^V paste main
+
+bind M-M mark main
+bind ^W wordcount main
+
+bind ^J justify main
+bind M-J fulljustify main
+
+bind M-/ comment main
+bind ^Space complete all
+
+bind M-R recordmacro all
+bind ^R runmacro all
+
+bind ^Z undo all
+bind M-Z redo all
+
+bind F5 refresh all
+bind ^T suspend all
+bind ^D discardbuffer writeout
+bind ^E browser all
+
+
+# Nano Highlights
+# include ~/.nano/nanorc/nanorc/*.nanorc
