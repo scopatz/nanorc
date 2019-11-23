@@ -1,12 +1,24 @@
-sudo: required
-dist: trusty
+# Tests
+# Verify the install script
 
-before_install:
-  - echo 'deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse' | sudo tee -a /etc/apt/sources.list
-  - sudo apt-get -qq update
-  - sudo apt-get install -y shellcheck
+# minimal = sh
+os: linux
+language: minimal
+
+dist: bionic
 
 git:
   depth: 3
+  quiet: true
+
+branches:
+  only:
+    - master
+    - themify
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y shellcheck nano
+
 
 script: ./shellcheck.sh
