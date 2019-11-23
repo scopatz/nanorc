@@ -232,7 +232,7 @@ f_check_deps && exit 1
 
 # Menu
 # Getopts: https://www.shellscript.sh/tips/getopts/
-while getopts "d:hlt:uvw" c
+while getopts "d:hlt:uvw" c; do
   case $c in
     d) f_set_variable G_DIR $OPTARG ;;
     h) f_menu_usage ;;
