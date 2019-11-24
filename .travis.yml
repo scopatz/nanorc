@@ -17,8 +17,9 @@ branches:
     - themify
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install -y shellcheck nano
-
+  # Add unstable repos for the last version of nano
+  - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-backports main restricted universe multiverse"
+  - sudo apt-get update -qq -y
+  - sudo apt-get install -qq -y shellcheck nano
 
 script: ./tests.sh

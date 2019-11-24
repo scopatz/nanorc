@@ -225,7 +225,7 @@ f_install(){
 # big change: update all nanorc
 # big change: install "only" the themed nanorc files and .nanorc
 
-# next: update/re-create the nanorc
+# next: more shellcheck and get file and write it
 
 # ============================
 #
