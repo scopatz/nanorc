@@ -28,7 +28,7 @@ G_IFS=" "
 # Global Variables
 G_VERSION="2019.10.17"
 G_DEPS="unzip sed"
-G_FILE="~/.nanorc"
+G_FILE="${HOME}/.nanorc"
 G_REPO_MASTER="https://github.com/scopatz/nanorc/archive/master.zip"
 G_REPO_RELEASE="https://github.com/scopatz/nanorc/archive/${G_VERSION}.zip"
 unset G_LITE G_UNSTABLE G_VERBOSE G_DIR G_THEME
@@ -117,13 +117,15 @@ f_set_ifs(){
 # Sources:  https://unix.stackexchange.com/questions/23111/what-is-the-eval-command-in-bash
 f_set_variable(){
   varname=$1
+  varvalue=""
   shift
 
-  # Because 'sh' do not recognize indirect expansion "${!#}"
-  eval varvalue="$"$varname
+  # Because 'sh' do not recognize indirect expansion "${!#}" like bash.
+  # Alert! The backslash "\" is needed!
+  eval varvalue="\$${varname}"
 
   if [ -z "${varvalue}" ]; then
-    eval "$varname=${@}"
+    eval "$varname=${*}"
   else
     echo "Error: ${varname} already set."
     usage
@@ -157,9 +159,13 @@ f_install(){
   begin="# BEGIN"
   end="# END"
   theme="${G_DIR}/themes/${G_THEME}/"
-  cd ~
 
-  mkdir -p $G_DIR
+  if [ ! cd "$HOME" ]; then
+    echo "Error: Cannot open or access ${HOME} directory."
+    exit 1
+  fi
+
+  mkdir -p "$G_DIR"
 
   if [ ! -d "$G_DIR" ]; then
     echo "Error: ${G_DIR} is not a directory or cannot be accessed or created."
@@ -176,10 +182,10 @@ f_install(){
   rm $temp
 
   if [ "$G_UNSTABLE" = true ]; then
-    mv "nanorc-master/*" $G_DIR
+    mv "nanorc-master/*" "$G_DIR"
     rm -rf "nanorc-master"
   else
-    mv "nanorc-${G_VERSION}" $G_DIR
+    mv "nanorc-${G_VERSION}" "$G_DIR"
     rm -rf "nanorc-${G_VERSION}"
   fi
 
@@ -190,9 +196,10 @@ f_install(){
 
   touch "$G_FILE"
 
-  echo "$begin" >> $G_FILE
-  echo "" >> $G_FILE
-  echo "$end" >> $G_FILE
+  { echo "$begin";
+    echo "";
+    echo "$end";
+  } >> $G_FILE
 
   if [ "$G_LITE" = true ]; then
     sed -n -i.bkp '/'"$begin"'/,/'"$end"'/ {
@@ -234,10 +241,10 @@ f_check_deps && exit 1
 # Getopts: https://www.shellscript.sh/tips/getopts/
 while getopts "d:hlt:uvw" c; do
   case $c in
-    d) f_set_variable G_DIR $OPTARG ;;
+    d) f_set_variable G_DIR "$OPTARG" ;;
     h) f_menu_usage ;;
     l) f_set_variable G_LITE true ;;
-    t) f_set_variable G_THEME $OPTARG ;;
+    t) f_set_variable G_THEME "$OPTARG" ;;
     u) f_set_variable G_UNSTABLE true ;;
     v) f_menu_version ;;
     w) f_set_variable G_VERBOSE true ;;
@@ -246,7 +253,7 @@ while getopts "d:hlt:uvw" c; do
 done
 
 # Set defaults if there is not.
-[ -z "$G_DIR" ] && G_DIR="~/.nano/nanorc/"
+[ -z "$G_DIR" ] && G_DIR="${HOME}/.nano/nanorc/"
 [ -z "$G_THEME" ] && G_THEME="scopatz"
 
 # Set verbose
