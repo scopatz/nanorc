@@ -41,42 +41,43 @@ unset G_LITE G_UNSTABLE G_VERBOSE G_DIR G_THEME
 
 # Show the usage/help
 f_menu_usage(){
-  echo "Usage: $0 [ -h|-l|-u|-v|-w ] [ -d DIR ] [ -t THEME ]"
-  echo
-  echo "IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
-  echo "Get nano editor better to use and see."
-  echo
-  echo "-h    Show help or usage."
-  echo "-l    Activate lite installation."
-  echo "        We will take account your existing .nanorc files."
-  echo "-u    Use the unstable branch (master)."
-  echo "-v    Show version, license and other info."
-  echo "-w    Turn the script more verbose, often to tests."
-  echo
-  echo "-d DIR"
-  echo "      Give other directory for installation."
-  echo "        Default: ~/.nano/nanorc/"
-  echo
-  echo "-t THEME"
-  echo "      Give other theme for installation."
-  echo "        Default: scopatz"
-  echo "        Options: nano, tpro"
+  printf "\n Usage: %s [ -h|-l|-u|-v|-w ] [ -d DIR ] [ -t THEME ]" "$0"
+  printf "\n"
+  printf "\n IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
+  printf "\n Get nano editor better to use and see."
+  printf "\n"
+  printf "\n -h    Show help or usage."
+  printf "\n -l    Activate lite installation."
+  printf "\n         We will take account your existing .nanorc files."
+  printf "\n -u    Use the unstable branch (master)."
+  printf "\n -v    Show version, license and other info."
+  printf "\n -w    Turn the script more verbose, often to tests."
+  printf "\n"
+  printf "\n -d DIR"
+  printf "\n       Give other directory for installation."
+  printf "\n         Default: ~/.nano/nanorc/"
+  printf "\n"
+  printf "\n -t THEME"
+  printf "\n       Give other theme for installation."
+  printf "\n         Default: scopatz"
+  printf "\n         Options: nano, tpro"
+  
   exit 1
 }
 
 # Show version, license and other file.
 f_menu_version(){
-  echo "IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
-  echo "Version ${G_VERSION}"
-  echo
-  echo "Copyright (C) 2014+ Anthony Scopatz et al."
-  echo "License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>."
-  echo "This is free software: you are free to change and redistribute it."
-  echo "There is NO WARRANTY, to the extent permitted by law."
-  echo
-  echo "Written by Anthony Scopatz and others."
-  echo
-  echo "For bugs report, please fill an issue at https://github.com/scopatz/nanorc"
+  printf "\n IMPROVED NANO SYNTAX HIGHLIGHTING FILES"
+  printf "\n Version %s" "${G_VERSION}"
+  printf "\n"
+  printf "\n Copyright (C) 2014+ Anthony Scopatz et al."
+  printf "\n License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>."
+  printf "\n This is free software: you are free to change and redistribute it."
+  printf "\n There is NO WARRANTY, to the extent permitted by law."
+  printf "\n"
+  printf "\n Written by Anthony Scopatz and others."
+  printf "\n"
+  printf "\n For bugs report, please fill an issue at https://github.com/scopatz/nanorc"
 
   exit 0
 }
@@ -97,7 +98,7 @@ f_check_deps(){
     return 0
   else
     for DEP in $DEPS_MISSED; do
-      echo "The '${DEP}' program is required but was not found. Install '${DEP}' first and then run this script again." >&2
+      printf "\n The '%s' program is required but was not found. Install '${DEP}' first and then run this script again." "${DEP}" >&2
     done
     return 1
   fi
@@ -127,7 +128,7 @@ f_set_variable(){
   if [ -z "${varvalue}" ]; then
     eval "$varname=${*}"
   else
-    echo "Error: ${varname} already set."
+    printf "\n Error: '%s' is already set." "${varname}"
     usage
   fi
 }
@@ -140,7 +141,7 @@ _update_nanorc(){
   # add all includes from ~/.nano/nanorc if they're not already there
   while read -r inc; do
       if ! grep -q "$inc" "${NANORC_FILE}"; then
-          echo "$inc" >> "$NANORC_FILE"
+          printf "\n %s" "$inc" >> "$NANORC_FILE"
       fi
   done < ~/.nano/nanorc
 }
@@ -161,14 +162,14 @@ f_install(){
   theme="${G_DIR}/themes/${G_THEME}/"
 
   if cd "$HOME"; then
-    echo "Error: Cannot open or access ${HOME} directory."
+    printf "\n Error: Cannot open or access '%s' directory." "${HOME}"
     exit 1
   fi
 
   mkdir -p "$G_DIR"
 
   if [ ! -d "$G_DIR" ]; then
-    echo "Error: ${G_DIR} is not a directory or cannot be accessed or created."
+    printf "\n Error: '%s' is not a directory or cannot be accessed or created." "${G_DIR}"
     usage
   fi
 
@@ -190,16 +191,13 @@ f_install(){
   fi
 
   if [ ! -d "$theme" ]; then
-    echo "Error: ${G_THEME} is not a theme or cannot be accessed."
+    printf "\n Error: '%s' is not a theme or cannot be accessed." "${G_THEME}"
     usage
   fi
 
   touch "$G_FILE"
 
-  { echo "$begin";
-    echo "";
-    echo "$end";
-  } >> $G_FILE
+  printf "\n %s \n %s \n" "$begin" "$end" >> "$G_FILE"
 
   if [ "$G_LITE" = true ]; then
     sed -n -i.bkp '/'"$begin"'/,/'"$end"'/ {
@@ -210,7 +208,7 @@ f_install(){
         }
     #    r theme
     # write the includes
-    }' $G_FILE
+    }' "$G_FILE"
 
     _update_nanorc_lite
   else
