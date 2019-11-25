@@ -160,7 +160,7 @@ f_install(){
   end="# END"
   theme="${G_DIR}/themes/${G_THEME}/"
 
-  if [ ! cd "$HOME" ]; then
+  if cd "$HOME"; then
     echo "Error: Cannot open or access ${HOME} directory."
     exit 1
   fi

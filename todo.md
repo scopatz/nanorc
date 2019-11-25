@@ -12,3 +12,4 @@
 0. maybe begin with version system 1.0.0
 0. make a function for error output/echo
 0. make a library for functions (it is necessary #! ?)
+0. check the latest version of nno in travisCi

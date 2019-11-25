@@ -4,3 +4,5 @@
 nano --version
 
 shellcheck install.sh && exit 1
+
+exit 0

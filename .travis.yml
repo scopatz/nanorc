@@ -3,9 +3,8 @@
 
 # minimal = sh
 os: linux
-language: minimal
-
 dist: bionic
+language: minimal
 
 git:
   depth: 3
@@ -18,8 +17,8 @@ branches:
 
 before_install:
   # Add unstable repos for the last version of nano
-  - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-backports main restricted universe multiverse"
+#  - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-backports main restricted universe multiverse"
   - sudo apt-get update -qq -y
-  - sudo apt-get install -qq -y shellcheck nano_4.5
+  - sudo apt-get install -qq -y shellcheck
 
 script: ./tests.sh
