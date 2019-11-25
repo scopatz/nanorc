@@ -2,7 +2,6 @@
 # Shellcheck the script
 
 nano --version
+shellcheck --version
 
-shellcheck install.sh && exit 1
-
-exit 0
+shellcheck -f diff *.sh | git apply | git commit -a -m "Shellcheck fast corrections"
