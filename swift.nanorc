@@ -55,8 +55,8 @@ color red ""[^"]*""
 color white start="\\\(" end="\)"
 
 # Comments
-color green "//.*"
-color brightgreen "///.*"
+color green "^\s*//.*"
+color brightgreen "^\s*///.*"
 color green start="/\*\*" end="\*/"
 color green "[/**]"
 

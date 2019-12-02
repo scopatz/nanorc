@@ -19,7 +19,7 @@ color brightred "\<(inner|outer)\>"
 color brightblue "<[^= 	]*>" ""(\\.|[^"])*""
 
 ## Comment highlighting
-color red "//.*"
+color red "^\s*//.*"
 color red start="/\*" end="\*/"
 
 ## Trailing whitespace

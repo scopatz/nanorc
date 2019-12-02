@@ -35,7 +35,7 @@ color cyan "<[^= 	]*>" ""(\\.|[^"])*""
 #color cyan start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 
 ## Comment highlighting
-color brightblue "//.*"
+color brightblue "^\s*//.*"
 color brightblue start="/\*" end="\*/"
 
 ## Trailing whitespace

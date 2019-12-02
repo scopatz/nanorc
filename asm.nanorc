@@ -11,7 +11,7 @@ color brightcyan "^[[:space:]]*#[[:space:]]*(define|undef|include|ifn?def|endif|
 color brightyellow "<[^= 	]*>" ""(\\.|[^"])*""
 color brightyellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 ## Highlight comments
-color brightblue "//.*"
+color brightblue "^\s*//.*"
 color brightblue start="/\*" end="\*/"
 ## Highlight trailing whitespace
 color ,green "[[:space:]]+$"

@@ -26,7 +26,7 @@ color green start="\".*\\$" end=".*\""
 color green start="r#+\"" end="\"#+"
 
 # Comments
-color blue "//.*"
+color blue "^\s*//.*"
 color blue start="/\*" end="\*/"
 
 # Attributes

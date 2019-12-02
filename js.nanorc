@@ -49,4 +49,4 @@ color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
 
 ## Comments
 color brightblue start="/\*" end="\*/"
-color brightblue "//.*$"
+color brightblue "^\s*//.*$"
