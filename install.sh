@@ -31,6 +31,8 @@ G_DEPS="unzip sed"
 G_FILE="${HOME}/.nanorc"
 G_REPO_MASTER="https://github.com/scopatz/nanorc/archive/master.zip"
 G_REPO_RELEASE="https://github.com/scopatz/nanorc/archive/${G_VERSION}.zip"
+G_NANO_VERSION="4.5"
+G_NANO_NRC_DIR=""
 unset G_LITE G_UNSTABLE G_VERBOSE G_DIR G_THEME
 
 # Exit Values Help
@@ -60,8 +62,8 @@ f_menu_usage(){
   printf "\n -t THEME"
   printf "\n       Give other theme for installation."
   printf "\n         Default: scopatz"
-  printf "\n         Options: nano, tpro"
-  
+  printf "\n         Options: nano, scopatz, tpro"
+
   exit 1
 }
 
@@ -133,28 +135,34 @@ f_set_variable(){
   fi
 }
 
+# Get Nanorc's
+# Get the not installed Nano's files.
+# This function is only called in lite installation.
+# Sources:
+# http://mywiki.wooledge.org/ParsingLs
+# https://unix.stackexchange.com/questions/70614/how-to-output-only-file-names-with-spaces-in-ls-al
+# https://stackoverflow.com/questions/25156902/how-to-check-if-find-command-didnt-find-anything-bash-opensus
+# https://stackoverflow.com/questions/59110820/find-operator-cant-go-up-in-directory
+f_get_nanorcs(){
+  lite=""
 
+  cd nanorc/
+  for file in *; do
+    [ -e "$file" ] || continue
 
-_update_nanorc(){
-  touch ~/.nanorc
+    if [ -z $(find "../original/" -name "$file") ]; then
+      lite=`printf "%s\ninclude %s" "$lite" "$file"`
+    fi
 
-  # add all includes from ~/.nano/nanorc if they're not already there
-  while read -r inc; do
-      if ! grep -q "$inc" "${NANORC_FILE}"; then
-          printf "\n %s" "$inc" >> "$NANORC_FILE"
-      fi
-  done < ~/.nano/nanorc
+  done
+  cd ..
+
+  return "$lite"
 }
-
-_update_nanorc_lite(){
-  sed -i '/include "\/usr\/share\/nano\/\*\.nanorc"/i include "~\/.nano\/*.nanorc"' "${NANORC_FILE}"
-}
-
-
-
 
 # Install
-# Sources: https://www.cyberciti.biz/faq/download-a-file-with-curl-on-linux-unix-command-line/
+# Sources:
+#  https://www.cyberciti.biz/faq/download-a-file-with-curl-on-linux-unix-command-line/
 f_install(){
   temp="temp.zip"
   begin="# BEGIN"
@@ -201,29 +209,32 @@ f_install(){
 
   if [ "$G_LITE" = true ]; then
     sed -n -i.bkp '/'"$begin"'/,/'"$end"'/ {
-        /'"$begin"'/n
-        /'"$end"'/ !{
+        /'"$begin"'/n # skip over the line that has "$begin" on it
+        /'"$end"'/ !{ # skip over the line that has "$end" on it
           s/*//
-          r  
+          r '"${theme}/config"'
+          r f_get_nanorc
+          d
         }
-    #    r theme
-    # write the includes
     }' "$G_FILE"
-
-    _update_nanorc_lite
   else
+    sed -n -i.bkp '/'"$begin"'/,/'"$end"'/ {
+        /'"$begin"'/n # skip over the line that has "$begin" on it
+        /'"$end"'/ !{ # skip over the line that has "$end" on it
+          s/*//
+          r '"${theme}/config"'
+          # TODO: add a line with only "include /nanorc/*"
+          d
+        }
+    }' "$G_FILE"
     _update_nanorc
   fi
 }
 
-# update.
-# write comments, options, gui, rebindings, includes highlights (according theme)
-# lite = maintains the nano nanorc files'
-# get the list of nano's files and include only ours (exclude).
-# big change: update all nanorc
+# big change: update all nanorc's
 # big change: install "only" the themed nanorc files and .nanorc
 
-# next: more shellcheck and get file and write it
+# next:
 
 # ============================
 #
