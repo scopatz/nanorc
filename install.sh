@@ -149,7 +149,7 @@ f_get_nanorcs(){
   if cd nanorc/; then
     printf "\n Error: Cannot open or access '%s' directory." "nanorc/"
     exit 1
-  done
+  fi
 
   for file in *; do
     [ -e "$file" ] || continue
