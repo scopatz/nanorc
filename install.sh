@@ -146,12 +146,16 @@ f_set_variable(){
 f_get_nanorcs(){
   lite=""
 
-  cd nanorc/
+  if cd nanorc/; then
+    printf "\n Error: Cannot open or access '%s' directory." "nanorc/"
+    exit 1
+  done
+
   for file in *; do
     [ -e "$file" ] || continue
 
-    if [ -z $(find "../original/" -name "$file") ]; then
-      lite=`printf "%s\ninclude %s" "$lite" "$file"`
+    if [ -z "$(find "../original/" -name "$file")" ]; then
+      lite="$(printf "%s\ninclude %s" "$lite" "$file")"
     fi
 
   done
