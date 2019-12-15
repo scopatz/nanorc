@@ -44,7 +44,7 @@ color blue start=""""" end="""""
 color yellow "(^|[[:space:]])//.*"
 
 # Block comment.
-color yellow start="/\*" end="\*/"
+color yellow start="^\s*/\*" end="\*/"
 
 # Trailing whitespace.
 color ,green "[[:space:]]+$"

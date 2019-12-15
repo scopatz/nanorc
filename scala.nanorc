@@ -7,6 +7,6 @@ color cyan "\<(def|object|case|trait|lazy|implicit|abstract|class|extends|final|
 color red ""[^"]*""
 color yellow "\<(true|false|null)\>"
 color blue "^\s*//.*"
-color blue start="/\*" end="\*/"
+color blue start="^\s*/\*" end="\*/"
 color brightblue start="/\*\*" end="\*/"
 color ,green "[[:space:]]+$"

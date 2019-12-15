@@ -26,7 +26,7 @@ color yellow ""(\\.|[^"])*""
 
 # Comments
 color brightblack "(^|[[:space:]])//.*"
-color brightblack start="/\*" end="\*/"
+color brightblack start="^\s*/\*" end="\*/"
 color brightblack start="\(\*" end="\*\)"
 color brightwhite,cyan "TODO:?"
 

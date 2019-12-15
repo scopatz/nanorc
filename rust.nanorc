@@ -30,7 +30,7 @@ color green start="r#+\"" end="\"#+"
 
 # Comments
 color blue "^\s*//.*"
-color blue start="/\*" end="\*/"
+color blue start="^\s*/\*" end="\*/"
 
 # Attributes
 color magenta start="#!\[" end="\]"

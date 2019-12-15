@@ -20,7 +20,7 @@ color brightblue "<[^= 	]*>" ""(\\.|[^"])*""
 
 ## Comment highlighting
 color red "^\s*//.*"
-color red start="/\*" end="\*/"
+color red start="^\s*/\*" end="\*/"
 
 ## Trailing whitespace
 color ,green "[[:space:]]+$"

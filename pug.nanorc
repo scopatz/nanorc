@@ -27,7 +27,7 @@ color cyan "('[^']*')|(\"[^\"]*\")"
 icolor green "\(" "\)" "\," "\="
 # Comments, dashes and spaces
 color blue "\s+(//.*)"
-color blue start="/\*" end="\*/"
+color blue start="^\s*/\*" end="\*/"
 color white "^\s*(\-)"
 color ,green "[[:space:]]+$"
 # Unbuffered comments
