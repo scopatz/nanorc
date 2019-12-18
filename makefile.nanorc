@@ -1,5 +1,6 @@
 syntax "Makefile" "([Mm]akefile|\.ma?k)$"
 header "^#!.*/(env +)?[bg]?make( |$)"
+magic "makefile script"
 comment "#"
 
 color cyan  "\<(ifeq|ifdef|ifneq|ifndef|else|endif)\>"

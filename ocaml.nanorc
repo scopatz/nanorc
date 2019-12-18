@@ -1,6 +1,7 @@
 ## Syntax highlighting for OCaml.
 
 syntax "OCaml" "\.mli?$"
+magic "OCaml"
 comment "(*|*)"
 
 #uid

@@ -1,6 +1,7 @@
 ## Here is an example for assembler.
 ##
 syntax "ASM" "\.(S|s|asm)$"
+magic "assembler source"
 comment "//"
 
 color red "\<[A-Z_]{2,}\>"
