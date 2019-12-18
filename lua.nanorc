@@ -13,6 +13,10 @@
 
 # Automatically use for '.lua' files
 syntax "Lua" ".*\.lua$"
+magic "Lua script"
+comment "--"
+
+linter luacheck --no-color
 
 # General
 color brightwhite ".+"

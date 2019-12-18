@@ -2,6 +2,9 @@
 ##
 syntax "Ruby" "\.rb$" "Gemfile" "config.ru" "Rakefile" "Capfile" "Vagrantfile"
 header "^#!.*/(env +)?ruby( |$)"
+magic "Ruby script"
+linter ruby -w -c
+comment "#"
 
 ## Asciibetical list of reserved words
 color yellow "\<(BEGIN|END|alias|and|begin|break|case|class|def|defined\?|do|else|elsif|end|ensure|false|for|if|in|module|next|nil|not|or|redo|rescue|retry|return|self|super|then|true|undef|unless|until|when|while|yield)\>"

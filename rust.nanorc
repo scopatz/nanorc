@@ -2,7 +2,10 @@
 # Copyright 2015 The Rust Project Developers.
 #
 # NOTE: Rules are applied in order: later rules re-colorize matching text.
+
+
 syntax "Rust" "\.rs"
+comment "//"
 
 # function definition
 color magenta "fn [a-z0-9_]+"
