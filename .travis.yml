@@ -16,7 +16,9 @@ branches:
     - themify
 
 before_install::
- - sudo apt install -qq -y http://ftp.us.debian.org/debian/pool/main/n/nano/nano_4.5-1_amd64.deb
+ - sudo add-apt-repository -y deb http://ftp.de.debian.org/debian bullseye main
+ - sudo apt-get update -y
+ - sudo apt-get install -y nano_4.5-1_amd64.deb
  - nano --version
  - shellcheck --version
 
