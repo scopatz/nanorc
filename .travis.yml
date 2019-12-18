@@ -15,8 +15,8 @@ branches:
 #    - master
     - themify
 
-before_install:
- - sudo apt-get update -qq -y
+before_install::
+ - sudo apt install -qq -y http://ftp.us.debian.org/debian/pool/main/n/nano/nano_4.5-1_amd64.deb
  - nano --version
  - shellcheck --version
 
