@@ -17,8 +17,10 @@ branches:
 before_install:
  - sudo add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu bionic-backports bionic-proposed restricted main multiverse universe"
  - sudo apt-get update -qq -y
- - sudo apt-get install -y nano=4.5
- - sudo apt-get install -y shellcheck=0.6
+# - sudo apt-get install -y nano=4.5
+# - sudo apt-get install -y shellcheck=0.6
+ - sudo apt-get install -y nano=\*
+ - sudo apt-get install -y shellcheck=\*
  - nano --version
  - shellcheck --version
 
