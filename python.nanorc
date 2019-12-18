@@ -3,6 +3,7 @@
 syntax "python" "\.py$"
 header "^#!.*/(env +)?python[-0-9._]*( |$)"
 magic "Python script"
+comment "#"
 
 ## built-in objects
 color cyan "\<(None|self|True|False)\>"

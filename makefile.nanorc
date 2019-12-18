@@ -1,5 +1,6 @@
 syntax "Makefile" "([Mm]akefile|\.ma?k)$"
 header "^#!.*/(env +)?[bg]?make( |$)"
+comment "#"
 
 color cyan  "\<(ifeq|ifdef|ifneq|ifndef|else|endif)\>"
 color cyan  "^(export|include|override)\>"

@@ -1,5 +1,6 @@
 syntax "AWK" "\.awk$"
 header "^#!.*bin/(env +)?awk( |$)"
+comment "#"
 
 color brightyellow "\$[A-Za-z0-9_!@#$*?-]+"
 color brightyellow "\<(ARGC|ARGIND|ARGV|BINMODE|CONVFMT|ENVIRON|ERRNO|FIELDWIDTHS)\>"

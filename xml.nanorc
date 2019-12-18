@@ -2,6 +2,7 @@
 ##
 
 syntax "XML" ".*\.([jrs]?html?|xml|sgml?|rng)$"
+comment "<!--|-->"
 color white "^.+$"
 color green  start="<" end=">"
 color cyan   "<[^> ]+"

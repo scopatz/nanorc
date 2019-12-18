@@ -13,6 +13,7 @@
 
 # Automatically use for '.lua' files
 syntax "Lua" ".*\.lua$"
+comment "--"
 
 # General
 color brightwhite ".+"

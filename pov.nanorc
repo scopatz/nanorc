@@ -1,6 +1,8 @@
 ## Here is an example for POV-Ray.
 ##
 syntax "POV" "\.(pov|POV|povray|POVRAY)$"
+comment "//"
+
 color brightcyan "^[[:space:]]*#[[:space:]]*(declare)"
 color brightyellow "\<(sphere|cylinder|translate|matrix|rotate|scale)\>"
 color brightyellow "\<(orthographic|location|up|right|direction|clipped_by)\>"
