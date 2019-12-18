@@ -1,5 +1,7 @@
 syntax "JSON" "\.json$"
 header "^\{$"
+# You can't add a comment to JSON.
+comment ""
 
 color blue   "\<[-]?[1-9][0-9]*([Ee][+-]?[0-9]+)?\>"  "\<[-]?[0](\.[0-9]+)?\>"
 color cyan  "\<null\>"
