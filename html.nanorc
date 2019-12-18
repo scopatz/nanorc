@@ -1,6 +1,6 @@
 ## HTML syntax highlighting rules for Nano
 
-syntax "HTML" "\.html?(.j2)?$"
+syntax "HTML" "\.html?(.j2)?(.twig)?$"
 magic "HTML document"
 comment "<!--|-->"
 
