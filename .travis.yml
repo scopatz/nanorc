@@ -12,13 +12,17 @@ git:
 
 branches:
   only:
-    - master
+#    - master
     - themify
 
 before_install:
-  # Add unstable repos for the last version of nano
+ - sudo apt-get update -qq -y
+ - nano --version
+ - shellcheck --version
+
+# Add unstable repos for the last version of nano
 #  - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-backports main restricted universe multiverse"
 #  - sudo apt-get update -qq -y
 #  - sudo apt-get install -qq -y shellcheck
 
-script: ./tests.sh
+# script: ./tests.sh
