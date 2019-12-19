@@ -32,9 +32,9 @@ f_compare_version(){
   # Second: check if greater or lesser
   local test_v=$(printf "%s\n%s" "$greater_v" "$lesser_v" | sort -V | head -n 1)
   case $test_v in
-    $getted_v) return true;
-    $required_v) return false;
-    *) return false;
+    $getted_v) return true ;;
+    $required_v) return false ;;
+    *) return false ;;
   esac
 }
 
