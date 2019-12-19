@@ -3,8 +3,8 @@
 # Note: using bash for more power in testing (the final user doesn't need it).
 
 # Global Variables
-G_NANO_VERSION=""
-G_SHELLCHECK_VERSION=""
+G_NANO_VERSION="4.6.0"
+G_SHELLCHECK_VERSION="0.6.0"
 
 # Functions
 
