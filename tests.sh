@@ -45,10 +45,12 @@ f_test_nano_version() {
   return f_compare_version $G_NANO_VERSION $version
 }
 
-f_test_nano_version() {
+f_test_shellcheck_version() {
   local version="nano --version | cut -d ' ' -f 8"
   return f_compare_version $G_SHELLCHECK_VERSION $version
 }
 
+f_test_nano_version
+f_test_shellcheck_version
 # ....shellcheck -f diff *.sh | git apply | git commit -a -m "Shellcheck fast corrections"
 shellcheck *.sh
