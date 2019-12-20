@@ -32,7 +32,7 @@ f_compare_version(){
   
   # Second: check if greater or lesser
   local test_v
-  $test_v=$(printf "%s\n%s" "$required_v" "$getted_v" | sort -V | head -n 1)
+  test_v="$(printf "%s\n%s" "$required_v" "$getted_v" | sort -V | head -n 1)"
   case $test_v in
     $getted_v) return 0 ;;
     $required_v) return 1 ;;
@@ -44,13 +44,13 @@ f_compare_version(){
 
 f_test_nano_version() {
   local version
-  $version=$(nano --version | cut -d ' ' -f 4)
+  version="$(nano --version | cut -d ' ' -f 4)"
   return $(f_compare_version $G_NANO_VERSION $version)
 }
 
 f_test_shellcheck_version() {
   local version
-  $version=$(nano --version | cut -d ' ' -f 8)
+  version="$(nano --version | cut -d ' ' -f 8)"
   return $(f_compare_version $G_SHELLCHECK_VERSION $version)
 }
 
