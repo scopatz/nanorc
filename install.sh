@@ -24,6 +24,9 @@
 OPTERR=1
 # Separator (useful for simulate arrays)
 G_IFS=" "
+# Debugging variables
+set -e
+set -x
 
 # Global Variables
 G_VERSION="2019.10.17"
