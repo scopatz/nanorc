@@ -34,7 +34,7 @@ G_DEPS="unzip sed"
 G_FILE="${HOME}/.nanorc"
 G_REPO_MASTER="https://github.com/scopatz/nanorc/archive/master.zip"
 G_REPO_RELEASE="https://github.com/scopatz/nanorc/archive/${G_VERSION}.zip"
-G_NANO_VERSION="4.5"
+G_NANO_VERSION="4.6.0"
 G_NANO_NRC_DIR=""
 unset G_LITE G_UNSTABLE G_VERBOSE G_DIR G_THEME
 
