@@ -56,9 +56,9 @@ f_test_shellcheck_version() {
   return $?
 }
 
-printf "#################\n"
+printf "=================\n"
 printf "TESTS\n"
-printf "#################\n"
+printf "=================\n"
 printf "Nano Version ok? %s\n" "$(f_test_nano_version)"
 printf "Shellcheck Version ok? %s\n" "$(f_test_shellcheck_version)"
 # ....shellcheck -f diff *.sh | git apply | git commit -a -m "Shellcheck fast corrections"
