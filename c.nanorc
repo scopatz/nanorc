@@ -40,5 +40,10 @@ color cyan "<[^= 	]*>" ""(\\.|[^"])*""
 color brightblue "^\s*//.*"
 color brightblue start="/\*" end="\*/"
 
+# Highlighting for documentation comments
+color magenta "@param [a-zA-Z_][a-z0-9A-Z_]+"
+color magenta "@return"
+color magenta "@author.*"
+
 ## Trailing whitespace
 color ,green "[[:space:]]+$"
