@@ -34,8 +34,8 @@ G_DEPS="unzip sed"
 G_FILE="${HOME}/.nanorc"
 G_REPO_MASTER="https://github.com/scopatz/nanorc/archive/master.zip"
 G_REPO_RELEASE="https://github.com/scopatz/nanorc/archive/${G_VERSION}.zip"
-G_NANO_VERSION="4.6.0"
-G_NANO_NRC_DIR=""
+# G_NANO_VERSION="4.6.0"
+# G_NANO_NRC_DIR=""
 unset G_LITE G_UNSTABLE G_VERBOSE G_DIR G_THEME
 
 # Exit Values Help
@@ -175,6 +175,9 @@ f_install(){
   begin="# BEGIN"
   end="# END"
   theme="${G_DIR}/themes/${G_THEME}/"
+  # Sed rules : skip over the line "$begin" tag and before "$end" tag
+  sed_lite="$(printf "/%s/,/%s/{ /%s/n /%s/ !{ s/*// r '%s/config' r '%s' d }}" "$begin" "$end" "$begin" "$end" "$theme" "$(f_get_nanorc)")"
+  sed_no_lite="$(printf "/%s/,/%s/{ /%s/n /%s/ !{ s/*// r '%s/config' r 'include /nanorc/*' d }}" "$begin" "$end" "$begin" "$end" "$theme")"
 
   if cd "$HOME"; then
     printf "\n Error: Cannot open or access '%s' directory." "${HOME}"
@@ -215,25 +218,9 @@ f_install(){
   printf "\n %s \n %s \n" "$begin" "$end" >> "$G_FILE"
 
   if [ "$G_LITE" = true ]; then
-    sed -n -i.bkp '/'"$begin"'/,/'"$end"'/ {
-        /'"$begin"'/n # skip over the line that has "$begin" on it
-        /'"$end"'/ !{ # skip over the line that has "$end" on it
-          s/*//
-          r '"${theme}/config"'
-          r f_get_nanorc
-          d
-        }
-    }' "$G_FILE"
+    sed -n -i.bkp '$sed_lite' "$G_FILE"
   else
-    sed -n -i.bkp '/'"$begin"'/,/'"$end"'/ {
-        /'"$begin"'/n # skip over the line that has "$begin" on it
-        /'"$end"'/ !{ # skip over the line that has "$end" on it
-          s/*//
-          r '"${theme}/config"'
-          # TODO: add a line with only "include /nanorc/*"
-          d
-        }
-    }' "$G_FILE"
+    sed -n -i.bkp '$sed_no_lite' "$G_FILE"
     _update_nanorc
   fi
 }

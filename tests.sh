@@ -42,30 +42,28 @@ f_compare_version(){
 
 # Test Functions
 
-f_test_nano_version() {
+f_test_nano_version(){
   local version
   version="$(nano --version | cut -d ' ' -f 5 | head -n 1)"
-  echo $G_NANO_VERSION
-  echo $version
   f_compare_version "$G_NANO_VERSION" "$version"
   return $?
 }
 
-f_test_shellcheck_version() {
+f_test_shellcheck_version(){
   local version
   version="$(shellcheck --version | cut -d ' ' -f 2 | head -n 2 | tail -n 1)"
-  echo $G_SHELLCHECK_VERSION
-  echo $version
   f_compare_version "$G_SHELLCHECK_VERSION" "$version"
   return $?
 }
+
+# MAIN TESTS
 
 printf "=================\n"
 printf "TESTS\n"
 printf "=================\n"
 f_test_nano_version
-printf "Nano Version ok? %s (1 = ok)\n" "$?"
+printf "Nano Version ok? %s (0 = ok)\n" "$?"
 f_test_shellcheck_version
-printf "Shellcheck Version ok? %s (1 = ok)\n" "$?"
+printf "Shellcheck Version ok? %s (0 = ok)\n" "$?"
 # ....shellcheck -f diff *.sh | git apply | git commit -a -m "Shellcheck fast corrections"
 shellcheck -- *.sh
