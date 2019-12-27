@@ -218,9 +218,9 @@ f_install(){
   printf "\n %s \n %s \n" "$begin" "$end" >> "$G_FILE"
 
   if [ "$G_LITE" = true ]; then
-    sed -n -i.bkp '$sed_lite' "$G_FILE"
+    sed -n -i.bkp "$sed_lite" "$G_FILE"
   else
-    sed -n -i.bkp '$sed_no_lite' "$G_FILE"
+    sed -n -i.bkp "$sed_no_lite" "$G_FILE"
     _update_nanorc
   fi
 }
