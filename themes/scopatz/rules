@@ -1,0 +1,44 @@
+#!/usr/bin/sed -f
+
+# SCOPATZ
+# =====================
+# NANORC Scopatz
+# https://github.com/scopatz
+# =====================
+
+# Text Colors
+## Strings and Comments:
+##  In general you will want your strings and comments to come last,
+##  because highlighting rules are applied in the order they are read in.
+## The words should be in singular.
+## BTICKS = backtick
+## TSPACE = trailing whitespace
+## VERSION = version numbers
+## REMINDERS = fixme, todo, xxx
+
+s|CONSTANT|brightred|
+s|FUNCTION|brightmagenta|
+s|KEYWORD1|brightgreen|
+s|KEYWORD2|green|
+s|DIRECTIVE|brightcyan|
+s|STRING1|red|
+s|STRING2|magenta|
+s|COMMENT1|brightblue|
+s|COMMENT2|cyan|
+s|COLOR|yellow|
+s|MACRO|cyan|
+s|ERROR|brightred|
+s|OPERATORS|green|
+s|BOOLEAN|brightmagenta|
+s|BRACKET|magenta|
+s|BTICKS|green|
+s|TSPACE|,green|
+s|VERSION|red|
+s|REMINDERS|brightwhite,yellow|
+s|EMAIL|magenta|
+
+# Macros
+
+# s|^+TODO|color brightcyan "TODO:?"|
+# s|^+LINT|color ,green "[[:space:]]+$"\ncolor ,red "\t*"|
+# s|^+LONG-LINE-WARNING|color ,red "^.{81,}$"|

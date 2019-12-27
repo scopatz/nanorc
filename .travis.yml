@@ -1,12 +1,25 @@
-sudo: required
-dist: trusty
+# Tests
+# Verify the install script
 
-before_install:
-  - echo 'deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse' | sudo tee -a /etc/apt/sources.list
-  - sudo apt-get -qq update
-  - sudo apt-get install -y shellcheck
+os: linux
+dist: bionic
+language: shell
 
 git:
   depth: 3
+  quiet: true
 
-script: ./shellcheck.sh
+branches:
+  only:
+#    - master
+    - themify
+
+before_install:
+ - sudo add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu bionic-backports bionic-proposed restricted main multiverse universe"
+ - sudo apt-get update -qq -y
+ # nano version <= 4.6 (2019/12/18 = 2.9.3)
+ - sudo apt-get install -qq -y nano=\*
+ # shellcheck version >= 0.6.0 (2019/12/18 = 0.6.0)
+ - sudo apt-get install -qq -y shellcheck=\*
+
+script: ./tests.sh

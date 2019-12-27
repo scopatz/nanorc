@@ -4,6 +4,8 @@ This repository holds ``{lang}.nanorc`` files that have improved definitions of 
 
 ## Installation
 
+For readability will use `$install_path` for the path of your choose (in *system wide* the path is always `/usr/share/nano-syntax-highlighting/`).
+
 There are three ways to install this repo.
 
 ### 1. Automatic installer
@@ -38,11 +40,9 @@ Feel free to add your official package manager.
 
 ### 3. Clone repo (copy the files)
 
-The files should be placed inside of the `~/.nano/` directory.
-
-You can put the files in another directory inside the correct `.nano` folder.
-For example: `~/.nano/nanorc/`.
-For readability will use `$install_path` for the path of your choose (in *system wide* the path is always `/usr/share/nano-syntax-highlighting/`).
+The files should be placed inside of the `~/.nano/` directory.  
+You can put the files in another directory inside the correct `.nano` folder.  
+For example: `~/.nano/nanorc/`.  
 
 For user, only run:
 
@@ -86,6 +86,13 @@ include "~/.nano/c.nanorc"
 
 ## Tricks & Tweaks
 
+### Themes - WIP
+
+There are three themes you can use:
+- original: only nano's approximate default highlight.
+- project: only scopatz's highlight.
+- custom: highlight, GUI and shortcuts.
+
 ### MacOS
 
 `\<` and `\>` are regular character escapes on MacOS.  
@@ -106,6 +113,17 @@ But if some original nanorc file needs an update, feel free to [patch it](https:
 
 Please see this [issue](https://savannah.gnu.org/bugs/?56994).
 
+### New Features
+
+Sometimes new features are pending in nano's project issues or in a superior version of nano.  
+A view in that issues it can be helpful or upgrade the nano's version.  
+See GNU Project link in the end.
+
 ## Acknowledgements
 
-Some of these files are derived from the original [Nano](https://www.nano-editor.org) editor [repo](https://git.savannah.gnu.org/cgit/nano.git)
+- [Nano Editor](https://www.nano-editor.org) for some `nanorc` files.
+- [GNU Project](https://savannah.gnu.org/projects/nano/) for hosting the `nano`'s git and issues.
+- [nanorc-mac](https://github.com/richrad/nanorc-mac) for the themes idea.
+- [Bruce Barnert](http://www.grymoire.com/Unix/Sed.html) for good `sed` documentation.
+
+- And to all contributors!
