@@ -18,7 +18,7 @@ color yellow "(^|[[:blank:]]|\(|,)_($|[[:blank:]]|,|\))"
 
 # Functions
 color cyan "(^|[[:blank:]])\w+\("
-color normal "\(|\)|\[|\]|,|=|\\="
+color white "\(|\)|\[|\]|,|=|\\="
 
 # Atoms
 color green start="\"" end="\""
