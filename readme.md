@@ -77,7 +77,7 @@ Simply run:
 
 ### 3. One by one
 
-Add your preferable languages one by onento the file. For example:
+Add your preferable languages one by one into the file. For example:
 
 ```
 ## C/C++
@@ -95,10 +95,9 @@ This is reported in [Issue 52](https://github.com/scopatz/nanorc/issues/52).
 
 ### Why not include the original files?
 
-It is a good question, but the way that nano reads the files matters.  
-In other words, the regex instructions should be in a _specific order_ (you can see that in some nanorc files).  
-So, if we `include` or `extendsyntax` (yes, there is also this command) the colors or other things won't be work well.  
-The best way to do is copying and editing the original files (if it is needed).  
+Good question! It's due to the way that nano reads the files, the regex instructions should be in a _specific order_ which is evident in some nanorc files.
+And if we use the `include` or `extendsyntax` commands, the colors or other things may not work as expected.  
+The best way to make changes is by copying and editing the original files.  
 Please see this [issue](https://savannah.gnu.org/bugs/index.php?5698).   
 But if some original nanorc file needs an update, feel free to [patch it](https://savannah.gnu.org/patch/?func=additem&group=nano)!
 
