@@ -1,6 +1,7 @@
 ## Here is an example for Fish shell scripts.
 ##
 syntax "Fish" "\.fish$"
+header "^#!.*/(env +)?fish( |$)"
 icolor brightgreen "^[0-9A-Z_]+\(\)"
 color green "\<(alias|begin|break|case|continue|contains|else|end|for|function|if|math|return|set|switch|test|while)\>"
 color green "(\{|\}|\(|\)|\;|\]|\[|`|\\|\$|<|>|!|=|&|\|)"
