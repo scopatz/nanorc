@@ -19,6 +19,7 @@ color green "\<(var|interface|int|in|let|new|package|private)\>"
 color green "\<(protected|public|return|static|super|switch)\>"
 color green "\<(this|throw|try|typeof)\>"
 color green "\<(void|while|with|yield)\>"
+color green "\<(async|await)\>"
 
 ## Type specifiers
 color red "\<(Array|Boolean|Date|Enumerator|Error|Function)\>"
