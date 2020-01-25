@@ -49,5 +49,5 @@ color ,green "[[:space:]]+$"
 color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
 
 ## Comments
-color brightblue start="/\*" end="\*/"
+color brightblue start="^\s*/\*" end="\*/"
 color brightblue "^\s*//.*$"
