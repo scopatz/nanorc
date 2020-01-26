@@ -554,3 +554,5 @@
   github: rasa
 - name: Zach DeCook
   email: zdecook@ccel.org
+  alternate_emails:
+    - zachdecook@librem.one
