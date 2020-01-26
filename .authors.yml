@@ -252,7 +252,7 @@
   github: hawk93
 - name: Harsh Shandilya
   email: msfjarvis@gmail.com
-  num_commits: 1
+  num_commits: 10
   first_commit: 2019-09-19 15:52:44
   github: msfjarvis
 - name: DesertPunk
@@ -335,7 +335,7 @@
   github: TJProgrammer
 - name: Anthony Scopatz
   email: scopatz@gmail.com
-  num_commits: 47
+  num_commits: 50
   first_commit: 2010-07-28 18:15:43
   github: astronautlevel
 - name: PhilipRoman
@@ -555,4 +555,31 @@
 - name: Zach DeCook
   email: zdecook@ccel.org
   alternate_emails:
-    - zachdecook@librem.one
+  - zachdecook@librem.one
+  num_commits: 6
+  first_commit: 2019-12-18 09:34:49
+  github: earboxer
+- name: Gareth Jones
+  email: Jones258@Gmail.com
+  num_commits: 3
+  first_commit: 2019-11-01 23:57:35
+- name: Dante Falzone
+  email: 48266179+DanteFalzone0@users.noreply.github.com
+  num_commits: 2
+  first_commit: 2019-12-25 22:55:19
+  github: DanteFalzone0
+- name: CryptoDragonLady
+  email: celeste.weingartner@gmail.com
+  num_commits: 1
+  first_commit: 2019-12-30 04:00:29
+  github: CryptoDragonLady
+- name: Hunter Peavey
+  email: vrywjvgviuotxeioqipx@disroot.org
+  num_commits: 2
+  first_commit: 2019-10-18 19:38:17
+  github: krathalan
+- name: Ritiek Malhotra
+  email: Ritiek@users.noreply.github.com
+  num_commits: 4
+  first_commit: 2017-05-23 11:12:47
+  github: ritiek
