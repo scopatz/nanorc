@@ -1,0 +1,31 @@
+syntax "toml" "\.toml$"
+comment "#"
+
+# Booleans
+color magenta "true|false"
+
+# Numbers
+color green "[+-]?[[:space:]]*[0-9]+(\.[0-9]+)?([Ee][+-]?[0-9]+)?"
+color green "[0-9]+(_[0-9]+)*"
+
+# Tables / unwrapped keys
+color brightgreen "[a-zA-Z0-9_]*(\.[a-zA-Z0-9_]+)*"
+
+# Invalid Table names
+color ,red "^[[:space:]]*\[\]"
+color ,red "^[[:space:]]*\[[a-zA-Z0-9_]\.\]"
+color ,red "^[[:space:]]*\[.*\.\..*\]"
+color ,red "^[[:space:]]*\[\..*?\]"
+
+# Strings
+color brightyellow ""(\.|[^"])*"" "'(\.|[^'])*'"
+color yellow start="\"\"\"" end="\"\"\""
+
+# Comments
+color brightblue "#.*"
+
+# Keyless value
+color ,red "^[[:space:]]*=.*"
+
+# Trailing whitespace
+color ,green "[[:space:]]+$"
