@@ -40,6 +40,7 @@ case "$1" in
  -h|--help)
    echo "Install script for nanorc syntax highlights"
    echo "Call with -l or --lite to update .nanorc with secondary precedence to existing .nanorc includes"
+   exit 0
  ;;
 esac
 
