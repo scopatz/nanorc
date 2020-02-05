@@ -1,5 +1,5 @@
 ## PHP Syntax Highlighting
-syntax "PHP" "\.php[2345s~]?$"
+syntax "PHP" "\.php[2345s~]?$|\.module$"
 magic "PHP script"
 comment "//"
 color white start="<\?(php|=)?" end="\?>"
