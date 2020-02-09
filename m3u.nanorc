@@ -12,8 +12,8 @@ color brightyellow "=[\"][^\"]*[\"]"
 color brightgreen "[a-zA-Z-]*="
 
 # Headers
-color brightmagenta start="#EXTM3U.*" end="$"
 color brightred "^#EXT[-A-Z]*:"
+color brightmagenta "^#EXTM3U"
 
 # Separators
 color normal "[,=]"
