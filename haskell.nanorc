@@ -12,7 +12,7 @@ color cyan "(\||@|!|:|_|~|=|\\|;|\(\)|,|\[|\]|\{|\})"
 color magenta "(==|/=|&&|\|\||<|>|<=|>=)"
 
 ## Various symbols
-color cyan "(->|<-)"
+color cyan "(->|<-|=>)"
 color magenta "\.|\$"
 
 ## Data constructors
