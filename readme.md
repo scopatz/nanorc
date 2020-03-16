@@ -20,7 +20,7 @@ If your machine doesn't have `curl` command, use this code:
 wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
 ```
 
-This unpacks all the `.nanorc` files to `~/.nano`.
+This automatically unpacks all the `.nanorc` files to `~/.nano`.
 
 #### Note
 
