@@ -13,6 +13,7 @@
 ## New updated taken from http://wiki.linuxhelp.net/index.php/Nano_Syntax_Highlighting
 
 syntax "JavaScript" "\.(js)$"
+header "^#!.*\/(env +)node"
 comment "//"
 
 ## Default
