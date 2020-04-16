@@ -42,6 +42,8 @@ color red "\<(true|false)\>"
 ## String
 color brightyellow "L?\"(\\"|[^"])*\""
 color brightyellow "L?'(\'|[^'])*'"
+color brightcyan "L?`(\`|[^`])*`"
+color brightwhite,blue start="\$\{" end="\}"
 
 ## Trailing spaces
 color ,green "[[:space:]]+$"
