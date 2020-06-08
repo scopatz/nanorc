@@ -3,10 +3,6 @@ syntax "Creole" "\.creole$"
 # Headers
 color magenta "^=.*=$"
 
-# Emphasis
-color yellow start="//" end="//"
-color brightyellow start="\*\*" end="\*\*"
-
 # Lists
 color green "^[#*]+\s.*"
 
@@ -14,7 +10,13 @@ color green "^[#*]+\s.*"
 color cyan start="\[\[" end="\]\]"
 color cyan start="\{\{" end="\}\}"
 
+# Emphasis
+color yellow "//.*//"
+color brightyellow "\*\*.*\*\*"
+
 # Pre and tables
 color red start="\{\{\{" end="\}\}\}"
 color red "\|"
 color brightred "\|="
+
+color ,red "\s+$"
