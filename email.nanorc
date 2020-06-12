@@ -1,5 +1,5 @@
-syntax "Email"
+syntax "Email" "\.em(ai)?l$"
 
 color magenta "^>([^>].*|$)"
-color blue "^>>([^>].*|$)"
-color green "^>>>.*"
+color blue "^> ?>([^>].*|$)"
+color green "^> ?> ?>.*"
