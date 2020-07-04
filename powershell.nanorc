@@ -1,0 +1,31 @@
+##
+syntax "powershell" "\.(ps1|psm1)$"
+
+## Most commands
+icolor cyan "\<(Add-Computer|Add-Content|Add-History|Add-Member|Add-PSSnapin|Add-Type|asnp|cat|cd|cd..|chdir|Checkpoint-Co|clc|clear|Clear-Content|Clear-EventLo|Clear-History|Clear-Host|Clear-Item|Clear-ItemPro|Clear-Variabl|clhy|cli|clp|cls|clv|compare|Compare-Objec|Complete-Tran|Connect-WSMan|ConvertFrom-C|ConvertFrom-S|ConvertFrom-S|Convert-Path|ConvertTo-Csv|ConvertTo-Htm|ConvertTo-Sec|ConvertTo-Xml|copy|Copy-Item|Copy-ItemProp|cp|cpi|cpp|cvpa|dbp|Debug-Process|del|diff|dir|Disable-Compu|Disable-PSBre|Disable-PSRem|Disable-PSSes|Disable-WSMan|Disconnect-WS|ebp|echo|Enable-Comput|Enable-PSBrea|Enable-PSRemo|Enable-PSSess|Enable-WSManC|Enter-PSSessi|epal|epcsv|epsn|erase|etsn|Exit-PSSessio|Export-Alias|Export-Clixml|Export-Consol|Export-Counte|Export-Csv|Export-Format|Export-Module|Export-PSSess|exsn|foreach|ForEach-Objec|Format-Custom|Format-List|Format-Table|Format-Wide|gal|gbp|gc|gci|gcm|gcs|gdr|Get-Acl|Get-Alias|Get-Authentic|Get-ChildItem|Get-Command|Get-ComputerR|Get-Content|Get-Counter|Get-Credentia|Get-Culture|Get-Date|Get-Event|Get-EventLog|Get-EventSubs|Get-Execution|Get-FormatDat|Get-Help|Get-History|Get-Host|Get-HotFix|Get-Item|Get-ItemPrope|Get-Job|Get-Location|Get-Member|Get-Module|Get-PfxCertif|Get-Process|Get-PSBreakpo|Get-PSCallSta|Get-PSDrive|Get-PSProvide|Get-PSSession|Get-PSSession|Get-PSSnapin|Get-Random|Get-Service|Get-TraceSour|Get-Transacti|Get-UICulture|Get-Unique|Get-Variable|Get-Verb|Get-WinEvent|Get-WmiObject|Get-WSManCred|Get-WSManInst|ghy|gjb|gmo|gps|group|Group-Object|gsn|gsnp|gsv|gwmi|help|history|icm|iex|ihy|Import-Alias|Import-Clixml|Import-Counte|Import-Csv|Import-Locali|Import-Module|Import-PSSess|ImportSystemM|Invoke-Comman|Invoke-Expres|Invoke-Histor|Invoke-Item|Invoke-WmiMet|Invoke-WSManA|ipal|ipcsv|ipmo|ipsn|ise|iwmi|Join-Path|kill|Limit-EventLo|man|measure|Measure-Comma|Measure-Objec|mkdir|more|mount|move|Move-Item|Move-ItemProp|mv|nal|ndr|New-Alias|New-Event|New-EventLog|New-Item|New-ItemPrope|New-Module|New-ModuleMan|New-Object|New-PSDrive|New-PSSession|New-PSSession|New-Service|New-TimeSpan|New-Variable|New-WebServic|New-WSManInst|New-WSManSess|nmo|nsn|ogv|Out-Default|Out-File|Out-GridView|Out-Host|Out-Null|Out-Printer|Out-String|popd|Pop-Location|prompt|pushd|Push-Location|pwd|rbp|rcjb|rdr|Read-Host|Receive-Job|Register-Engi|Register-Obje|Register-PSSe|Register-WmiE|Remove-Comput|Remove-Event|Remove-EventL|Remove-Item|Remove-ItemPr|Remove-Job|Remove-Module|Remove-PSBrea|Remove-PSDriv|Remove-PSSess|Remove-PSSnap|Remove-Variab|Remove-WmiObj|Remove-WSManI|ren|Rename-Item|Rename-ItemPr|Reset-Compute|Resolve-Path|Restart-Compu|Restart-Servi|Restore-Compu|Resume-Servic|rjb|rmdir|rmo|rni|rnp|rsn|rsnp|rvpa|rwmi|sajb|sal|saps|sasv|sbp|select|Select-Object|Select-String|Select-Xml|Send-MailMess|set|Set-Acl|Set-Alias|Set-Authentic|Set-Content|Set-Date|Set-Execution|Set-Item|Set-ItemPrope|Set-Location|Set-PSBreakpo|Set-PSDebug|Set-PSSession|Set-Service|Set-StrictMod|Set-TraceSour|Set-Variable|Set-WmiInstan|Set-WSManInst|Set-WSManQuic|Show-EventLog|sleep|sort|Sort-Object|spjb|Split-Path|spps|spsv|start|Start-Job|Start-Process|Start-Service|Start-Sleep|Start-Transac|Start-Transcr|Stop-Computer|Stop-Job|Stop-Process|Stop-Service|Stop-Transcri|Suspend-Servi|swmi|TabExpansion|tee|Tee-Object|Test-Computer|Test-Connecti|Test-ModuleMa|Test-Path|Test-WSMan|Trace-Command|type|Undo-Transact|Unregister-Ev|Unregister-PS|Update-Format|Update-List|Update-TypeDa|Use-Transacti|Wait-Event|Wait-Job|Wait-Process|where|Where-Object|wjb|write|Write-Debug|Write-Error|Write-EventLo|Write-Host|Write-Output|Write-Progres|Write-Verbose|Write-Warning)\>"
+
+## Functions
+icolor brightyellow "\<function\>"
+
+## Comparison operators
+icolor brightyellow "-\<(eq|ne|gt|lt|ge|le)\>"
+
+## Variables
+icolor brightred "\$[a-zA-Z0-9_]+"
+
+## Major statements
+icolor brightcyan "\<(if|do|else|elseif|for|foreach|switch|until|while)\>"
+
+## Comments
+color brightblue "#.*$"
+color brightblue start="<#" end="#>"
+
+## Quoted text
+color brightwhite "\"[^\"]*\""
+color brightwhite "'[^']*'"
+
+## Text between %'s which is unique to searches
+icolor brightmagenta "\%[^\%]*\%"
+
+## Trailing whitespace
+color ,green "[[:space:]]+$"
