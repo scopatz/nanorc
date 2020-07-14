@@ -39,9 +39,6 @@ color yellow "( and | or | xor |!|&&|\|\|)"
 # And/Or/SRO/etc
 color green "(\;\;|\|\||::|=>)"
 color cyan "->"
-# Online Comments
-color brightyellow "^(#.*|//.*)$"
-color brightyellow "[	| ](#.*|//.*)$"
 # Double quoted STRINGS!
 color red "(\"[^\"]*\")"
 # Heredoc (typically ends with a semicolon).
@@ -50,6 +47,9 @@ color red start="<<<['\"]?[A-Z][A-Z0-9_]*['\"]?" end="^[A-Z][A-Z0-9_]*;"
 color white "\{\$[^}]*\}"
 # Single quoted string
 color red "('[^']*')"
+# Online Comments
+color brightyellow "^(#.*|//.*)$"
+color brightyellow "[	| ](#.*|//.*)$"
 # PHP Tags
 color red "(<\?(php)?|\?>)"
 # General HTML
