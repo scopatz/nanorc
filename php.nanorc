@@ -37,8 +37,7 @@ color yellow "(==|===|!=|<>|!==|<=|>=|<=>)"
 # Logical Operators
 color yellow "( and | or | xor |!|&&|\|\|)"
 # And/Or/SRO/etc
-color green "(\;\;|\|\||::|=>)"
-color cyan "->"
+color cyan "(\;\;|\|\||::|=>|->)"
 # Double quoted STRINGS!
 color red "(\"[^\"]*\")"
 # Heredoc (typically ends with a semicolon).
