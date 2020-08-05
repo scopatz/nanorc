@@ -1,0 +1,39 @@
+## Nano syntax highlighting file for Batch
+## Written by Dante Falzone https://github.com/DanteFalzone0
+
+syntax "Batch" "\.[bB][aA][tT]$" "\.[cC][mM][dD]$"
+comment "REM"
+
+## Commands for basic I/O
+icolor green "\<(cls|echo|pause|choice|more|type)\>"
+
+## Commands for file operations
+icolor green "\<(assoc|cd|copy|del|move|path|rd|ren|vol|attrib|chkdsk|comp|convert)\>"
+icolor green "\<(expand|format|label|subst|xcopy|robocopy|fc|diskpart|md|mkdir)\>"
+
+## Other commands
+icolor cyan "\<(ver|dir|date|exit|prompt|start|time|cmd|driverquery|find|help|ipconfig)\>"
+icolor cyan "\<(net|ping|shutdown|sort|systeminfo|taskkill|tasklist|tree|title|set)\>"
+
+## Operators
+icolor yellow "[.:;,+*-/|=!<>&%@\"]"
+
+## Executable files
+icolor brightred "[[:graph:]]+\.exe[[:space:]]"
+icolor brightred "[[:graph:]]+\.exe$"
+
+## Switches and labels
+icolor brightmagenta "/[[:graph:]]+$"
+icolor brightmagenta "/[[:graph:]]+[[:space:]]"
+
+## Numerals
+icolor brightyellow "[[:digit:]]"
+
+## Block delimeters
+icolor magenta "[(){}]"
+
+## Comments
+icolor brightblue "REM.*"
+
+## Trailing whitespace
+color ,green "[[:space:]]+$"
