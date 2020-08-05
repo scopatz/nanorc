@@ -1,7 +1,7 @@
 ## Nano syntax highlighting file for Batch
 ## Written by Dante Falzone https://github.com/DanteFalzone0
 
-syntax "Batch" "\.[bBcC][aAmM][tTdD]$"
+syntax "Batch" "\.[bB][aA][tT]$" "\.[cC][mM][dD]$"
 comment "REM"
 
 ## Commands for basic I/O
