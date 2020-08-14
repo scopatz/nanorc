@@ -19,3 +19,6 @@ color brightwhite ":(\s|\t|$)"
 
 # Comments
 color brightblue "(^|[[:space:]])#.*$"
+
+# Trailing whitespace
+color ,red "[[:space:]]+$"
