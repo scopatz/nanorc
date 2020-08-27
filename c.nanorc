@@ -36,6 +36,9 @@ color cyan "<[^= 	]*>" ""(\\.|[^"])*""
 ## This string is VERY resource intensive!
 #color cyan start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 
+## printf-family format specifiers
+color yellow "%(\#|(0-+))?(hh|h|l|ll|q|L|j|z|Z|t)?[A-Za-z]" "%%"
+
 ## Comment highlighting
 color brightblue "//.*"
 color brightblue start="/\*" end="\*/"
