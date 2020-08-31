@@ -1,5 +1,5 @@
 ## Here is an example for Batch file shell script.
-## Author: davidhcefx, based on Mitch Bumgarner's version.
+## Author: davidhcefx (https://github.com/davidhcefx), based on Mitch Bumgarner's version.
 ## License: MIT License
 
 syntax "batch" "\.(bat|cmd)$"
