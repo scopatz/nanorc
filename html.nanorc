@@ -28,7 +28,7 @@ color yellow ""(\\.|[^"])*""
 color red "&#?[[:alnum:]]*;"
 
 ## Template strings (not in the HTML spec, but very commonly used)
-color magenta "\{[^\}]*\}"
+color magenta "\{[^\}]*\}\}?"
 color brightgreen "[[:space:]]((end)?if|(end)?for|in|not|(end)?block)[[:space:]]"
 
 ## Comments
