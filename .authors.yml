@@ -255,6 +255,8 @@
   num_commits: 10
   first_commit: 2019-09-19 15:52:44
   github: msfjarvis
+  alternate_emails:
+    - me@msfjarvis.dev
 - name: DesertPunk
   email: 38014530+DesertPunk@users.noreply.github.com
   num_commits: 2
@@ -583,3 +585,41 @@
   num_commits: 4
   first_commit: 2017-05-23 11:12:47
   github: ritiek
+- name: hdquemada
+  email: 44162051+hdquemada@users.noreply.github.com
+- name: Oïleurre
+  email: 66210874+oileurre@users.noreply.github.com
+- name: Joerg Stoever
+  email: stoever@dtv-verkehrsconsult.de
+- name: emidiostani
+  email: emidiostani@gmail.com
+- name: Justin P
+  email: Jpartain89@gmail.com
+- name: Yvan Satyawan
+  email: y_satyawan@hotmail.com
+- name: Paulo S. Costa
+  email: pauloscosta5@gmail.com
+- name: czechuuu
+  email: czechuuu@users.noreply.github.com
+- name: msuska
+  email: Martin.Suska@dhl.com
+- name: davidhcefx
+  email: davidhu0903ex3@gmail.com
+- name: Mlendea, Horațiu
+  email: Mlendea.Horatiu@GMail.com
+- name: Exonorid
+  email: exonorid@gmail.com
+- name: yzzyx
+  email: yzzyx@yzzyx.network
+  alternate_emails:
+    - yzzyx@cock.li
+- name: Aiden Gall
+  email: aidentvgall@gmail.com
+- name: Rashil Gandhi
+  email: rashil2000@gmail.com
+- name: Ryan Westlund
+  email: rlwestlund@gmail.com
+- name: Serhiy Zahoriya
+  email: serhiy.int@gmail.com
+- name: Bart Hanssens
+  email: bart.hanssens@bosa.fgov.be
