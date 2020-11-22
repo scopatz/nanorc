@@ -1,4 +1,4 @@
-syntax "JavaScript" "\.js$"
+syntax "JavaScript" "\.(js|ts)$"
 comment "//"
 color blue   "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
 color blue   "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
