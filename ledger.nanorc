@@ -1,10 +1,17 @@
-syntax "Ledger" "(^|\.|/)ledger|ldgr|beancount|bnct$"
+syntax "Ledger" "(^|\.|/)ledger|ldgr|lg$"
 
-color brightmagenta  "^([0-9]{4}(/|-)[0-9]{2}(/|-)[0-9]{2}|[=~]) .*"
-color blue   "^[0-9]{4}(/|-)[0-9]{2}(/|-)[0-9]{2}"
+# descriptions
+color brightmagenta "^(([0-9]{4}(/|-|.))?[0-9]{2}(/|-|.)[0-9]{2}|[=~]) .*"
+# dates
+color blue "^([0-9]{4}(\/|-|.))?[0-9]{2}(\/|-|.)[0-9]{2}"
+# balance
 color brightyellow "^~ .*"
 color brightblue "^= .*"
-color cyan  "^[[:space:]]+(![[:space:]]+)?\(?[A-Za-z ]+(:[A-Za-z ]+)*\)?"
-color cyan  "^[[:space:]]+(![[:space:]]+)?\(?[A-Za-z_-]+(:[A-Za-z_-]+)*\)?"
-color red "[*!]"
-color brightblack  "^[[:space:]]*;.*"
+# accounts
+color cyan "(\t| )\b\w*\ ?\w*(:\w*\ ?\w*\w*){1,}\b"
+# double quotes and transaction flags
+color red "[*!@\"]"
+# text within double quotes
+color pink "\"(.*?)\""
+# comments
+color brightblack "(^|\s)(;|#|%|\|).*"

@@ -1,0 +1,20 @@
+syntax "Beancount" "(^|\.|/)beancount|bnct|bc$"
+
+# directives
+color red "^([0-9]{4}-[0-9]{2}-[0-9]{2} | )?[a-z-]+( |: )"
+# dates
+color blue "^[0-9]{4}-[0-9]{2}-[0-9]{2}"
+# tags
+color green "#\S+"
+# links
+color blue "\^\S+"
+# accounts
+color cyan "(\t| )\b\w*-?\w*(:\w*-?\w*){1,}\b"
+# currencies and stocks
+color cyan "\b[A-Z]+\b"
+# double quotes and transaction flags
+color red "[*!@\"]"
+# text within double quotes
+color pink "\"(.*?)\""
+# comments
+color brightblack "(^|\s);.*"
