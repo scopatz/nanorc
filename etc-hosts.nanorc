@@ -8,7 +8,7 @@ color yellow "^[0-9\.]+\s"
 icolor green "^[0-9a-f:]+\s"
 
 # interpunction
-color normal "[.:]"
+color white "[.:]"
 
 # comments
 color brightblack "^#.*"
