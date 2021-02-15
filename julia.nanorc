@@ -12,7 +12,7 @@ color brightcyan "\<(quote|return|struct|true|try|using|while)\>"
 
 ## operators
 color magenta "[.:;,+*|=!\%?]" "<" ">" "/" "-" "&"
-color magenta "[÷⋅×√∛⊻∈∉∋∌≈≉≠≡≢≤≥∩∪⊆⊇⊈⊉⊊⊋±∘]"
+color magenta "[÷⋅×√∛⊻∈∉∋∌≈≉≠≡≢≤≥∩∪⊆⊇⊈⊉⊊⊋±∘']"
 
 ## functions
 color brightblue "[A-Za-z][A-Za-z0-9_]*\!?\.?[\(]"
@@ -29,7 +29,7 @@ color green start="#=" end="=#"
 
 ## chars and strings
 color yellow start="[rb]?["]" end="["]" start="[rb]?["]{3}" end="["]{3}"
-color yellow "[']\\?[^'][']"
+color yellow "[']\\?[^' ][']"
 
 ## string interpolation
 color normal "\$\([^)]*\)"
