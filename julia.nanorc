@@ -12,7 +12,7 @@ color brightcyan "\<(quote|return|struct|true|try|using|while)\>"
 
 ## operators
 color magenta "[.:;,+*|=!\%?]" "<" ">" "/" "-" "&"
-color magenta "[÷√∛⊻∈∉∋∌≈≉≠≡≢≤≥∩∪⊆⊇⊈⊉⊊⊋±]"
+color magenta "[÷⋅×√∛⊻∈∉∋∌≈≉≠≡≢≤≥∩∪⊆⊇⊈⊉⊊⊋±∘]"
 
 ## functions
 color brightblue "[A-Za-z][A-Za-z0-9_]*\!?\.?[\(]"
