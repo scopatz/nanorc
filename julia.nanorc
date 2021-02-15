@@ -1,0 +1,47 @@
+## Julia syntax highlighting rules for Nano
+
+syntax "julia" "\.jl$"
+header "^#!.*/(env +)?julia[-0-9._]*( |$)"
+magic "Julia"
+comment "#"
+
+## buildin keywords
+color brightcyan "\<(baremodule|begin|break|catch|const|continue|do|else|elseif|end|export)\>"
+color brightcyan "\<(false|finally|for|function|global|if|import|let|local|macro|module)\>"
+color brightcyan "\<(quote|return|struct|true|try|using|while)\>"
+
+## operators
+color magenta "[.:;,+*|=!\%?]" "<" ">" "/" "-" "&"
+color magenta "[÷⋅×√∛⊻∈∉∋∌≈≉≠≡≢≤≥∩∪⊆⊇⊈⊉⊊⊋±∘']"
+
+## functions
+color brightblue "[A-Za-z][A-Za-z0-9_]*\!?\.?[\(]"
+
+## symbols
+color yellow "([^A-Za-z0-9_:]|^):[0-9A-Za-z_]+"
+
+## parentheses
+color magenta "[(){}]" "\[" "\]"
+
+## comments
+color green "^#.*|[[:space:]]#.*$"
+color green start="#=" end="=#"
+
+## chars and strings
+color yellow start="[rb]?["]" end="["]" start="[rb]?["]{3}" end="["]{3}"
+color yellow "[']\\?[^' ][']"
+
+## string interpolation
+color normal "\$\([^)]*\)"
+
+## external commands
+color red start="`" end="`"
+
+## macros
+color cyan "@[A-Za-z0-9_]+"
+
+## Trailing spaces
+color ,red "[[:space:]]+$"
+
+## reminders
+color brightwhite,yellow "(FIXME|TODO|XXX)"
