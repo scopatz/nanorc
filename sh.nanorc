@@ -1,6 +1,6 @@
 ## Here is an example for Bourne shell scripts.
 ##
-syntax "SH" "\.sh$" "\.ash" "\.bashrc" "bashrc" "\.bash_aliases" "bash_aliases" "\.bash_functions" "bash_functions" "\.bash_login" "\.bash_logout" "\.bash_profile" "bash_profile" "\.profile" "revise\..+$"
+syntax "SH" "\.sh$" "\.ash" "\.bashrc" "bashrc" "\.bash_aliases" "bash_aliases" "\.bash_functions" "bash_functions" "\.bash_login" "\.bash_logout" "\.bash_profile" "bash_profile" "\.profile" "^PKGBUILD$" "revise\..+$"
 header "^#!.*/(env +)?(ba|da|a)?sh( |$)"
 magic "(POSIX|Bourne-Again) shell script.*text"
 comment "#"
