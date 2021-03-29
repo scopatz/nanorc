@@ -1,15 +1,13 @@
 ## Syntax highlighting for Jrnl/Markdown files.
 
 ## Original authors:  Ryan Westlund and Benno Schulenberg
-## Copy and modified:  Bruce DuPlanty
+## Copied Markdown and Modified for jrnl.sh:  Bruce DuPlanty
 ## License:  GPL version 3 or newer
 
 syntax "jrnl" "\.(jrnl)$"
 # @tag +tag #tag
 color brightgreen "\+{1}[a-zA-Z0-9_!:\-\.]*"
 color brightgreen "@{1}[a-zA-Z0-9_!:\-\.]*"
-#color brightgreen "(@+[a-zA-Z0-9\-\_\.\=\!\:(_)]{1,})"
-#color brightgreen "(\++[a-zA-Z0-9\-\_\.\=\!\:(_)]{1,})"
 color brightred "#{1}[a-zA-Z0-9_!:\-\.]*"
 
 # Tables (Github extension)
