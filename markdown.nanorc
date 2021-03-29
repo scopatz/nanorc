@@ -28,7 +28,7 @@ color brightmagenta "^(---+|===+|___+|\*\*\*+)\s*$"
 color brightwhite "^#{1,6} .*"
 
 # lists
-color orange   "^[[:space:]]*[\*+-] |^[[:space:]]*[0-9]+\. "
+color brightblue   "^[[:space:]]*[\*+-] |^[[:space:]]*[0-9]+\. "
 
 # leading whitespace
 color black    "^[[:space:]]+"

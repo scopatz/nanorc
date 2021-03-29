@@ -32,12 +32,11 @@ color red "(^|[[:space:]])~~[^ ][^~]*~~"
 color brightmagenta "^(---+|===+|___+|\*\*\*+)\s*$"
 
 # headlines
-# color brightwhite "^#{1,6} .*"
 # for jrnl files whhere MD Headings maty be embedded
 color brightwhite "#{1,6} .*"
 
 # lists
-color orange   "^[[:space:]]*[\*+-] |^[[:space:]]*[0-9]+\. "
+color brightblue   "^[[:space:]]*[\*+-] |^[[:space:]]*[0-9]+\. "
 
 # leading whitespace
 color black    "^[[:space:]]+"
