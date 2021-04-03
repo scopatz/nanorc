@@ -1,7 +1,7 @@
 syntax "EXPECT" "\.exp$"
 header "^#!.*/(env +)?expect( |$)"
 
-magic "Tcl(/Tk)? script"
+magic "Expect script"
 comment "#"
 
 ## Standard Expect [info commands]
