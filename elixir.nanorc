@@ -48,3 +48,6 @@ color brightcyan "(XXX|TODO|FIXME|\?\?\?)"
 
 ## Trailing spaces
 color ,green "[[:space:]]+$"
+
+## Pipe Operator
+color brightmagenta "\|>" "\|"
