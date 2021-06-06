@@ -17,14 +17,14 @@ branches=(
   pre-2.1.5
 )
 
-git clone https://github.com/rasa/nanorc
+# git clone https://github.com/rasa/nanorc
 
-cd nanorc
+# cd nanorc
 
-git remote remove upstream || true
-git remote add upstream https://github.com/scopatz/nanorc
+# git remote remove upstream || true
+# git remote add upstream https://github.com/scopatz/nanorc
 
-git fetch upstream
+# git fetch upstream
 
 # https://stackoverflow.com/a/42332860/1432614
 
@@ -32,10 +32,10 @@ git fetch upstream
 git checkout master
 
 # pulls all new commits made to upstream/master
-git pull upstream master
+# git pull upstream master
 
 # this will delete all your local changes to master
-git reset --hard upstream/master
+# git reset --hard upstream/master
 
 for branch in "${branches[@]}"; do
   git branch -D "${branch}" || true
@@ -113,10 +113,10 @@ sed -E -i.bak -e 's/(icolor\s+brightwhite.*\*\()\|/\1/' "${nanos[@]}"
 sed -E -i.bak -e 's/(color\s+red\s+.*\)\.\*)\+/\1\\+/' "${nanos[@]}"
 git commit -am "fix: pre-2.1.5: fix bad regexes"
 
-git checkout master
+# git checkout master
 
 # take care, this will delete all your changes on your forked master
-git push --force origin master
+# git push --force origin master
 
 for branch in "${branches[@]}"; do
   git checkout "${branch}"
