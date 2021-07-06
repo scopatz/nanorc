@@ -14,7 +14,7 @@ color yellow "[:-]\s+[0-9]+\.?[0-9]*(\s*($|#))"
 color yellow "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "
 
 # Separator
-color brightwhite "^\s+-"
+color brightwhite "^\s*-"
 color brightwhite ":(\s|\t|$)"
 
 # Comments
