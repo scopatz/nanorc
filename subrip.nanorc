@@ -1,0 +1,10 @@
+syntax "subrip" "\.srt$"
+
+# Subtitle number
+color yellow "^[0-9]+$"
+
+# Timecode
+color green "^[0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3} --> [0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}"
+
+# Tags
+color cyan "<[[:alpha:]/!?][^>]*>"
