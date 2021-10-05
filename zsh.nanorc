@@ -28,7 +28,7 @@ color brightmagenta "\<(base(32|64)|basename|cat|chcon|chgrp|chmod|chown|chroot|
 icolor brightgreen "^\s+(function\s+)[0-9A-Z_]+\s+\(\)"
 
 ## Variables
-icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
+icolor brightred "\$\{?[0-9A-Z_!@#%$*?-]+\}?"
 
 ## Strings
 color yellow ""(\\.|[^"])*""
