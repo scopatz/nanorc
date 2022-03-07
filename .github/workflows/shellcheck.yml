@@ -1,0 +1,31 @@
+name: shellcheck
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: ShellCheck
+        uses: ludeeus/action-shellcheck@1.1.0
+        #with:
+          # A space separated list of additional filename to check
+          #additional_files: # optional, default is 
+          # Paths to ignore when running ShellCheck
+          #ignore: # optional, default is 
+          # Minimum severity of errors to consider. Options: [error, warning, info, style]
+          #severity: # optional, default is 
+          # Run shellcheck on _all_ files at once, instead of one at a time
+          #check_together: # optional, default is 
+          # Directory to be searched for files. Defaults to .
+          #scandir: # optional, default is .
+          # Set to true to skip using problem-matcher
+          #disable_matcher: # optional, default is false
+          # Output format (checkstyle, diff, gcc, json, json1, quiet, tty)
+          #format: # optional, default is gcc
