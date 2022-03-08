@@ -1,0 +1,40 @@
+name: test
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  highlight_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install build dependencies
+        run: sudo apt-get install -y autoconf automake autopoint gcc gettext git groff make pkg-config texinfo libncurses5-dev
+
+      - name: Clone and configure GNU nano
+        run: |
+          git clone --depth 100 git://git.savannah.gnu.org/nano.git
+          cd nano
+          ./autogen.sh
+          ./configure --prefix=/usr
+          cd -
+
+      - name: Build and install nano
+        run: |
+          cd nano
+          make -j
+          sudo make install
+          cd -
+          nano --version
+
+      - name: Test highlighting files
+        run: |
+          mkdir -p ~/.nano/
+          cp -al *.nanorc ~/.nano/
+          TERM=xterm timeout 1s nano --rcfile ./nanorc >/dev/null 2>error.txt || true
+          grep -v -e "Received SIGHUP or SIGTERM" -e "Too many errors from stdin" error.txt && false
+          echo "All seems good!"
