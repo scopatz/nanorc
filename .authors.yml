@@ -252,9 +252,11 @@
   github: hawk93
 - name: Harsh Shandilya
   email: msfjarvis@gmail.com
-  num_commits: 10
+  num_commits: 13
   first_commit: 2019-09-19 15:52:44
   github: msfjarvis
+  alternate_emails:
+  - me@msfjarvis.dev
 - name: DesertPunk
   email: 38014530+DesertPunk@users.noreply.github.com
   num_commits: 2
@@ -335,7 +337,7 @@
   github: TJProgrammer
 - name: Anthony Scopatz
   email: scopatz@gmail.com
-  num_commits: 50
+  num_commits: 52
   first_commit: 2010-07-28 18:15:43
   github: astronautlevel
 - name: PhilipRoman
@@ -556,16 +558,16 @@
   email: zdecook@ccel.org
   alternate_emails:
   - zachdecook@librem.one
-  num_commits: 6
+  num_commits: 10
   first_commit: 2019-12-18 09:34:49
   github: earboxer
 - name: Gareth Jones
   email: Jones258@Gmail.com
-  num_commits: 3
+  num_commits: 11
   first_commit: 2019-11-01 23:57:35
 - name: Dante Falzone
   email: 48266179+DanteFalzone0@users.noreply.github.com
-  num_commits: 2
+  num_commits: 8
   first_commit: 2019-12-25 22:55:19
   github: DanteFalzone0
 - name: CryptoDragonLady
@@ -583,3 +585,93 @@
   num_commits: 4
   first_commit: 2017-05-23 11:12:47
   github: ritiek
+- name: hdquemada
+  email: 44162051+hdquemada@users.noreply.github.com
+  num_commits: 4
+  first_commit: 2020-04-26 23:09:25
+  github: hdquemada
+- name: Oïleurre
+  email: 66210874+oileurre@users.noreply.github.com
+  num_commits: 2
+  first_commit: 2020-06-07 07:20:21
+  github: oileurre
+- name: Joerg Stoever
+  email: stoever@dtv-verkehrsconsult.de
+  num_commits: 1
+  first_commit: 2020-08-14 06:04:10
+  github: Gaibhne
+- name: emidiostani
+  email: emidiostani@gmail.com
+  num_commits: 1
+  first_commit: 2020-02-05 05:48:21
+  github: EmidioStani
+- name: Justin P
+  email: Jpartain89@gmail.com
+  num_commits: 1
+  first_commit: 2020-01-30 23:28:08
+  github: jpartain89
+- name: Yvan Satyawan
+  email: y_satyawan@hotmail.com
+  num_commits: 2
+  first_commit: 2020-03-16 08:40:58
+  github: yvan674
+- name: Paulo S. Costa
+  email: pauloscosta5@gmail.com
+  num_commits: 2
+  first_commit: 2020-01-27 17:18:02
+  github: pscosta5
+- name: czechuuu
+  email: czechuuu@users.noreply.github.com
+  num_commits: 1
+  first_commit: 2020-08-26 12:13:33
+  github: czechuuu
+- name: msuska
+  email: Martin.Suska@dhl.com
+  num_commits: 1
+  first_commit: 2020-03-21 10:18:26
+  github: Betlista
+- name: davidhcefx
+  email: davidhu0903ex3@gmail.com
+  num_commits: 3
+  first_commit: 2020-08-30 21:21:54
+  github: davidhcefx
+- name: Mlendea, Horațiu
+  email: Mlendea.Horatiu@GMail.com
+  num_commits: 2
+  first_commit: 2020-02-09 03:50:20
+  github: hmlendea
+- name: Exonorid
+  email: exonorid@gmail.com
+  num_commits: 1
+  first_commit: 2020-10-02 02:46:00
+  github: Exonorid
+- name: yzzyx
+  email: yzzyx@yzzyx.network
+  alternate_emails:
+  - yzzyx@cock.li
+  num_commits: 3
+  first_commit: 2020-04-24 09:22:09
+- name: Aiden Gall
+  email: aidentvgall@gmail.com
+  num_commits: 1
+  first_commit: 2020-03-14 18:09:11
+  github: Wasby
+- name: Rashil Gandhi
+  email: rashil2000@gmail.com
+  num_commits: 1
+  first_commit: 2020-08-10 08:12:56
+  github: rashil2000
+- name: Ryan Westlund
+  email: rlwestlund@gmail.com
+  num_commits: 2
+  first_commit: 2020-04-08 08:16:57
+  github: yujiri8
+- name: Serhiy Zahoriya
+  email: serhiy.int@gmail.com
+  num_commits: 1
+  first_commit: 2020-10-08 10:43:13
+- name: Bart Hanssens
+  email: bart.hanssens@bosa.fgov.be
+  num_commits: 1
+  first_commit: 2020-10-07 11:30:35
+  github: Fedict

@@ -4,7 +4,7 @@ header "^#!.*\/(env +)ts-node"
 ## Default
 color white "^.+$"
 
-## Decimal, cotal and hexadecimal numbers
+## Decimal, octal and hexadecimal numbers
 color yellow "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
 
 ## Floating point number with at least one digit before decimal point

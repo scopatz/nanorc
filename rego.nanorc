@@ -1,0 +1,22 @@
+# Syntax highlighting for Rego (https://www.openpolicyagent.org/)
+
+syntax "Rego" "\.rego"
+comment "#"
+
+## Reserved words
+color cyan "\<(as|default|else|import|package|not|some|with)\>"
+color brightblue "\<(false|null|true)\>"
+
+## Built-ins
+### Generated from `cat v0.25.2.json | jq -r .builtins[].name | tr '\n' '|'`
+color yellow "\<(abs|all|and|any|array.concat|array.slice|assign|base64.decode|base64.encode|base64.is_valid|base64url.decode|base64url.encode|base64url.encode_no_pad|bits.and|bits.lsh|bits.negate|bits.or|bits.rsh|bits.xor|cast_array|cast_boolean|cast_null|cast_object|cast_set|cast_string|concat|contains|count|crypto.md5|crypto.sha1|crypto.sha256|crypto.x509.parse_certificate_request|crypto.x509.parse_certificates|div|endswith|eq|equal|format_int|glob.match|glob.quote_meta|graph.reachable|gt|gte|hex.decode|hex.encode|http.send|indexof|intersection|io.jwt.decode|io.jwt.decode_verify|io.jwt.encode_sign|io.jwt.encode_sign_raw|io.jwt.verify_es256|io.jwt.verify_es384|io.jwt.verify_es512|io.jwt.verify_hs256|io.jwt.verify_hs384|io.jwt.verify_hs512|io.jwt.verify_ps256|io.jwt.verify_ps384|io.jwt.verify_ps512|io.jwt.verify_rs256|io.jwt.verify_rs384|io.jwt.verify_rs512|is_array|is_boolean|is_null|is_number|is_object|is_set|is_string|json.filter|json.is_valid|json.marshal|json.patch|json.remove|json.unmarshal|lower|lt|lte|max|min|minus|mul|neq|net.cidr_contains|net.cidr_contains_matches|net.cidr_expand|net.cidr_intersects|net.cidr_merge|net.cidr_overlap|numbers.range|object.filter|object.get|object.remove|object.union|opa.runtime|or|plus|product|re_match|regex.find_all_string_submatch_n|regex.find_n|regex.globs_match|regex.is_valid|regex.match|regex.split|regex.template_match|rego.parse_module|rem|replace|round|semver.compare|semver.is_valid|set_diff|sort|split|sprintf|startswith|strings.replace_n|substring|sum|time.add_date|time.clock|time.date|time.now_ns|time.parse_duration_ns|time.parse_ns|time.parse_rfc3339_ns|time.weekday|to_number|trace|trim|trim_left|trim_prefix|trim_right|trim_space|trim_suffix|type_name|union|units.parse_bytes|upper|urlquery.decode|urlquery.decode_object|urlquery.encode|urlquery.encode_object|uuid.rfc4122|walk|yaml.is_valid|yaml.marshal|yaml.unmarshal)\>"
+
+# Numbers
+color purple "\<([0-9]+)\>"
+
+# Strings
+color green ""(\\.|[^"])*""
+color green "`(\\.|[^\\`])*`"
+
+## Comments
+color brightblack "^\s*#.*"
