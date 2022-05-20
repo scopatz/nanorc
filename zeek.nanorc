@@ -1,0 +1,39 @@
+## Here is an example nanorc for syntax highlighting in Zeek scripts. Edited the standard sh.nanorc to create this, and added in the regex described by Scott Runnels.
+## For Scott's bro-mode.el, go to https://github.com/srunnels/bro-mode/blob/master/bro-mode.el
+
+syntax "zeek" "\.zeek$"
+magic "(POSIX|Bourne.*) shell script text"
+header "^#!.*/(ba|k|pdk)?sh[-0-9_]*"
+icolor brightgreen "^[0-9A-Z_]+\(\)"
+
+color cyan "(usec|msec|sec|min|hr|day)s?\b"
+color cyan "[0-9]+\/(tcp|udp|icmp|unknown)"
+
+# Functions and event names
+color magenta "\w+\("
+
+# Declarations and statements
+color brightcyan "\<(add|alarm|fallthrough|break|case|const|copy|continue|do|delete|else|for|global|switch|default|if|endif|local|next|of|print|redef|return|schedule|type|when|while|option)\>"
+color brightcyan "module|export|timeout"
+
+# Types
+color cyan "\<(addr|opaque|any|bool|hook|connection|function|count|time|double|file|int|enum|event|interval|net|port|pattern|record|set|string|subnet|table|vector)\>"
+
+# Namespaces
+color yellow "(\w+?)::\b"
+
+# Operators
+color green "(:|\{|\}|\(|\)|\;|\]|\[|`|\\|\$|<|>|!|=|& |&&|\||\?|%|\+|\*|-\W| as |\^|~| not | in | is | !in | : |,)"
+
+# attributes
+color brightgreen "\&(expire_func|redef|priority|log|optional|default|add_func|delete_func|read_expire|write_expire|create_expire|on_change|raw_output|error_handler|type_column|deprecated)"
+
+# Directives and record references
+icolor brightred "(@\w+)"
+icolor red "(\w+?)\$\{?[0-9A-Z_!@#$*?-]+\}?"
+
+# string literals
+color brightyellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
+
+# Comments
+color blue "(^|[[:space:]])#.*$"
