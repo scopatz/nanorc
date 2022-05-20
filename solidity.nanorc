@@ -1,0 +1,43 @@
+# manually created by referencing:
+#  -  https://github.com/solidityj/solidity-antlr4/blob/master/Solidity.g4
+#  - https://github.com/ConsenSysMesh/solidity-parser/blob/master/solidity.pegjs
+#  - https://docs.soliditylang.org/en/v0.4.24/units-and-global-variables.html
+
+
+syntax "solidity" "\.sol$"
+
+color brightmagenta "^pragma.*$"
+color brightgreen "import"
+
+# Other things
+color brightcyan "using|for|modifier|if|else|while|do |assembly|continue|break|throw|emit|var|let "
+color brightcyan "after|delete|switch|case|default|hex|abstract|catch|final| in |inline|match|of|relocatable|static|try|typeof|get"
+color brightcyan "anonymous|constant|return |set"
+
+# Modifiers
+color brightmagenta "public|private|internal|external|pure|view|payable|override|virtual|memory|storage|calldata|indexed|type"
+
+# Types
+color green "bool|address|string|struct|enum|event|mapping"
+color green "int|int8|int16|int24|int32|int40|int48|int56|int64|int72|int80|int88|int96|int104|int112|int120|int128|int136|int144|int152|int160|int168|int176|int184|int192|int200|int208|int216|int224|int232|int240|int248|int256"
+color green "uint|uint8|uint16|uint24|uint32|uint40|uint48|uint56|uint64|uint72|uint80|uint88|uint96|uint104|uint112|uint120|uint128|uint136|uint144|uint152|uint160|uint168|uint176|uint184|uint192|uint200|uint208|uint216|uint224|uint232|uint240|uint248|uint256"
+color green "bytes|bytes1|bytes2|bytes3|bytes4|bytes5|bytes6|bytes7|bytes8|bytes9|bytes10|bytes11|bytes12|bytes13|bytes14|bytes15|bytes16|bytes17|bytes18|bytes19|bytes20|bytes21|bytes22|bytes23|bytes24|bytes25|bytes26|bytes27|bytes28|bytes29|bytes30|bytes31|bytes32"
+color green "fixed|ufixed|true|false|null"
+
+
+# Units
+icolor red "wei|szabo|finney|ether|seconds|days|minutes|hours|weeks|years"
+
+# Classes
+color cyan "function|class|contract|interface|library| is |as |returns|new|constructor|selfdestruct|extends|super|suicide"
+
+# bifs
+color magenta "this|now|keccak256|(abi.(\w+\.)+?\w+)|blockhash|(block.(\w+\.)+?\w+)|require|(msg.(\w+\.)+?\w+)|(tx.(\w+\.)+?\w+)"
+color magenta "assert|revert|addmod|mulmod|sha256|sha3|ripemd160|ecrecover"
+
+# address functions
+color yellow "0x\w+\.(balance|transfer|send|call|callcode|delegatecall)"
+color yellow "0x\w{64}"
+
+# Comments
+color blue "(^|[[:space:]])//.*$"
