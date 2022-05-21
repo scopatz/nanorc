@@ -48,12 +48,21 @@ For readability will use `$install_path` for the path of your choose (in *system
 
 For user, only run:
 
-`git clone git@github.com:scopatz/nanorc.git $install_path` or  
-`git clone https://github.com/scopatz/nanorc.git $install_path`
+```
+git clone git@github.com:scopatz/nanorc.git $install_path
+```
+
+or
+
+```
+git clone https://github.com/scopatz/nanorc.git $install_path`
+```
 
 For system wide, run:
 
-`sudo git clone https://github.com/scopatz/nanorc.git $install_path`
+```
+sudo git clone https://github.com/scopatz/nanorc.git $install_path
+```
 
 ## Configuration
 
@@ -67,15 +76,29 @@ Again there are three ways:
 
 Append the content of the folder in one line, with wildcard:
 
-`echo "include $install_path/*.nanorc" >> ~/.nanorc` or  
-`echo "include $install_path/*.nanorc" >> /etc/nanorc`
+```
+echo "include $install_path/*.nanorc" >> ~/.nanorc
+```
+
+or
+
+```
+echo "include $install_path/*.nanorc" >> /etc/nanorc
+```
 
 ### 2. Include/append our `nanorc` file
 
 Simply run:
 
-`cat $install_path/nanorc >> ~/.nanorc` or  
-`cat $install_path/nanorc >> /etc/nanorc`
+```
+cat $install_path/nanorc >> ~/.nanorc
+```
+
+or  
+
+```
+cat $install_path/nanorc >> /etc/nanorc
+```
 
 ### 3. One by one
 
@@ -88,7 +111,7 @@ include "~/.nano/c.nanorc"
 
 ## Tricks & Tweaks
 
-### MacOS
+### macOS
 
 `\<` and `\>` are regular character escapes on MacOS.  
 The bug is fixed in Nano, but this might be a problem if you are using an older version  
