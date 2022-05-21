@@ -4,7 +4,7 @@ This repository holds ``{lang}.nanorc`` files that have improved definitions of 
 
 ## Installation
 
-There are three ways to install this repo.
+There are four ways to install this repo.
 
 ### 1. Automatic installer
 
@@ -64,13 +64,19 @@ For system wide, run:
 sudo git clone https://github.com/scopatz/nanorc.git $install_path
 ```
 
+### 4. Homebrew
+
+```
+brew install nanorc
+```
+
 ## Configuration
 
 After installation, you need to inform `nano` to used the new highlight files. 
 The configuration file is located at `~/.nanorc`, for users, and at `/etc/nanorc`, for system wide.
 If this file doesn't exist, create a new one.
 
-Again there are three ways:
+There are three ways:
 
 ### 1. Include all
 
@@ -84,6 +90,18 @@ or
 
 ```
 echo "include $install_path/*.nanorc" >> /etc/nanorc
+```
+
+If you used `Homebrew` to install `nanorc`, replace `$install_path` with `~/.nano/`:
+
+```
+echo "include ~/.nano/*.nanorc" >> ~/.nanorc
+```
+
+or
+
+```
+echo "include ~/.nano/*.nanorc" >> /etc/nanorc
 ```
 
 ### 2. Include/append our `nanorc` file
@@ -113,7 +131,7 @@ include "~/.nano/c.nanorc"
 
 ### macOS
 
-`\<` and `\>` are regular character escapes on MacOS.  
+`\<` and `\>` are regular character escapes on macOS.  
 The bug is fixed in Nano, but this might be a problem if you are using an older version  
 If this is the case, replace them respectively with `[[:<:]]` and `[[:>:]]`.
 This is reported in [Issue 52](https://github.com/scopatz/nanorc/issues/52).
