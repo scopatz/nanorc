@@ -1,6 +1,6 @@
 # Syntax highlighting for Rego (https://www.openpolicyagent.org/)
 
-syntax "Rego" "\.rego"
+syntax "Rego" "\.rego$"
 comment "#"
 
 ## Reserved words
