@@ -2,6 +2,9 @@
 ##
 syntax "C" "\.(c(c|pp|xx)?|C)$" "\.(h(h|pp|xx)?|H)$" "\.ii?$" "\.(def)$" "\.ino$"
 magic "^(C|C\+\+) (source|program)"
+
+linter g++ -fshow-column
+
 comment "//"
 color brightred "\<[A-Z_][0-9A-Z_]+\>"
 color green "\<(float|double|bool|char|wchar_t|int|short|long|sizeof|enum|void|static|const|struct|union|typedef|extern|(un)?signed|inline)\>"
@@ -50,3 +53,6 @@ color magenta "@author.*"
 
 ## Trailing whitespace
 color ,green "[[:space:]]+$"
+
+## Reminders
+color brightwhite,yellow "\<(FIXME|TODO|XXX)\>"
