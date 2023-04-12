@@ -50,7 +50,7 @@ color ,green "[[:space:]]+$"
 
 
 # This syntax format is used for interactive rebasing
-syntax "git-rebase-todo" "git-rebase-todo"
+syntax "git-rebase-todo" "git-rebase-todo$"
 
 # Default
 color yellow ".*"
