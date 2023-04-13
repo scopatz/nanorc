@@ -45,7 +45,7 @@ case "$1" in
 esac
 
 _fetch_sources;
-if [ $UPDATE_LITE ];
+if [ "$UPDATE_LITE" ];
 then
   _update_nanorc_lite
 else
