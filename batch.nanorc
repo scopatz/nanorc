@@ -4,7 +4,7 @@
 
 syntax "batch" "\.(bat|cmd)$"
 header "^@[eE](cho|CHO) (on|off|ON|OFF)"
-comment "::"
+comment "REM "
 
 # Native commands, symbols, and comparisons.
 icolor green "\<(ASSOC|CALL|CD|CLS|CMDEXTVERSION|COLOR|COPY|DATE|DEL|DIR|ECHO|ENDLOCAL|ERASE|ERRORLEVEL|EXIT|FOR|FTYPE|GOTO|IF|MD|MKLINK|MOVE|PATH|PAUSE|POPD|PROMPT|PUSHD|RD|REM|REN|SET|SETLOCAL|SHIFT|START|TIME|TITLE|TYPE|VER|VERIFY|VOL)\>"

@@ -1,11 +1,11 @@
 ## Here is an example for Bourne shell scripts.
 ##
-syntax "SH" "\.sh$" "\.ash$" "\.bashrc$" "bashrc$" "\.bash_aliases$" "bash_aliases$" "\.bash_functions$" "bash_functions$" "\.bash_login$" "\.bash_logout$" "\.bash_profile$" "bash_profile$" "\.profile$" "revise\..+$"
+syntax "SH" "\.sh$" "\.ash$" "\.bashrc$" "bashrc$" "\.bash_aliases$" "bash_aliases$" "\.bash_functions$" "bash_functions$" "\.bash_login$" "\.bash_logout$" "\.bash_profile$" "bash_profile$" "\.profile$" "revise\..+$" "^PKGBUILD$"
 header "^#!.*/(env +)?(ba|da|a)?sh( |$)"
 magic "(POSIX|Bourne-Again) shell script.*text"
 comment "#"
 
-linter dash -n
+linter shellcheck --format=gcc
 
 ## keywords:
 color green "\<(case|do|done|elif|else|esac|fi|for|function|if|in|select|then|time|until|while)\>"
@@ -17,7 +17,7 @@ color brightblue "\<(alias|bg|bind|break|builtin|caller|cd|command|compgen|compl
 ## not buitins:
 ## cat|chmod|chown|cp|env|grep|install|ln|make|mkdir|mv|rm|sed|tar|touch
 icolor brightgreen "^\s+[0-9A-Z_]+\s+\(\)"
-icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
+icolor brightred "\$\{?[0-9A-Z_!@#%$*?-]+\}?"
 color brightyellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
 color cyan "(^|[[:space:]])#.*$"
 color ,green "[[:space:]]+$"

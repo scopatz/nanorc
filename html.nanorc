@@ -3,6 +3,7 @@
 syntax "HTML" "\.html?(.j2)?(.twig)?$"
 magic "HTML document"
 comment "<!--|-->"
+tabgives "  "
 
 ## Emphasis tags
 color brightwhite start="<([biu]|em|strong)[^>]*>" end="</([biu]|em|strong)>"
