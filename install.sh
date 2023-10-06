@@ -6,11 +6,12 @@ if [ ! "$(command -v unzip)" ]; then
   exit 1
 fi
 
+
 _fetch_sources(){
   wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
-  mkdir -p ~/.nano/
+  mkdir -p ~/.config/nano/
 
-  cd ~/.nano/ || exit
+  cd ~/.config/nano/ || exit
   unzip -o "/tmp/nanorc.zip"
   mv nanorc-master/* ./
   rm -rf nanorc-master
@@ -18,21 +19,21 @@ _fetch_sources(){
 }
 
 _update_nanorc(){
-  touch ~/.nanorc
+  touch ~/.config/nano/nanorc
       
-  # add all includes from ~/.nano/nanorc if they're not already there
+  # add all includes from ~/.config/nano/nanorc if they're not already there
   while read -r inc; do
       if ! grep -q "$inc" "${NANORC_FILE}"; then
           echo "$inc" >> "$NANORC_FILE"
       fi
-  done < ~/.nano/nanorc
+  done < ~/.config/nano/nanorc
 }
 
 _update_nanorc_lite(){
-  sed -i '/include "\/usr\/share\/nano\/\*\.nanorc"/i include "~\/.nano\/*.nanorc"' "${NANORC_FILE}"
+  sed -i '/include "\/usr\/share\/nano\/\*\.nanorc"/i include "~\/.conig.\/nano\/*.nanorc"' "${NANORC_FILE}"
 }
 
-NANORC_FILE=~/.nanorc
+NANORC_FILE=~/.config\/nano\/nanorc
 
 case "$1" in
  -l|--lite)
