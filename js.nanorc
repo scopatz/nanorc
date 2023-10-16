@@ -1,4 +1,4 @@
-### all *js files  ( e.g. Firefox user.js, prefs.js )
+### all *js and *mjs files  ( e.g. Firefox user.js, prefs.js )
 
 ## Old version
 
@@ -12,7 +12,7 @@
 
 ## New updated taken from http://wiki.linuxhelp.net/index.php/Nano_Syntax_Highlighting
 
-syntax "JavaScript" "\.(js)$"
+syntax "JavaScript" "\.(m?js)$"
 header "^#!.*\/(env +)node"
 comment "//"
 
