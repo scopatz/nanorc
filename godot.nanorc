@@ -1,0 +1,39 @@
+## Syntax highlighting for Godot.
+
+syntax gdscript "\.gd$"
+header ""
+magic "Godot script"
+comment "#"
+
+# Function definitions.
+color brightblue "func [0-9A-Za-z_]+"
+# Keywords.
+color brightred "\<(and|as|assert|async|await|break|class|continue)\>"
+color brightred "\<(func|del|elif|else|except|finally|for|from)\>"
+color brightred "\<(global|if|import|in|is|lambda|nonlocal|not|or)\>"
+color brightred "\<(pass|raise|return|try|while|with|yield|extends)\>"
+
+color brightcyan "\<(inline|Input|Array|inline)\>"
+color brightcyan "\<(exec|print|call)\>"
+
+# Special values.
+color brightmagenta "\<(False|None|True)\>"
+
+# Mono-quoted strings.
+color brightyellow "'([^'\]|\\.)*'|"([^"\]|\\.)*"|'''|""""
+color normal "'''|""""
+# Comments.
+color brightred "(^|[[:blank:]])#.*"
+# variable
+color brightgreen "\<(var|export|export_category)\>"
+
+
+# Backslash escapes.
+color lime "\\($|[\'"abfnrtv]|[0-3]?[0-7]?[0-7]|x[[:xdigit:]]{2})"
+color lime "\\(N\{[[:alpha:]]+\}|u[[:xdigit:]]{4}|U[[:xdigit:]]{8})"
+
+# Reminders.
+color brightwhite,yellow "\<(FIXME|TODO|XXX)\>"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
