@@ -1,0 +1,42 @@
+# The syntax highlight for V
+
+# Author : HARXI
+# Version: 1.0.0
+# License: MIT
+
+syntax v "\.(v|c.v|.vsh|.vv)$"
+
+# Operators
+color brightred "(\+|-|\*|/|%|~|&|(\|)|^|!|<|>|:=|=|\?|\.)"
+
+# Keywords
+color bold,pink "\<(as|asm|assert|atomic|break|const|continue|defer|else|enum|false|fn|for|go|goto|if|import|in|interface|is|isreftype|lock|match|module|mut|none|or|pub|return|rlock|select|shared|sizeof|spawn|static|struct|true|type|typeof|union|unsafe|volatile|__global|__offsetof)\>"
+
+# Literals
+color rosy "\<([0-9]+|0[oO][0-7]+|0[xX][[:xdigit:]]+)\>"
+color rosy "\<[0-9]+\.[0-9]*([eE][+-]?[0-9]+)?\>"
+color rosy "\<[0-9]+[eE][+-]?[0-9]+\>"
+color rosy "\<[0-9]+\>"
+
+# Types
+color bold,pink "\<(bool|string|int|i(8|16|32|64|128)|u(8|16|32|64|128)|rune|f(32|64)|isize|usize|voidptr|any)\>"
+
+# Compile time
+color brightblue "\$([a-zA-Z._0-9])+"
+
+# Flags
+color brightblue "\#([a-zA-Z._0-9])+"
+
+# Upper case words
+color rosy "[A-Z][A-Za-z0-9_]+"
+
+# Compile time constants
+color pink "\@([a-zA-Z._0-9])+"
+
+# String and char
+color brightyellow ""([^"\]|\\.)*"|'([^'\]|\\.)*'"
+color brightgreen "`([^`\]|\\.)*`"
+
+# Comments
+color brightblue start="/\*" end="\*/"
+color brightblue "(^|[[:blank:]])//.*"
