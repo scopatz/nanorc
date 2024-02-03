@@ -1,7 +1,7 @@
 ## Clojure Syntax Highlighting
 ##
 
-syntax "clojure" "\.((clj[s|c]?)|edn)"
+syntax "clojure" "\.((clj[s|c]?)|edn)$"
 
 icolor green "defn? [0-9A-Z_]+"
 

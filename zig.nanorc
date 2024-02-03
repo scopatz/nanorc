@@ -1,4 +1,4 @@
-syntax "Zig" "\.zig$$"
+syntax "Zig" "\.zig$"
 color latte       "\<(align|allowzero|and|anyframe|anytype|asm|async|await|break|catch|comptime|const|continue|defer|else|enum|errdefer|error|export|extern|fn|for|if|inline|noalias|nosuspend|or|orelse|packed|pub|resume|return|linksection|struct|suspend|switch|test|threadlocal|try|union|unreachable|usingnamespace|var|volatile|while)\>"
 color brightcyan  "@[a-zA-Z]+[0-9]{0,2}"
 color cyan        "(true|false|null|undefined)"
