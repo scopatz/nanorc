@@ -25,7 +25,7 @@ color brightwhite ".+"
 color brightyellow ":|\*\*|\*|/|%|\+|-|\^|>|>=|<|<=|~=|=|\.\.|\<(not|and|or)\>"
 
 # Statements
-color brightblue "\<(do|end|while|repeat|until|if|elseif|then|else|for|in|function|local|return)\>"
+color brightblue "\<(do|end|while|repeat|until|if|elseif|then|else|for|in|function|local|return|goto)\>"
 
 # Keywords
 color brightyellow "\<(debug|string|math|table|io|coroutine|os|utf8|bit32)\>\."
@@ -33,7 +33,7 @@ color brightyellow "\<(_ENV|_G|_VERSION|assert|collectgarbage|dofile|error|getfe
 
 # Standard library
 color brightyellow "io\.\<(close|flush|input|lines|open|output|popen|read|tmpfile|type|write)\>"
-color brightyellow "math\.\<(abs|acos|asin|atan2|atan|ceil|cosh|cos|deg|exp|floor|fmod|frexp|huge|ldexp|log10|log|max|maxinteger|min|mininteger|modf|pi|pow|rad|random|randomseed|sinh|sqrt|tan|tointeger|type|ult)\>"
+color brightyellow "math\.\<(abs|acos|asin|atan2|atan|ceil|cosh|cos|deg|exp|floor|fmod|frexp|huge|ldexp|log10|log|max|maxinteger|min|mininteger|modf|pi|pow|rad|random|randomseed|sin|sqrt|tan|tointeger|type|ult)\>"
 color brightyellow "os\.\<(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)\>"
 color brightyellow "package\.\<(config|cpath|loaded|loadlib|path|preload|seeall|searchers|searchpath)\>"
 color brightyellow "string\.\<(byte|char|dump|find|format|gmatch|gsub|len|lower|match|pack|packsize|rep|reverse|sub|unpack|upper)\>"
@@ -52,8 +52,10 @@ color brightmagenta "\<(false|nil|true)\>"
 # External files
 color brightgreen "(\<(dofile|require|include)|%q|%!|%Q|%r|%x)\>"
 
-# Numbers
-color red "\<([0-9]+)\>"
+# Numbers (hex and decimal with scientific notation)
+#color red "\<(0[xX](([0-9A-Fa-f]+\.[0-9A-Fa-f]*)|(\.?[0-9A-Fa-f]+))([pP][-+]?[0-9]+)?)\>"
+#color red "\<((([0-9]+\.[0-9]*)|(\.?[0-9]+))([eE][-+]?[0-9]+)?)\>"
+color red "\<((0[xX](([0-9A-Fa-f]+\.[0-9A-Fa-f]*)|(\.?[0-9A-Fa-f]+))([pP][-+]?[0-9]+)?)|((([0-9]+\.[0-9]*)|(\.?[0-9]+))([eE][-+]?[0-9]+)?))\>"
 
 # Symbols
 color brightmagenta "(\(|\)|\[|\]|\{|\})"
@@ -65,7 +67,7 @@ color red "\"(\\.|[^\\\"])*\"|'(\\.|[^\\'])*'"
 color red start="\s*\[\[" end="\]\]"
 
 # Escapes
-color red "\\[0-7][0-7][0-7]|\\x[0-9a-fA-F][0-9a-fA-F]|\\[abefnrs]|(\\c|\\C-|\\M-|\\M-\\C-)."
+#color red "\\[0-7][0-7][0-7]|\\x[0-9a-fA-F][0-9a-fA-F]|\\[abefnrs]|(\\c|\\C-|\\M-|\\M-\\C-)."
 
 # Shebang
 color brightcyan "^#!.*"
