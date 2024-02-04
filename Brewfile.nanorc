@@ -1,0 +1,28 @@
+# Brewfile.nanorc
+## Syntax highlighting for Homebrew Brewfiles
+## Author: tomkyle (https://github.com/tomkyle)
+
+syntax "Brewfile" "Brewfile$"
+
+## Keywords
+icolor red      "^(tap)[[:space:]]"
+icolor green    "^(brew)[[:space:]]"
+icolor blue     "^(cask)[[:space:]]"
+icolor brightblue "^(cask_args)[[:space:]]"
+icolor magenta  "^(mas)[[:space:]]"
+
+
+## Brackets & parenthesis
+color brightblack "(\(|\)|\[|\]|\{|\})"
+
+
+## Strings and quotes
+color brightyellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
+color yellow "('|\")"
+
+
+## comments
+color brightblack "^#.*"
+color white       "^##.*"
+color cyan        "^###.*"
+
