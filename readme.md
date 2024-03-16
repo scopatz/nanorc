@@ -44,7 +44,7 @@ The files should be placed inside of the `~/.nano/` directory.
 
 You can put the files in another directory inside the correct `.nano` folder.
 For example: `~/.nano/nanorc/`.
-For readability will use `$install_path` for the path of your choose (in *system wide* the path is always `/usr/share/nano-syntax-highlighting/`).
+For readability will use `$install_path` for the path of your choose (in *system wide* the path is always `/usr/share/nano/`[^1]).
 
 For user, only run:
 
@@ -110,3 +110,5 @@ Please see this [issue](https://savannah.gnu.org/bugs/?56994).
 ## Acknowledgements
 
 Some of these files are derived from the original [Nano](https://www.nano-editor.org) editor [repo](https://git.savannah.gnu.org/cgit/nano.git)
+
+[^1]: https://www.nano-editor.org/dist/latest/nanorc.5.html#FILES
