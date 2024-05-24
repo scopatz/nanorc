@@ -9,6 +9,7 @@ Authors are sorted by number of commits.
 * Alex Taber
 * Gareth Jones
 * Zach DeCook
+* Craig Barnes
 * Mariusz Smykuła
 * Dante Falzone
 * Michael Straube
