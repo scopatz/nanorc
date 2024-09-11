@@ -13,8 +13,9 @@ color green "\<((const|dynamic|reinterpret|static)_cast)\>"
 color green "\<(alignas|alignof|asm|auto|compl|concept|constexpr|decltype|export|noexcept|nullptr|requires|static_assert|thread_local|typeid|override|final)\>"
 color green "\<(and|and_eq|bitand|bitor|not|not_eq|or|or_eq|xor|xor_eq)\>"
 color brightmagenta "\<(goto|continue|break|return)\>"
-color brightcyan "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
+color brightcyan "^[[:space:]]*#[[:space:]]*(pragma|define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
 color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
+color orange "\<(true|false)\>"
 
 ##
 ## GCC builtins
