@@ -1,0 +1,64 @@
+## Syntax to highlighting for Mozart2 programing system
+## See http://mozart2.org/
+
+## Original author: Mattéo Dubuisson
+## Author company : Université catholique de Louvain La Neuve
+## Year : 2025
+## License: Public domain
+
+syntax oz "\.oz$"
+magic "OZ source code"
+comment "%"
+
+# Keywords (http://mozart2.org/mozart-v1/doc-1.4.0/notation/node2.html#chapter.lexical)
+color brightmagenta "andthen|at|attr|case|catch|choice|cond|declare|define|dis|div|else|elseclause|elseif|end|export|fail|false|feat|finally|from|fun|functor|if|import|in|local|lock|meth|mod|not|of|or|orelse|prepare|proc|prop|raise|require|self|skip|suchthat|then|thread|true|try|unit"
+
+# Delimiters
+color white "\(|\)|\[|\]|\{|\}|\||\#|\:|\.\.\.|\=|\.|\:\=|\^|\[\]|\$|\!|\_|\~|\+|\-|\*|\/|\@|<\-|\,|\!\!|<\=|\=\=|\\\=|<|\=<|>|>\=|\=\:|\\\=\:|<\:|\=<\:|>\:|>\=\:|\:\:|\:\:\:"
+
+# Operators
+
+# Label
+color white "[A-Z][A-Za-z0-9]*"
+
+# Value
+color white "=[[:space:]]*[A-Za-z0-9]+"
+
+# Number
+color yellow "[[:space:]][0-9]+"
+color yellow "[0-9]+[[:space:]]"
+
+# Procedure / Function / Method / Call
+color white "\{[[A-Za-z0-9[:space:].]+\}"
+color brightcyan "\{[[:space:]]*[^[:space:]}]+"
+color brightblue "\{[[:space:]]*[^[:space:]}.]+"
+color brightmagenta "\{|\}"
+
+# Class
+color brightgreen "(class|from)[[:space:]]*[A-Za-z0-9]+"
+color brightmagenta "class|from"
+
+# Directive (http://mozart2.org/mozart-v1/doc-1.4.0/compiler/node2.html)
+color brightgreen "\\(switch|pushSwitches|popSwitches|localSwitches|line|insert|define|undef|ifdef|ifndef|else|endif)"
+
+# Record
+color cyan "[a-z][A-Za-z0-9]*\("
+color white "\("
+
+# Record key
+color yellow "[A-Za-z0-9]*:"
+color white ":"
+
+# Record value
+color cyan "\.[A-Za-z0-9]+"
+color yellow "\.[0-9]+"
+color white "\."
+
+# String
+color yellow "`([^`]|\\`)*`"
+color brightyellow "'([^']|\\')*'"
+color brightyellow ""([^"]|\\")*""
+
+# Comments
+color orange "%[^"]*$|(^|[[:blank:]])%.*"
+color orange start="/\*" end="\*/"
