@@ -1,10 +1,10 @@
 syntax "git-config" "git(config|modules)$|\.git/config$"
 
 color brightcyan "\<(true|false)\>"
-color cyan "^[[:space:]]*[^=]*="
+# color cyan "^[[:space:]]*[^=]*="
 color brightmagenta "^[[:space:]]*\[.*\]$"
 color yellow ""(\\.|[^"])*"|'(\\.|[^'])*'"
-color brightblack "(^|[[:space:]])#([^{].*)?$"
+color cyan "(^|[[:space:]])#([^{].*)?$"
 color ,green "[[:space:]]+$"
 color ,red "	+"
 
@@ -22,7 +22,7 @@ syntax "git-commit" "COMMIT_EDITMSG|TAG_EDITMSG"
 color yellow ".*"
 
 # Comments
-color brightblack "^#.*"
+color cyan "^#.*"
 
 # Files changes
 color white       "#[[:space:]](deleted|modified|new file|renamed):[[:space:]].*"
@@ -32,18 +32,16 @@ color brightgreen "#[[:space:]]new file:"
 color brightblue  "#[[:space:]]renamed:"
 
 # Untracked filenames
-color black "^#	[^/?*:;{}\\]+\.[^/?*:;{}\\]+$"
+color brightblack "^#	[^/?*:;{}\\]+\.[^/?*:;{}\\]+$"
 
 color brightmagenta "^#[[:space:]]Changes.*[:]"
 color brightred "^#[[:space:]]Your branch and '[^']+"
-color brightblack "^#[[:space:]]Your branch and '"
+color cyan "^#[[:space:]]Your branch and '"
 color brightwhite "^#[[:space:]]On branch [^ ]+"
-color brightblack "^#[[:space:]]On branch"
+color cyan "^#[[:space:]]On branch"
 
 # Recolor hash symbols
-
-# Recolor hash symbols
-color brightblack "#"
+color cyan "#"
 
 # Trailing spaces (+LINT is not ok, git uses tabs)
 color ,green "[[:space:]]+$"
@@ -56,7 +54,7 @@ syntax "git-rebase-todo" "git-rebase-todo"
 color yellow ".*"
 
 # Comments
-color brightblack "^#.*"
+color cyan "^#.*"
 
 # Rebase commands
 color green       "^(e|edit) [0-9a-f]{7,40}"
@@ -73,7 +71,7 @@ color yellow      "^(x|exec) [^ ]+ [0-9a-f]{7,40}"
 color yellow      "^#  (x, exec)"
 
 # Recolor hash symbols
-color brightblack "#"
+color cyan "#"
 
 # Commit IDs
 color brightblue "[0-9a-f]{7,40}"
