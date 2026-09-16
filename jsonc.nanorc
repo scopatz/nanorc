@@ -1,0 +1,22 @@
+syntax "JSONC" "\.jsonc$"
+# Header line is either:
+#   // -*- mode: jsonc -*-
+# or:
+#   // -*- jsonc -*-
+header "^\s*//.*-\*-\s*(mode:\s*)?jsonc\s*-\*-.*$"
+comment "/*|*/"
+
+color orange        "\<[-]?[1-9][0-9]*([Ee][+-]?[0-9]+)?\>"  "\<[-]?[0](\.[0-9]+)?\>"
+color brightmagenta "\<(true|false|null)\>"
+color green         ""(\\.|[^"])*"|'(\\.|[^'])*'"
+color brightcyan    "\"(\\"|[^"])*\"[[:space:]]*:"  "'(\'|[^'])*'[[:space:]]*:"
+color brightyellow  "\\u[0-9a-fA-F]{4}|\\[bfnrt'"/\\]"
+
+color italic,gray    "//.*$"
+color italic,gray    start="/\*" end="\*/"
+# Only the first non-blank line should be highlighted magenta, but \A does not
+# appear to work here, so ^ is used instead, removing that constraint.
+color italic,magenta "^\s*//.*-\*-.*$"
+
+color ,green "\s+$"
+color ,red   "	+ +| +	+"
