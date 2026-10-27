@@ -2,6 +2,9 @@
 
 syntax gemini "\.(gemini|gmi)$"
 
+# No comments
+comment ""
+
 # Heading levels
 color brightgreen "^#.*"
 color brightcyan "^##.*"
@@ -15,7 +18,14 @@ color green "^=>\s*\S+"
 color yellow "^=>"
 
 # Bullet Lists
-color brightblue "^\*.*"
+color blue "^\s*\*.*"
+color brightblue "^\s*\*"
+
+# Quote lines
+color orange,black "^\s*>.*"
+color orange "^\s*>"
 
 # Monospaced Blocks
 color white,black start="^```" end="^```"
+color gray,black "^```.+"
+color white,black "^```"
